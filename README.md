@@ -18,3 +18,9 @@ This is a civic app that aims to help visualize how Austin's park resources are 
 - **Convert Shapefile to [GeoJSON](https://github.com/mateoclarke/Austin_Parks_Acreage/blob/master/data/city_of_austin_parks.geojson)** using GDAL. I referenced [this blog post](http://ben.balter.com/2013/06/26/how-to-convert-shapefiles-to-geojson-for-use-on-github/) from Ben Balter for help.
 
 ### 3. Add District Shapefiles from a [past project](http://mateoclarke.github.io/311vs10One/)
+
+### 4. Set Up Web Files
+	
+	$ npm init
+
+	$ npm install gulp gulp-util gulp-compass gulp-connect gulp-gh-pages --save-dev

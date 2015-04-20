@@ -1,0 +1,100 @@
+// _base.scss
+// ==============
+
+html {
+  min-height: 100%;
+}
+
+// body {}
+h1, h2, h3, p {
+  font-family: $body-font;
+  color: $main-color;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+p {
+	font-family: $body-font;
+	color: $grey;
+	margin: 20px;
+	line-height: 1.6em;
+	font-size: .9em;
+}
+
+a {
+	&:visited {
+		color: $grey;
+	}
+}
+
+.btn {
+    width: 286px;
+    height: 50px;
+    border-radius: 7px;
+    margin: 24px 5px;
+    font-family: $body-font;
+    font-size: 1em;
+    color: $white;
+    text-decoration: none;
+    vertical-align: middle;
+    &:hover {
+    	cursor: pointer;
+    }
+}
+
+.btn-neutral {
+	background: transparent;
+	border: 1px solid $white;
+}
+
+.btn-action {
+   	border: none;
+   	border-top: 1px solid $lilac-purlpe;
+   	background: $purple;
+   	background: -webkit-gradient(linear, left top, left bottom, from($purple), to($dark-purple));
+   	box-shadow: black 0px 0px 3px;
+   	text-shadow: rgba(0, 0, 0, 0.8) 1px 1px 4px;
+   	&:hover {
+   		background: $dark-purple;
+   	}
+}
+
+.tooltip {
+	position: absolute;
+	max-width: 275px;
+	border-radius: 5px;
+	p {
+		color: $white;
+		font-size: 0.7em;
+		margin: 10px;
+	}
+}
+
+.tooltip-arrow {
+    width: 70px;
+    height: 16px;
+    overflow: hidden;
+    position: absolute;
+    left: 50%;
+    margin-left: -35px;
+    bottom: -16px;
+}
+
+.tooltip, .tooltip-arrow:after {
+  	background-color: rgba(0, 0, 0, 0.7);
+}
+
+.tooltip-arrow:after {
+  	content: "";
+  	position: absolute;
+  	left: 20px;
+  	top: -20px;
+  	width: 25px;
+  	height: 25px;
+  	box-shadow: 6px 5px 9px -9px black,
+  	            5px 6px 9px -9px black;
+  	-webkit-transform: rotate(45deg);
+}
+

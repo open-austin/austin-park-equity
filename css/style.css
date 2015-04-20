@@ -1,0 +1,155 @@
+@import "http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800)";
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+html {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+q, blockquote {
+  quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+a img {
+  border: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+html {
+  min-height: 100%;
+}
+
+h1, h2, h3, p {
+  font-family: "Open Sans", sans-serif;
+  color: #111;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+p {
+  font-family: "Open Sans", sans-serif;
+  color: #5C5C5C;
+  margin: 20px;
+  line-height: 1.6em;
+  font-size: .9em;
+}
+
+a:visited {
+  color: #5C5C5C;
+}
+
+.btn {
+  width: 286px;
+  height: 50px;
+  border-radius: 7px;
+  margin: 24px 5px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1em;
+  color: #fff;
+  text-decoration: none;
+  vertical-align: middle;
+}
+.btn:hover {
+  cursor: pointer;
+}
+
+.btn-neutral {
+  background: transparent;
+  border: 1px solid #fff;
+}
+
+.btn-action {
+  border: none;
+  border-top: 1px solid #C9A6CE;
+  background: #9F5EA7;
+  background: -webkit-gradient(linear, left top, left bottom, from(#9F5EA7), to(#6D4073));
+  box-shadow: black 0px 0px 3px;
+  text-shadow: rgba(0, 0, 0, 0.8) 1px 1px 4px;
+}
+.btn-action:hover {
+  background: #6D4073;
+}
+
+.tooltip {
+  position: absolute;
+  max-width: 275px;
+  border-radius: 5px;
+}
+.tooltip p {
+  color: #fff;
+  font-size: 0.7em;
+  margin: 10px;
+}
+
+.tooltip-arrow {
+  width: 70px;
+  height: 16px;
+  overflow: hidden;
+  position: absolute;
+  left: 50%;
+  margin-left: -35px;
+  bottom: -16px;
+}
+
+.tooltip, .tooltip-arrow:after {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.tooltip-arrow:after {
+  content: "";
+  position: absolute;
+  left: 20px;
+  top: -20px;
+  width: 25px;
+  height: 25px;
+  box-shadow: 6px 5px 9px -9px black, 5px 6px 9px -9px black;
+  -webkit-transform: rotate(45deg);
+}
+
+#map {
+  width: 80%;
+  min-height: 500px;
+  max-height: 100%;
+}

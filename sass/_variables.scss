@@ -1,0 +1,29 @@
+// _variables.scss
+// =================
+
+@import "http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800)";
+
+// NEUTRAL COLORS
+$black		   	: #111; 	
+$white			: #fff;
+$grey			: #5C5C5C;
+$off-grey		: #ECDFED;
+
+// MORE COLORS
+$dark-green		: #5A702A;
+$light-green	: #83A33E;
+$footer-green-1	: #879C5B;
+$footer-green-2	: #657E30;
+$grey-green		: #B8C59C;
+
+$lilac-purlpe	: #C9A6CE;
+$purple			: #9F5EA7;
+$dark-purple	: #6D4073;
+
+// COLOR THEMES
+$main-color		: $black;
+
+// FONTS
+$head-font : 'Open Sans', sans-serif;
+$body-font : 'Open Sans', sans-serif;
+
