@@ -1,8 +1,8 @@
 # Austin_Parks_Acreage
 
-This is a civic app that aims to help visualize how Austin's park resources are distributed throughout the city.
+This is a civic app that aims to help visualize how Austin's park resources are distributed throughout the City of Austin.
 
-Methodology:
+### Methodology:
 
 - **Recieve raw data** via Councilman Casar's Directory of Policy.
 - **Refine data** by adding Lat & Long from "PARK ADDRESS SERVICE" row using [Geo](https://github.com/mapbox/geo-googledocs/) for Google Spreadsheets.
