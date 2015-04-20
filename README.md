@@ -14,5 +14,5 @@ This is a civic app that aims to help visualize how Austin's park resources are 
 
 ### Find & Convert Park GIS Data to GeoJSON
 
-- **Download GIS data** from [City of Austin GIS page](ftp://ftp.ci.austin.tx.us/GIS-Data/Regional/coa_gis.html). [Data Source](ftp://ftp.ci.austin.tx.us/GIS-Data/Regional/environmental/coa_parks.zip)
-- **Convert Shapefile to to GeoJSON** using GDAL. I referenced [this blog post](http://ben.balter.com/2013/06/26/how-to-convert-shapefiles-to-geojson-for-use-on-github/) from Ben Balter for help.
+- **Download GIS data** from City of Austin GIS page.(ftp://ftp.ci.austin.tx.us/GIS-Data/Regional/coa_gis.html). Data Source: (ftp://ftp.ci.austin.tx.us/GIS-Data/Regional/environmental/coa_parks.zip)
+- **Convert Shapefile to [GeoJSON](https://github.com/mateoclarke/Austin_Parks_Acreage/blob/master/data/city_of_austin_parks.geojson)** using GDAL. I referenced [this blog post](http://ben.balter.com/2013/06/26/how-to-convert-shapefiles-to-geojson-for-use-on-github/) from Ben Balter for help.
