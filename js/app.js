@@ -5,7 +5,7 @@
 
 	var map = L.map('map', {
 		center: [30.304539565829106, -97.73300170898438], //Austin!
-		zoom: 10,
+		zoom: 11,
 		scrollWheelZoom: false
 	});
 
@@ -24,18 +24,6 @@
 	    'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
 	).addTo(map);
 
-	// adding parks shapefiles to Map
-	var parkLayer = L.geoJson(parks, {}).addTo(map);
-	var parksOn = true;
-	function toggleParksLayer(){
-		if (parksOn === true){
-			map.removeLayer(parkLayer);
-		} else {
-			map.addLayer(parkLayer);
-		}
-		parksOn = !parksOn;
-	}
-
 	// adding district shapefiles to Map
 	var districtLayer = L.geoJson(districts, {
 		style: function style(feature) {
@@ -45,7 +33,7 @@
 				opacity: 1,
 				color: 'white',
 				dashArray: '3',
-				fillOpacity: 0.4,
+				fillOpacity: 0.4
 			};
 		},
 		onEachFeature: function onEachFeature(feature, layer) {
@@ -56,7 +44,7 @@
 		}
 	}).addTo(map);
 
-	var districtOn = false;
+	var districtOn = true;
 	function toogleDistrictsLayer(){
 		console.log("test");
 		if (districtOn === true){
@@ -65,6 +53,28 @@
 			map.addLayer(districtLayer);
 		}
 		districtOn = !districtOn;
+	}
+
+	// adding parks shapefiles to Map
+	var parkLayer = L.geoJson(parks, {
+		style: function style(feature){
+			return {
+				fillColor: '#657E30',
+				weight: 1,
+				opacity: 0.7,
+				color: 'black',
+				fillOpacity: 0.7
+			};
+		}
+	}).addTo(map);
+	var parksOn = true;
+	function toggleParksLayer(){
+		if (parksOn === true){
+			map.removeLayer(parkLayer);
+		} else {
+			map.addLayer(parkLayer);
+		}
+		parksOn = !parksOn;
 	}
 
 	function getColor(d) {
