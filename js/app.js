@@ -56,7 +56,7 @@
 		}
 	}).addTo(map);
 
-	var districtOn = true;
+	var districtOn = false;
 	function toogleDistrictsLayer(){
 		console.log("test");
 		if (districtOn === true){
