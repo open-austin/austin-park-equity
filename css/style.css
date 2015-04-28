@@ -116,53 +116,6 @@ a:visited {
   background: #6D4073;
 }
 
-.navigation {
-  list-style: none;
-  margin: 0;
-  background: #64c062;
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex-flow: row wrap;
-  justify-content: flex-end;
-}
-
-.navigation a {
-  text-decoration: none;
-  display: block;
-  padding: 1em;
-  color: white;
-}
-
-.navigation a:hover {
-  background: #388636;
-}
-
-@media all and (max-width: 800px) {
-  .navigation {
-    justify-content: space-around;
-  }
-}
-@media all and (max-width: 600px) {
-  .navigation {
-    -webkit-flex-flow: column wrap;
-    flex-flow: column wrap;
-    padding: 0;
-  }
-
-  .navigation a {
-    text-align: center;
-    padding: 10px;
-    border-top: 1px solid rgba(255, 255, 255, 0.3);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  }
-
-  .navigation li:last-of-type a {
-    border-bottom: none;
-  }
-}
 #map {
   width: 66.666666%;
   height: 100%;
@@ -196,8 +149,8 @@ h1 {
 div.dropdown {
   text-align: left;
   font-size: 0.9em;
-  color: #f0f0f0;
-  text-shadow: 0px 1px 1px black;
+  color: #111;
+  text-shadow: 0px 1px 1px #808080;
 }
 div.dropdown.closed ul {
   margin-top: 0px;
@@ -299,8 +252,9 @@ div.dropdown ul li:hover {
 }
 div.dropdown ul li:before {
   content: " ";
-  display: inline-block;
+  display: -webkit-inline-box;
   position: relative;
+  background: transparent url("http://www.carlcalderon.com/pen/img/line-stop.png");
   margin-top: -12px;
   margin-right: 10px;
   width: 20px;
@@ -324,6 +278,7 @@ div.dropdown ul li:before {
   display: flex;
   -webkit-flex-flow: row wrap;
   justify-content: flex-end;
+  background-image: linear-gradient(to bottom, rgba(230, 230, 230, 0.1), #44a048);
 }
 
 .navigation a {
