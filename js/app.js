@@ -3,13 +3,14 @@
 
 	$('.parks').click( toggleParksLayer );
 
-	$('.districts-toggles button').on( 'click', function(){
+	$('.districts-toggles li').on( 'click', function(){
 		$this = $(this);
 		var districtNum = parseInt($this.data('district'));
 		var districtIndex = districtNum - 1;
 		if (districtLayer){ map.removeLayer(districtLayer); };
 		addSingleDistrictLayer(districtIndex);
 		console.log("Clicked District " + districtNum + " button."); 
+		console.log(districtLayer.getBounds()); 
 	});
 
 	var grayscale = L.tileLayer.provider('CartoDB.Positron'),
@@ -79,7 +80,7 @@
 					opacity: 1,
 					color: '#666',
 					dashArray: '',
-					fillOpacity: 0.4
+					fillOpacity: 0.6
 				};
 			}
 		}).addTo(map);
@@ -121,6 +122,15 @@
 
 	info.addTo(map);
 
+
+	// DROPDOWN
+	$(".dropdown .title").click(function () {
+	  $(this).parent().toggleClass("closed");
+	});
+
+	$(".dropdown li").click(function () {
+	  $(this).parent().parent().toggleClass("closed").find(".title").text($(this).text());
+	});
 
 
 })();
