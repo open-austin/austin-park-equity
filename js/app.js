@@ -45,7 +45,7 @@
 				fillOpacity: 0.7
 			};
 		}
-	});
+	}).addTo(map);
 
 	var parksOn = true;
 	function toggleParksLayer(){
@@ -62,8 +62,8 @@
 		"Parks": parkLayer
 	};
 
-	L.control.layers(baseMaps, overlayMaps, {autoZIndex: true}).addTo(map);
-	
+	L.control.layers(baseMaps, overlayMaps, {collapsed: true, autoZIndex: true}).addTo(map);
+
 	function isInArray(value, array) {
 	  return array.indexOf(value) > -1;
 	}
