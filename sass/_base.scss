@@ -1,8 +1,8 @@
 // _base.scss
 // ==============
 
-html {
-  min-height: 100%;
+html, body {
+  height: 100%;
 }
 
 // body {}
@@ -15,8 +15,11 @@ h1 {
   font-size: 3em;
 }
 
-p {
+body {
 	font-family: $body-font;
+}
+
+p {
 	color: $grey;
 	margin: 20px;
 	line-height: 1.6em;
@@ -59,42 +62,5 @@ a {
    	&:hover {
    		background: $dark-purple;
    	}
-}
-
-.tooltip {
-	position: absolute;
-	max-width: 275px;
-	border-radius: 5px;
-	p {
-		color: $white;
-		font-size: 0.7em;
-		margin: 10px;
-	}
-}
-
-.tooltip-arrow {
-    width: 70px;
-    height: 16px;
-    overflow: hidden;
-    position: absolute;
-    left: 50%;
-    margin-left: -35px;
-    bottom: -16px;
-}
-
-.tooltip, .tooltip-arrow:after {
-  	background-color: rgba(0, 0, 0, 0.7);
-}
-
-.tooltip-arrow:after {
-  	content: "";
-  	position: absolute;
-  	left: 20px;
-  	top: -20px;
-  	width: 25px;
-  	height: 25px;
-  	box-shadow: 6px 5px 9px -9px black,
-  	            5px 6px 9px -9px black;
-  	-webkit-transform: rotate(45deg);
 }
 

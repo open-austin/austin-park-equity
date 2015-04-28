@@ -1,36 +1,69 @@
-// (function(){
-
+(function(){
 	
 
 	$('.parks').click( toggleParksLayer );
-	$('.districts').click( toogleDistrictsLayer );
-	$('.districts-toggles button').on( 'click', function(){
+
+	$('.districts-toggles li').on( 'click', function(){
 		$this = $(this);
 		var districtNum = parseInt($this.data('district'));
 		var districtIndex = districtNum - 1;
 		if (districtLayer){ map.removeLayer(districtLayer); };
 		addSingleDistrictLayer(districtIndex);
 		console.log("Clicked District " + districtNum + " button."); 
+		console.log(districtLayer.getBounds()); 
 	});
 
-	var map = L.map('map', {
-		center: [30.304539565829106, -97.73300170898438], //Austin!
-		zoom: 12,
-		scrollWheelZoom: false
-	});
-
-	//  add tile Layer from Mapquest
-	L.tileLayer.provider(
+	var grayscale = L.tileLayer.provider('CartoDB.Positron'),
+		terrain = L.tileLayer.provider('Stamen.Terrain');
 		// 'OpenStreetMap.BlackAndWhite'
 		// 'Thunderforest.Transport'
 		// 'OpenMapSurfer.Roads'
 		// 'OpenMapSurfer.Grayscale'
 		// 'Stamen.Toner'
-		// 'Stamen.Terrain'
 		// 'Esri.WorldGrayCanvas'
-		'CartoDB.Positron'
 		// 'CartoDB.DarkMatter'
-	).addTo(map);
+
+	var map = L.map('map', {
+		center: [30.304539565829106, -97.73300170898438], //Austin!
+		zoom: 12,
+		scrollWheelZoom: false,
+		layers: [terrain, grayscale]
+	});
+
+	var baseMaps = {
+	    "Terrain": terrain,
+	    "Grayscale": grayscale
+	};
+
+	// adding parks shapefiles to Map
+	var parkLayer = L.geoJson(parks, {
+		style: function style(feature){
+			return {
+				fillColor: '#56DD54',
+				weight: 1,
+				opacity: 0.7,
+				color: '#44A048',
+				fillOpacity: 0.7
+			};
+		}
+	}).addTo(map);
+
+	var parksOn = true;
+	function toggleParksLayer(){
+		if (parksOn === true){
+			map.removeLayer(parkLayer);
+		} else {
+			map.addLayer(parkLayer);
+		}
+		parksOn = !parksOn;
+	}
+
+
+	var overlayMaps = {
+		"Parks": parkLayer
+	};
+
+	L.control.layers(baseMaps, overlayMaps, {collapsed: true, autoZIndex: true}).addTo(map);
 
 	function isInArray(value, array) {
 	  return array.indexOf(value) > -1;
@@ -45,51 +78,14 @@
 					fillColor: getColor(feature.properties.DISTRICT_N),
 					weight: 1,
 					opacity: 1,
-					color: 'white',
-					dashArray: '3',
-					fillOpacity: 0.4
+					color: '#666',
+					dashArray: '',
+					fillOpacity: 0.6
 				};
-			},
-			onEachFeature: function onEachFeature(feature, layer) {
-				// layer.bindPopup('District ' + feature.properties.DISTRICT_N);
-				layer.on({
-				        click: highlightFeature
-				    });
 			}
 		}).addTo(map);
-	}
-
-	var districtOn = true;
-	function toogleDistrictsLayer(){
-		if (districtOn === true){
-			map.removeLayer(districtLayer);
-		} else {
-			map.addLayer(districtLayer);
-		}
-		districtOn = !districtOn;
-	}
-
-
-	// adding parks shapefiles to Map
-	var parkLayer = L.geoJson(parks, {
-		style: function style(feature){
-			return {
-				fillColor: '#56DD54',
-				weight: 1,
-				opacity: 0.7,
-				color: '#44A048',
-				fillOpacity: 0.7
-			};
-		}
-	}).addTo(map);
-	var parksOn = true;
-	function toggleParksLayer(){
-		if (parksOn === true){
-			map.removeLayer(parkLayer);
-		} else {
-			map.addLayer(parkLayer);
-		}
-		parksOn = !parksOn;
+		map.fitBounds(districtLayer.getBounds());
+		districtLayer.bringToBack();
 	}
 
 	function getColor(d) {
@@ -105,28 +101,8 @@
 			'#bc80bd';
 	}
 
-	// Hover highlight feature
-	function highlightFeature(e) {
-		districtLayer.eachLayer( function resetHighlight(layer) {
-		    districtLayer.resetStyle(layer);
-		    info.update();
-	});
 
-    var layer = e.target;
 
-    layer.setStyle({
-        weight: 2,
-        color: '#666',
-        dashArray: '',
-        fillOpacity: 0.7
-    });
-
-    if (!L.Browser.ie && !L.Browser.opera) {
-	        layer.bringToFront();
-	    }
-	    info.update(layer.feature.properties);
-	    map.fitBounds(e.target.getBounds());
-	}
 
 	// info controls on map
 	var info = L.control();
@@ -146,4 +122,15 @@
 
 	info.addTo(map);
 
-// })();
+
+	// DROPDOWN
+	$(".dropdown .title").click(function () {
+	  $(this).parent().toggleClass("closed");
+	});
+
+	$(".dropdown li").click(function () {
+	  $(this).parent().parent().toggleClass("closed").find(".title").text($(this).text());
+	});
+
+
+})();
