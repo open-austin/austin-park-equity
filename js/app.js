@@ -12,24 +12,58 @@
 		console.log("Clicked District " + districtNum + " button."); 
 	});
 
-	var map = L.map('map', {
-		center: [30.304539565829106, -97.73300170898438], //Austin!
-		zoom: 12,
-		scrollWheelZoom: false
-	});
-
-	L.tileLayer.provider(
-		'CartoDB.Positron'
+	var grayscale = L.tileLayer.provider('CartoDB.Positron'),
+		terrain = L.tileLayer.provider('Stamen.Terrain');
 		// 'OpenStreetMap.BlackAndWhite'
 		// 'Thunderforest.Transport'
 		// 'OpenMapSurfer.Roads'
 		// 'OpenMapSurfer.Grayscale'
 		// 'Stamen.Toner'
-		// 'Stamen.Terrain'
 		// 'Esri.WorldGrayCanvas'
 		// 'CartoDB.DarkMatter'
-	).addTo(map);
 
+	var map = L.map('map', {
+		center: [30.304539565829106, -97.73300170898438], //Austin!
+		zoom: 12,
+		scrollWheelZoom: false,
+		layers: [terrain, grayscale]
+	});
+
+	var baseMaps = {
+	    "Terrain": terrain,
+	    "Grayscale": grayscale
+	};
+
+	// adding parks shapefiles to Map
+	var parkLayer = L.geoJson(parks, {
+		style: function style(feature){
+			return {
+				fillColor: '#56DD54',
+				weight: 1,
+				opacity: 0.7,
+				color: '#44A048',
+				fillOpacity: 0.7
+			};
+		}
+	});
+
+	var parksOn = true;
+	function toggleParksLayer(){
+		if (parksOn === true){
+			map.removeLayer(parkLayer);
+		} else {
+			map.addLayer(parkLayer);
+		}
+		parksOn = !parksOn;
+	}
+
+
+	var overlayMaps = {
+		"Parks": parkLayer
+	};
+
+	L.control.layers(baseMaps, overlayMaps, {autoZIndex: true}).addTo(map);
+	
 	function isInArray(value, array) {
 	  return array.indexOf(value) > -1;
 	}
@@ -50,6 +84,7 @@
 			}
 		}).addTo(map);
 		map.fitBounds(districtLayer.getBounds());
+		districtLayer.bringToBack();
 	}
 
 	function getColor(d) {
@@ -66,27 +101,6 @@
 	}
 
 
-	// adding parks shapefiles to Map
-	var parkLayer = L.geoJson(parks, {
-		style: function style(feature){
-			return {
-				fillColor: '#56DD54',
-				weight: 1,
-				opacity: 0.7,
-				color: '#44A048',
-				fillOpacity: 0.7
-			};
-		}
-	}).addTo(map);
-	var parksOn = true;
-	function toggleParksLayer(){
-		if (parksOn === true){
-			map.removeLayer(parkLayer);
-		} else {
-			map.addLayer(parkLayer);
-		}
-		parksOn = !parksOn;
-	}
 
 
 	// info controls on map
