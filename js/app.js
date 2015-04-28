@@ -1,52 +1,66 @@
-;(function(){
+// (function(){
+
+	
 
 	$('.parks').click( toggleParksLayer );
 	$('.districts').click( toogleDistrictsLayer );
+	$('.districts-toggles button').on( 'click', function(){
+		$this = $(this);
+		var districtNum = parseInt($this.data('district'));
+		var districtIndex = districtNum - 1;
+		if (districtLayer){ map.removeLayer(districtLayer); };
+		addSingleDistrictLayer(districtIndex);
+		console.log("Clicked District " + districtNum + " button."); 
+	});
 
 	var map = L.map('map', {
 		center: [30.304539565829106, -97.73300170898438], //Austin!
-		zoom: 11,
+		zoom: 12,
 		scrollWheelZoom: false
 	});
 
 	//  add tile Layer from Mapquest
-	L.tileLayer(
-	    // Mapbox Streets-Satellite
-	    // 'http://api.tiles.mapbox.com/v4/mapbox.streets-satellite/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWF0ZW9jb2RlcyIsImEiOiJUZVVZSVBvIn0.PkZleldXk_6KCuoGhx6-CA'
-
-		// Satelite Tile
-		// 'http://otile1.mqcdn.com/tiles/1.0.0/sat/{z}/{x}/{y}.jpg'
-
-		// Plain (ugly) Mapquest Tiles
-		// 'http://otile1.mqcdn.com/tiles/1.0.0/map/{z}/{x}/{y}.jpg'
-
-		// Open Street Map Tile
-	    'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
+	L.tileLayer.provider(
+		// 'OpenStreetMap.BlackAndWhite'
+		// 'Thunderforest.Transport'
+		// 'OpenMapSurfer.Roads'
+		// 'OpenMapSurfer.Grayscale'
+		// 'Stamen.Toner'
+		// 'Stamen.Terrain'
+		// 'Esri.WorldGrayCanvas'
+		'CartoDB.Positron'
+		// 'CartoDB.DarkMatter'
 	).addTo(map);
 
+	function isInArray(value, array) {
+	  return array.indexOf(value) > -1;
+	}
+
 	// adding district shapefiles to Map
-	var districtLayer = L.geoJson(districts, {
-		style: function style(feature) {
-			return {
-				fillColor: getColor(feature.properties.DISTRICT_N),
-				weight: 1,
-				opacity: 1,
-				color: 'white',
-				dashArray: '3',
-				fillOpacity: 0.4
-			};
-		},
-		onEachFeature: function onEachFeature(feature, layer) {
-			// layer.bindPopup('District ' + feature.properties.DISTRICT_N);
-			layer.on({
-			        click: highlightFeature
-			    });
-		}
-	}).addTo(map);
+	var districtLayer;
+	function addSingleDistrictLayer(districtNum){
+		districtLayer = L.geoJson(districts.features[districtNum], {
+			style: function style(feature) {
+				return {
+					fillColor: getColor(feature.properties.DISTRICT_N),
+					weight: 1,
+					opacity: 1,
+					color: 'white',
+					dashArray: '3',
+					fillOpacity: 0.4
+				};
+			},
+			onEachFeature: function onEachFeature(feature, layer) {
+				// layer.bindPopup('District ' + feature.properties.DISTRICT_N);
+				layer.on({
+				        click: highlightFeature
+				    });
+			}
+		}).addTo(map);
+	}
 
 	var districtOn = true;
 	function toogleDistrictsLayer(){
-		console.log("test");
 		if (districtOn === true){
 			map.removeLayer(districtLayer);
 		} else {
@@ -55,14 +69,15 @@
 		districtOn = !districtOn;
 	}
 
+
 	// adding parks shapefiles to Map
 	var parkLayer = L.geoJson(parks, {
 		style: function style(feature){
 			return {
-				fillColor: '#657E30',
+				fillColor: '#56DD54',
 				weight: 1,
 				opacity: 0.7,
-				color: 'black',
+				color: '#44A048',
 				fillOpacity: 0.7
 			};
 		}
@@ -131,4 +146,4 @@
 
 	info.addTo(map);
 
-})();
+// })();
