@@ -43,18 +43,13 @@
 					fillColor: getColor(feature.properties.DISTRICT_N),
 					weight: 1,
 					opacity: 1,
-					color: 'white',
-					dashArray: '3',
+					color: '#666',
+					dashArray: '',
 					fillOpacity: 0.4
 				};
-			},
-			onEachFeature: function onEachFeature(feature, layer) {
-				// layer.bindPopup('District ' + feature.properties.DISTRICT_N);
-				layer.on({
-				        click: highlightFeature
-				    });
 			}
 		}).addTo(map);
+		map.fitBounds(districtLayer.getBounds());
 	}
 
 	function getColor(d) {
@@ -93,28 +88,6 @@
 		parksOn = !parksOn;
 	}
 
-	// Hover highlight feature
-	function highlightFeature(e) {
-		districtLayer.eachLayer( function resetHighlight(layer) {
-		    districtLayer.resetStyle(layer);
-		    info.update();
-	});
-
-    var layer = e.target;
-
-    layer.setStyle({
-        weight: 2,
-        color: '#666',
-        dashArray: '',
-        fillOpacity: 0.7
-    });
-
-    if (!L.Browser.ie && !L.Browser.opera) {
-	        layer.bringToFront();
-	    }
-	    info.update(layer.feature.properties);
-	    map.fitBounds(e.target.getBounds());
-	}
 
 	// info controls on map
 	var info = L.control();
@@ -133,5 +106,7 @@
 	};
 
 	info.addTo(map);
+
+
 
 })();
