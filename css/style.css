@@ -55,8 +55,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block;
 }
 
-html {
-  min-height: 100%;
+html, body {
+  height: 100%;
 }
 
 h1, h2, h3, p {
@@ -148,7 +148,7 @@ a:visited {
   -webkit-transform: rotate(45deg);
 }
 
-.leaflet-container {
+#map {
   width: 100%;
-  height: 480px;
+  height: 100%;
 }

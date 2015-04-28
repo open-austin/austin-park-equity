@@ -1,9 +1,8 @@
-// (function(){
-
+(function(){
 	
 
 	$('.parks').click( toggleParksLayer );
-	$('.districts').click( toogleDistrictsLayer );
+
 	$('.districts-toggles button').on( 'click', function(){
 		$this = $(this);
 		var districtNum = parseInt($this.data('district'));
@@ -19,8 +18,8 @@
 		scrollWheelZoom: false
 	});
 
-	//  add tile Layer from Mapquest
 	L.tileLayer.provider(
+		'CartoDB.Positron'
 		// 'OpenStreetMap.BlackAndWhite'
 		// 'Thunderforest.Transport'
 		// 'OpenMapSurfer.Roads'
@@ -28,7 +27,6 @@
 		// 'Stamen.Toner'
 		// 'Stamen.Terrain'
 		// 'Esri.WorldGrayCanvas'
-		'CartoDB.Positron'
 		// 'CartoDB.DarkMatter'
 	).addTo(map);
 
@@ -59,14 +57,17 @@
 		}).addTo(map);
 	}
 
-	var districtOn = true;
-	function toogleDistrictsLayer(){
-		if (districtOn === true){
-			map.removeLayer(districtLayer);
-		} else {
-			map.addLayer(districtLayer);
-		}
-		districtOn = !districtOn;
+	function getColor(d) {
+		return d > 9 ? '#8dd3c7' :
+			d > 8 ? '#ffffb3' :
+			d > 7 ? '#bebada' :
+			d > 6 ? '#fb8072' :
+			d > 5 ? '#80b1d3' :
+			d > 4 ? '#fdb462' :
+			d > 3 ? '#b3de69' :
+			d > 2 ? '#fccde5' :
+			d > 1 ? '#98e986' :
+			'#bc80bd';
 	}
 
 
@@ -90,19 +91,6 @@
 			map.addLayer(parkLayer);
 		}
 		parksOn = !parksOn;
-	}
-
-	function getColor(d) {
-		return d > 9 ? '#8dd3c7' :
-			d > 8 ? '#ffffb3' :
-			d > 7 ? '#bebada' :
-			d > 6 ? '#fb8072' :
-			d > 5 ? '#80b1d3' :
-			d > 4 ? '#fdb462' :
-			d > 3 ? '#b3de69' :
-			d > 2 ? '#fccde5' :
-			d > 1 ? '#98e986' :
-			'#bc80bd';
 	}
 
 	// Hover highlight feature
@@ -146,4 +134,4 @@
 
 	info.addTo(map);
 
-// })();
+})();
