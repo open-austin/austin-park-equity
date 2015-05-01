@@ -24,7 +24,7 @@
 		// 'CartoDB.DarkMatter'
 
 	var map = L.map('map', {
-		center: [30.304539565829106, -97.73300170898438], //Austin!
+		center: [30.26618, -97.74467], //Austin!
 		zoom: 12,
 		scrollWheelZoom: false,
 		layers: [terrain, grayscale]
