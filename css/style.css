@@ -116,6 +116,10 @@ a:visited {
   background: #6D4073;
 }
 
+.main-content-wrapper {
+  height: 95%;
+}
+
 #map {
   width: 66.666666%;
   height: 100%;
@@ -270,6 +274,7 @@ div.dropdown ul li:before {
 .navigation {
   list-style: none;
   margin: 0;
+  height: 5%;
   background: #64c062;
   display: -webkit-box;
   display: -moz-box;
