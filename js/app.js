@@ -43,8 +43,18 @@
 				color: '#44A048',
 				fillOpacity: 0.7
 			};
-		}
+		},
+		onEachFeature: onEachFeature
 	}).addTo(map);
+
+	function onEachFeature(feature, layer) {
+		var parkName = feature.properties.PARK_LABEL;
+		var parkAcres = feature.properties.ACRES.toFixed(2);
+		popupContent = "<p><span class='park-title'>"+parkName+"</span><br>"+parkAcres+" Acres</p>"
+	    if (feature.properties && feature.properties.PARK_LABEL) {
+	        layer.bindPopup( popupContent );
+	    }
+	}
 
 	var parksOn = true;
 	function toggleParksLayer(){
@@ -117,33 +127,35 @@
 	  // add district polygon to map
 	  if (districtLayer){ map.removeLayer(districtLayer); };
 	  addSingleDistrictLayer(districtIndex);
-
-	  // populate data fields
-	  var fullDistrict = districts.features[districtNum].properties;
-
-	  var totParkAcres = fullDistrict.TOT_PARK_ACRES;
-	  var totParksNum = fullDistrict.TOT_PARKS_NUM;
-	  var totParksCost = fullDistrict.TOT_PARKS_COST;
-	  var popUnder18 = fullDistrict.POP_UNDER_18;
-	  var avgIncome = fullDistrict.AVG_INCOME;
-	  var percRenter = fullDistrict.PERC_RENTERS;
-	  var councilperson = fullDistrict.COUNCILPERSON;
-	  var councilpersonEmail = fullDistrict.COUNCILPERSON_EMAIL;
-	  var pocketParks = fullDistrict.POCKET_PARKS;
-	  var neighborhoodParks = fullDistrict.NEIGHBORHOOD_PARKS;
-	  var districtParks = fullDistrict.DISTRICT_PARKS ;
-	  var metroParks = fullDistrict.METRO_PARKS;
-
-	  $('#tot-park-acres').text( totParkAcres );
-	  $('#tot-parks-num').text( totParksNum );
-	  $('#tot-parks-cost').text( totParksCost );
-	  $('#pop-under-18').text( popUnder18 );
-	  $('#avg-income').text( avgIncome );
-	  $('#perc-renters').text( percRenter );
-	  $('#councilperson').text( councilperson );
-	  $('#councilperson').parent().attr('href', "mailto:" + councilpersonEmail);
+	  populateDistrictFacts(districtIndex);
 
 	});
+
+	function populateDistrictFacts(districtIndex){
+		var districtFeatures = districts.features[districtIndex].properties;
+
+		var totParkAcres = districtFeatures.TOT_PARK_ACRES;
+		var totParksNum = districtFeatures.TOT_PARKS_NUM;
+		var totParksCost = districtFeatures.TOT_PARKS_COST;
+		var popUnder18 = districtFeatures.POP_UNDER_18;
+		var avgIncome = districtFeatures.AVG_INCOME;
+		var percRenter = districtFeatures.PERC_RENTERS;
+		var councilperson = districtFeatures.COUNCILPERSON;
+		var councilpersonEmail = districtFeatures.COUNCILPERSON_EMAIL;
+		var pocketParks = districtFeatures.POCKET_PARKS;
+		var neighborhoodParks = districtFeatures.NEIGHBORHOOD_PARKS;
+		var districtParks = districtFeatures.DISTRICT_PARKS ;
+		var metroParks = districtFeatures.METRO_PARKS;
+
+		$('#tot-park-acres').text( totParkAcres );
+		$('#tot-parks-num').text( totParksNum );
+		$('#tot-parks-cost').text( totParksCost );
+		$('#pop-under-18').text( popUnder18 );
+		$('#avg-income').text( avgIncome );
+		$('#perc-renters').text( percRenter );
+		$('#councilperson').text( councilperson );
+		$('#councilperson').parent().attr('href', "mailto:" + councilpersonEmail);
+	}
 
 
 })();
