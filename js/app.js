@@ -3,15 +3,13 @@
 
 	$('.parks').click( toggleParksLayer );
 
-	$('.districts-toggles li').on( 'click', function(){
-		$this = $(this);
-		var districtNum = parseInt($this.data('district'));
-		var districtIndex = districtNum - 1;
-		if (districtLayer){ map.removeLayer(districtLayer); };
-		addSingleDistrictLayer(districtIndex);
-		console.log("Clicked District " + districtNum + " button."); 
-		console.log(districtLayer.getBounds()); 
-	});
+	// $('.districts-toggles li').on( 'click', function(){
+	// 	$this = $(this);
+	// 	var districtNum = parseInt($this.data('district'));
+	// 	var districtIndex = districtNum - 1;
+	// 	if (districtLayer){ map.removeLayer(districtLayer); };
+	// 	addSingleDistrictLayer(districtIndex);
+	// });
 
 	var grayscale = L.tileLayer.provider('CartoDB.Positron'),
 		terrain = L.tileLayer.provider('Stamen.Terrain');
@@ -24,7 +22,7 @@
 		// 'CartoDB.DarkMatter'
 
 	var map = L.map('map', {
-		center: [30.304539565829106, -97.73300170898438], //Austin!
+		center: [30.26618, -97.74467], //Austin!
 		zoom: 12,
 		scrollWheelZoom: false,
 		layers: [terrain, grayscale]
@@ -101,35 +99,50 @@
 			'#bc80bd';
 	}
 
-
-
-
-	// info controls on map
-	var info = L.control();
-
-	info.onAdd = function (map) {
-	    this._div = L.DomUtil.create('div', 'info'); // create a div with a class "info"
-	    this.update();
-	    return this._div;
-	};
-
-		// method that we will use to update the control based on feature properties passed
-	info.update = function (property) {
-	    this._div.innerHTML =  (property ?
-	        '<b>District ' + property.DISTRICT_N + '</b><br />'
-	        : 'Click on a district');
-	};
-
-	info.addTo(map);
-
-
 	// DROPDOWN
 	$(".dropdown .title").click(function () {
 	  $(this).parent().toggleClass("closed");
+	  $('.district-facts').toggleClass("no-show");
 	});
 
 	$(".dropdown li").click(function () {
-	  $(this).parent().parent().toggleClass("closed").find(".title").text($(this).text());
+	  $this = $(this);
+	  $this.parent().parent().toggleClass("closed").find(".title").text($this.text());
+	  $('.district-facts').toggleClass("no-show");
+
+	  // capture district num/index
+	  var districtNum = parseInt($this.data('district'));
+	  var districtIndex = districtNum - 1;
+
+	  // add district polygon to map
+	  if (districtLayer){ map.removeLayer(districtLayer); };
+	  addSingleDistrictLayer(districtIndex);
+
+	  // populate data fields
+	  var fullDistrict = districts.features[districtNum].properties;
+
+	  var totParkAcres = fullDistrict.TOT_PARK_ACRES;
+	  var totParksNum = fullDistrict.TOT_PARKS_NUM;
+	  var totParksCost = fullDistrict.TOT_PARKS_COST;
+	  var popUnder18 = fullDistrict.POP_UNDER_18;
+	  var avgIncome = fullDistrict.AVG_INCOME;
+	  var percRenter = fullDistrict.PERC_RENTERS;
+	  var councilperson = fullDistrict.COUNCILPERSON;
+	  var councilpersonEmail = fullDistrict.COUNCILPERSON_EMAIL;
+	  var pocketParks = fullDistrict.POCKET_PARKS;
+	  var neighborhoodParks = fullDistrict.NEIGHBORHOOD_PARKS;
+	  var districtParks = fullDistrict.DISTRICT_PARKS ;
+	  var metroParks = fullDistrict.METRO_PARKS;
+
+	  $('#tot-park-acres').text( totParkAcres );
+	  $('#tot-parks-num').text( totParksNum );
+	  $('#tot-parks-cost').text( totParksCost );
+	  $('#pop-under-18').text( popUnder18 );
+	  $('#avg-income').text( avgIncome );
+	  $('#perc-renters').text( percRenter );
+	  $('#councilperson').text( councilperson );
+	  $('#councilperson').parent().attr('href', "mailto:" + councilpersonEmail);
+
 	});
 
 
