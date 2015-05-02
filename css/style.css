@@ -93,6 +93,10 @@ a:visited {
   float: left;
 }
 
+.park-title {
+  font-weight: bold;
+}
+
 .aside {
   width: 33.333333%;
   height: 100%;
