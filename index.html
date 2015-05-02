@@ -38,12 +38,22 @@
 					<li class="district-10" data-district="10">District 10</li>
 				</ul>
 			</div>
+			<div class="district-facts no-show">
+				<p>Total Park Acres: <span id="tot-park-acres"></span> acres</p>
+				<p>Total Parks: <span id="tot-parks-num"></span> parks</p>
+				<p>Total Park Maintenance Cost: <span id="tot-parks-cost"></span></p>
+				<p>District Population Under 18 years old: <span id="pop-under-18"></span></p>
+				<p>District Average Income: <span id="avg-income"></span></p>
+				<p>Percent of Renters: <span id="perc-renters"></span></p>
+				<p>Contact <a href=""><span id="councilperson"></span></a></p>
+			</div>
 		</div>
 	</div>
 
 	<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
 	<script src="https://code.jquery.com/jquery-2.1.1.js"></script>
 	<script src="data/district-shapefiles.js"></script>
+	<script src="data/district-extra-data.js"></script>
 	<script src="data/city_of_austin_parks.js"></script>
 	<script src="js/leaflet-providers.js"></script>
 	<script src="js/geojson-utils.js"></script>

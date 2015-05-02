@@ -20,7 +20,6 @@ body {
 }
 
 p {
-	color: $grey;
 	margin: 20px;
 	line-height: 1.6em;
 	font-size: .9em;
@@ -28,39 +27,7 @@ p {
 
 a {
 	&:visited {
-		color: $grey;
+		color: $dark-purple;
 	}
-}
-
-.btn {
-    width: 286px;
-    height: 50px;
-    border-radius: 7px;
-    margin: 24px 5px;
-    font-family: $body-font;
-    font-size: 1em;
-    color: $white;
-    text-decoration: none;
-    vertical-align: middle;
-    &:hover {
-    	cursor: pointer;
-    }
-}
-
-.btn-neutral {
-	background: transparent;
-	border: 1px solid $white;
-}
-
-.btn-action {
-   	border: none;
-   	border-top: 1px solid $lilac-purlpe;
-   	background: $purple;
-   	background: -webkit-gradient(linear, left top, left bottom, from($purple), to($dark-purple));
-   	box-shadow: black 0px 0px 3px;
-   	text-shadow: rgba(0, 0, 0, 0.8) 1px 1px 4px;
-   	&:hover {
-   		background: $dark-purple;
-   	}
 }
 
