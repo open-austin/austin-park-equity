@@ -119,7 +119,7 @@
 	  addSingleDistrictLayer(districtIndex);
 
 	  // populate data fields
-	  var fullDistrict = districts.features[districtNum].properties;
+	  var fullDistrict = districts.features[districtIndex].properties;
 
 	  var totParkAcres = fullDistrict.TOT_PARK_ACRES;
 	  var totParksNum = fullDistrict.TOT_PARKS_NUM;
