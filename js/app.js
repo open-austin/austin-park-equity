@@ -134,7 +134,7 @@
 	function populateDistrictFacts(districtIndex){
 		var districtFeatures = districts.features[districtIndex].properties;
 
-		var totParkAcres = districtFeatures.TOT_PARK_ACRES;
+		var totParkAcres = (districtFeatures.TOT_PARK_ACRES).toFixed(2);
 		var totParksNum = districtFeatures.TOT_PARKS_NUM;
 		var totParksCost = districtFeatures.TOT_PARKS_COST;
 		var popUnder18 = districtFeatures.POP_UNDER_18;
