@@ -6,6 +6,14 @@ _under development_
 
 This is a civic app that aims to help visualize how Austin's park resources are distributed throughout the City of Austin.
 
+## Running Code Locally:
+	
+Node's package manager, npm, is required. You can install it from [their site](https://nodejs.org/download/) or with a command like `brew install node` if you use Homebrew.
+
+
+	$ npm install gulp gulp-util gulp-compass gulp-connect gulp-gh-pages --save-dev
+	
+	
 ## Methodology:
 
 ### 1. Clean & Convert Raw Parks Acreage Data
@@ -23,8 +31,3 @@ This is a civic app that aims to help visualize how Austin's park resources are 
 
 ### 3. Add District Shapefiles from a [past project](http://mateoclarke.github.io/311vs10One/)
 
-### 4. Set Up Web Files
-	
-	$ npm init
-
-	$ npm install gulp gulp-util gulp-compass gulp-connect gulp-gh-pages --save-dev
