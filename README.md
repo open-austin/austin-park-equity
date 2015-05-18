@@ -1,6 +1,6 @@
 # Austin Parks Acreage Data App
 
-##[View Live](http://mateoclarke.github.io/Austin_Parks_Acreage/)
+##[View Live](http://open-austin.github.io/Austin_Parks_Acreage/)
 
 _under development_
 
@@ -10,9 +10,13 @@ This is a civic app that aims to help visualize how Austin's park resources are 
 	
 Node's package manager, npm, is required. You can install it from [their site](https://nodejs.org/download/) or with a command like `brew install node` if you use Homebrew.
 
+Before you can serve the app locally, you need to install some depdencies:
 
 	$ npm install gulp gulp-util gulp-compass gulp-connect gulp-gh-pages --save-dev
 	
+Now you should be able to run the local server and see the app in your browser at localhost:8080 with this command:
+	
+	$ gulp
 	
 ## Methodology:
 
