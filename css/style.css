@@ -301,3 +301,16 @@ div.dropdown ul li:before {
     border-bottom: none;
   }
 }
+table.district-facts {
+  width: 90%;
+  margin: 5%;
+}
+table.district-facts td {
+  padding: 5px;
+}
+table.district-facts tbody td:nth-child(even) {
+  text-align: right;
+}
+table.district-facts tbody tr:nth-child(odd) {
+  background: #eee;
+}
