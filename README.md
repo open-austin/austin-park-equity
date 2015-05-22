@@ -53,7 +53,7 @@ Gulp serves the app at `http://localhost:8080`.
 
 ### 2. Find & Convert Park GIS Data to GeoJSON
 
-- **Download "City of Austin Parks" GIS data** from City of Austin GIS page.(ftp://ftp.ci.austin.tx.us/GIS-Data/Regional/coa_gis.html).
+- **Download "City of Austin Parks" GIS data** from City of Austin Data Portal.(https://data.austintexas.gov/dataset/City-Of-Austin-Parks/99qw-4ixs).
 - **Convert Shapefile to [GeoJSON](https://github.com/mateoclarke/Austin_Parks_Acreage/blob/master/data/city_of_austin_parks.geojson)** using GDAL. I referenced [this blog post](http://ben.balter.com/2013/06/26/how-to-convert-shapefiles-to-geojson-for-use-on-github/) from Ben Balter for help.
 
 ### 3. Add District Shapefiles from a [past project](http://mateoclarke.github.io/311vs10One/)
