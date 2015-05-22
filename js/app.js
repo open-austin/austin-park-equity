@@ -11,9 +11,9 @@
 	// 	addSingleDistrictLayer(districtIndex);
 	// });
 
-	var grayscale = L.tileLayer.provider('CartoDB.Positron'),
-		terrain = L.tileLayer.provider('Stamen.Terrain');
-		// 'OpenStreetMap.BlackAndWhite'
+	var grayscale = L.tileLayer.provider('CartoDB.Positron');
+		// terrain = L.tileLayer.provider('Stamen.Terrain');
+		// blackAndWhite = 'OpenStreetMap.BlackAndWhite'
 		// 'Thunderforest.Transport'
 		// 'OpenMapSurfer.Roads'
 		// 'OpenMapSurfer.Grayscale'
@@ -25,11 +25,11 @@
 		center: [30.26618, -97.74467], //Austin!
 		zoom: 12,
 		scrollWheelZoom: false,
-		layers: [terrain, grayscale]
+		layers: [grayscale] //include more options in array like terrain
 	});
 
 	var baseMaps = {
-	    "Terrain": terrain,
+	    // "Terrain": terrain, //removing other tiles now for simplicity
 	    "Grayscale": grayscale
 	};
 
@@ -48,10 +48,15 @@
 	}).addTo(map);
 
 	function onEachFeature(feature, layer) {
-		var parkName = feature.properties.PARK_LABEL;
-		var parkAcres = feature.properties.ACRES.toFixed(2);
-		popupContent = "<p><span class='park-title'>"+parkName+"</span><br>"+parkAcres+" Acres</p>"
-	    if (feature.properties && feature.properties.PARK_LABEL) {
+		var parkName 	= feature.properties.PARK_NAME,
+			parkAcres 	= feature.properties.PARK_ACRES.toFixed(2),
+			parkType 	= feature.properties.PARK_TYPE,
+
+			popupContent = "<p><span class='park-title'>"+parkName+"</span> \
+						<br>"+parkAcres+" Acres \
+						<br>Park Type: "+parkType+"</p>";
+
+	    if (feature.properties) {
 	        layer.bindPopup( popupContent );
 	    }
 	}
