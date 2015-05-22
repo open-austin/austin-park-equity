@@ -1,11 +1,46 @@
 # Austin Parks Acreage Data App
 
-##[View Live](http://mateoclarke.github.io/Austin_Parks_Acreage/)
+### This is a civic app that aims to help visualize how Austin's park resources are distributed throughout the City of Austin.
 
-_under development_
+###Related News:
 
-This is a civic app that aims to help visualize how Austin's park resources are distributed throughout the City of Austin.
+- [Council Member Houston sees disparity in treatment of parks - May 20, 2015](http://www.austinmonitor.com/stories/2015/05/houston-sees-disparity-treatment-parks/)
 
+- [District 4 community meeting on parks - April 30, 2015](http://us8.campaign-archive1.com/?u=6fe419e1bea63f17bb6c8842d&id=13e7c71daa)
+
+- [North Austin green space becomes a priority for council - March 25, 2015](http://impactnews.com/austin-metro/northwest-austin/north-austin-green-space-becomes-a-priority-for-council)
+
+###Status: _under development_ 
+
+See our progress: [Live Demo](http://open-austin.github.io/Austin_Parks_Acreage/)  
+
+See our team's notes on [Hackpad](https://openaustin.hackpad.com/Austin-Parks-Equity-H1aHh4ggGaQ)
+
+##Credits
+
+- Katie Yoder - GIS Data Analysis
+- Mateo Clarke - Web Development
+
+## Running Code Locally:
+	
+**1. [npm](https://www.npmjs.com/) is required**
+
+_npm is Node's package manager. You can install Node at [their site](https://nodejs.org/download/) or with a command like `brew install node` if you use Homebrew._
+
+**2. [gulp](http://gulpjs.com/) is required**
+
+Before you can serve the app locally, you need to install some gulp libraries with npm:
+
+	$ npm install gulp gulp-util gulp-compass gulp-connect gulp-gh-pages --save-dev
+	
+To run the local server and see the app in your browser:
+	
+	$ gulp
+	 
+Gulp serves the app at `http://localhost:8080`.
+	
+	
+	
 ## Methodology:
 
 ### 1. Clean & Convert Raw Parks Acreage Data
@@ -23,8 +58,5 @@ This is a civic app that aims to help visualize how Austin's park resources are 
 
 ### 3. Add District Shapefiles from a [past project](http://mateoclarke.github.io/311vs10One/)
 
-### 4. Set Up Web Files
-	
-	$ npm init
-
-	$ npm install gulp gulp-util gulp-compass gulp-connect gulp-gh-pages --save-dev
+## License:
+needs review

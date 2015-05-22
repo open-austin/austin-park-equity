@@ -1,0 +1,16 @@
+table.district-facts {
+	width: 90%;
+	margin: 5%;
+
+	td {
+		padding: 5px;
+	}
+
+	tbody td:nth-child(even) {
+	  text-align: right;
+	}
+
+	tbody tr:nth-child(odd) {
+	  background: #eee;
+	}
+} 
