@@ -9,8 +9,8 @@ var district_1 = districts.features[0].properties,
 	district_9 = districts.features[8].properties,
 	district_10 = districts.features[9].properties;
 
-district_1.TOT_PARK_ACRES 		= 4761.007569;
-district_1.TOT_PARKS_NUM 		= 39;
+district_1.TOT_PARK_ACRES 		= 4896.1482;
+district_1.TOT_PARKS_NUM 		= 53;
 district_1.POCKET_PARKS 		= 1;
 district_1.NEIGHBORHOOD_PARKS 	= 2;
 district_1.DISTRICT_PARKS 		= 3;
@@ -22,8 +22,8 @@ district_1.PERC_RENTERS 		= "59%";
 district_1.COUNCILPERSON		= "Councilperson1";
 district_1.COUNCILPERSON_EMAIL	= "Councilperson1@gmail.com";
 
-district_2.TOT_PARK_ACRES 		= 1796.639366;
-district_2.TOT_PARKS_NUM 		= 24;
+district_2.TOT_PARK_ACRES 		= 1839.55933;
+district_2.TOT_PARKS_NUM 		= 30;
 district_2.POCKET_PARKS 		= 1;
 district_2.NEIGHBORHOOD_PARKS 	= 2;
 district_2.DISTRICT_PARKS 		= 3;
@@ -35,8 +35,8 @@ district_2.PERC_RENTERS 		= "59%";
 district_2.COUNCILPERSON		= "Councilperson2";
 district_2.COUNCILPERSON_EMAIL	= "Councilperson2@gmail.com";
 
-district_3.TOT_PARK_ACRES 		= 888.150597;
-district_3.TOT_PARKS_NUM 		= 34;
+district_3.TOT_PARK_ACRES 		= 964.198511;
+district_3.TOT_PARKS_NUM 		= 37;
 district_3.POCKET_PARKS 		= 1;
 district_3.NEIGHBORHOOD_PARKS 	= 2;
 district_3.DISTRICT_PARKS 		= 3;
@@ -48,8 +48,8 @@ district_3.PERC_RENTERS 		= "59%";
 district_3.COUNCILPERSON		= "Councilperson3";
 district_3.COUNCILPERSON_EMAIL	= "Councilperson3@gmail.com";
 
-district_4.TOT_PARK_ACRES 		= 181.251346;
-district_4.TOT_PARKS_NUM 		= 19;
+district_4.TOT_PARK_ACRES 		= 189.873276;
+district_4.TOT_PARKS_NUM 		= 20;
 district_4.POCKET_PARKS 		= 1;
 district_4.NEIGHBORHOOD_PARKS 	= 2;
 district_4.DISTRICT_PARKS 		= 3;
@@ -61,8 +61,8 @@ district_4.PERC_RENTERS 		= "59%";
 district_4.COUNCILPERSON		= "Councilperson4";
 district_4.COUNCILPERSON_EMAIL	= "Councilperson4@gmail.com";
 
-district_5.TOT_PARK_ACRES 		= 1292.372131;
-district_5.TOT_PARKS_NUM 		= 27;
+district_5.TOT_PARK_ACRES 		= 1298.82941;
+district_5.TOT_PARKS_NUM 		= 29;
 district_5.POCKET_PARKS 		= 1;
 district_5.NEIGHBORHOOD_PARKS 	= 2;
 district_5.DISTRICT_PARKS 		= 3;
@@ -74,7 +74,7 @@ district_5.PERC_RENTERS 		= "59%";
 district_5.COUNCILPERSON		= "Councilperson5";
 district_5.COUNCILPERSON_EMAIL	= "Councilperson5@gmail.com";
 
-district_6.TOT_PARK_ACRES 		= 529.064459;
+district_6.TOT_PARK_ACRES 		= 532.912088;
 district_6.TOT_PARKS_NUM 		= 15;
 district_6.POCKET_PARKS 		= 1;
 district_6.NEIGHBORHOOD_PARKS 	= 2;
@@ -87,8 +87,8 @@ district_6.PERC_RENTERS 		= "59%";
 district_6.COUNCILPERSON		= "Councilperson6";
 district_6.COUNCILPERSON_EMAIL	= "Councilperson6@gmail.com";
 
-district_7.TOT_PARK_ACRES 		= 603.518052;
-district_7.TOT_PARKS_NUM 		= 19;
+district_7.TOT_PARK_ACRES 		= 694.805775;
+district_7.TOT_PARKS_NUM 		= 24;
 district_7.POCKET_PARKS 		= 1;
 district_7.NEIGHBORHOOD_PARKS 	= 2;
 district_7.DISTRICT_PARKS 		= 3;
@@ -100,8 +100,8 @@ district_7.PERC_RENTERS 		= "59%";
 district_7.COUNCILPERSON		= "Councilperson7";
 district_7.COUNCILPERSON_EMAIL	= "Councilperson7@gmail.com";
 
-district_8.TOT_PARK_ACRES 		= 3415.839063;
-district_8.TOT_PARKS_NUM 		= 21;
+district_8.TOT_PARK_ACRES 		= 3748.713112;
+district_8.TOT_PARKS_NUM 		= 29;
 district_8.POCKET_PARKS 		= 1;
 district_8.NEIGHBORHOOD_PARKS 	= 2;
 district_8.DISTRICT_PARKS 		= 3;
@@ -113,8 +113,8 @@ district_8.PERC_RENTERS 		= "59%";
 district_8.COUNCILPERSON		= "Councilperson8";
 district_8.COUNCILPERSON_EMAIL	= "Councilperson8@gmail.com";
 
-district_9.TOT_PARK_ACRES 		= 514.769081;
-district_9.TOT_PARKS_NUM 		= 54;
+district_9.TOT_PARK_ACRES 		= 518.083491;
+district_9.TOT_PARKS_NUM 		= 60;
 district_9.POCKET_PARKS 		= 1;
 district_9.NEIGHBORHOOD_PARKS 	= 2;
 district_9.DISTRICT_PARKS 		= 3;
@@ -126,8 +126,8 @@ district_9.PERC_RENTERS 		= "59%";
 district_9.COUNCILPERSON		= "Councilperson9";
 district_9.COUNCILPERSON_EMAIL	= "Councilperson9@gmail.com";
 
-district_10.TOT_PARK_ACRES 		= 1730.213647;
-district_10.TOT_PARKS_NUM 		= 32;
+district_10.TOT_PARK_ACRES 		= 1707.037872;
+district_10.TOT_PARKS_NUM 		= 31;
 district_10.POCKET_PARKS 		= 1;
 district_10.NEIGHBORHOOD_PARKS 	= 2;
 district_10.DISTRICT_PARKS 		= 3;
