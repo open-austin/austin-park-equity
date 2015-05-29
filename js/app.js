@@ -1,5 +1,5 @@
 (function(){
-	
+
 
 	$('.parks').click( toggleParksLayer );
 
@@ -137,29 +137,27 @@
 	});
 
 	function populateDistrictFacts(districtIndex){
-		var districtFeatures = districts.features[districtIndex].properties;
+		var districtFeatures = districts.features[districtIndex].properties,
+				districtDemographics = distDemoData[districtIndex],
+				totParkAcres = (districtFeatures.TOT_PARK_ACRES).toFixed(2),
+				totParksNum = districtFeatures.TOT_PARKS_NUM,
+				familyIncome = districtDemographics.medianFamilyIncome2013,
+				percRenter = districtDemographics.percentRenterOccupiedHousingUnitsOfTotalOccupied2010,
+				pocketParks = districtFeatures.POCKET_PARKS,
+				neighborhoodParks = districtFeatures.NEIGHBORHOOD_PARKS,
+				districtParks = districtFeatures.DISTRICT_PARKS ,
+				metroParks = districtFeatures.METRO_PARKS,
+				popUnder18;
 
-		var totParkAcres = (districtFeatures.TOT_PARK_ACRES).toFixed(2);
-		var totParksNum = districtFeatures.TOT_PARKS_NUM;
-		var totParksCost = districtFeatures.TOT_PARKS_COST;
-		var popUnder18 = districtFeatures.POP_UNDER_18;
-		var avgIncome = districtFeatures.AVG_INCOME;
-		var percRenter = districtFeatures.PERC_RENTERS;
-		var councilperson = districtFeatures.COUNCILPERSON;
-		var councilpersonEmail = districtFeatures.COUNCILPERSON_EMAIL;
-		var pocketParks = districtFeatures.POCKET_PARKS;
-		var neighborhoodParks = districtFeatures.NEIGHBORHOOD_PARKS;
-		var districtParks = districtFeatures.DISTRICT_PARKS ;
-		var metroParks = districtFeatures.METRO_PARKS;
+		popUnder18 = (parseFloat(districtDemographics.ageUnderTen2010) +
+								  parseFloat(districtDemographics.ageTenToSeventeen2010))
+								 .toFixed(2);
 
 		$('#tot-park-acres').text( totParkAcres );
 		$('#tot-parks-num').text( totParksNum );
-		$('#tot-parks-cost').text( totParksCost );
 		$('#pop-under-18').text( popUnder18 );
-		$('#avg-income').text( avgIncome );
+		$('#family-income').text( familyIncome );
 		$('#perc-renters').text( percRenter );
-		$('#councilperson').text( councilperson );
-		$('#councilperson').parent().attr('href', "mailto:" + councilpersonEmail);
 	}
 
 
