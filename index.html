@@ -15,14 +15,14 @@
 		  <li><a href="https://github.com/open-austin/Austin_Parks_Acreage" target="_blank">About</a></li>
 		</ul>
 	</nav>
-	
+
 	<div class="main-content-wrapper">
 		<div id="map" class="map"></div>
-		
+
 		<div class="aside">
-			<div class="toggles">
-				<!-- <button class="parks">Parks</button> -->
-			</div>
+			<!-- <div class="toggles">
+				<button class="parks">Parks</button>
+			</div> -->
 			<div class="dropdown">
 				<div class="title">Districts</div>
 				<ul class="districts-toggles">
@@ -48,15 +48,17 @@
 					<td><span id="tot-parks-num"></span> parks</td>
 				</tr>
 				<tr>
-					<td>Council Member: </td>
-					<td><a href=""><span id="councilperson"></span></a></td>
+					<td>Population Under 18 years old: </td>
+					<td><span id="pop-under-18"></span>%</td>
 				</tr>
-
-				<!-- These rows can be included later provide more data -->
-				<!-- <p>Total Park Maintenance Cost: <span id="tot-parks-cost"></span></p>
-				<p>District Population Under 18 years old: <span id="pop-under-18"></span></p>
-				<p>District Average Income: <span id="avg-income"></span></p>
-				<p>Percent of Renters: <span id="perc-renters"></span></p> -->
+				<tr>
+					<td>Median Family Income: </td>
+					<td><span id="family-income"></span></td>
+				</tr>
+				<tr>
+					<td>Rented Housing Units of Occupied Housing Units: </td>
+					<td><span id="perc-renters"></span></td>
+				</tr>
 			</table>
 		</div>
 	</div>
@@ -66,6 +68,7 @@
 	<script src="data/district-shapefiles.js"></script>
 	<script src="data/district-extra-data.js"></script>
 	<script src="data/city_of_austin_parks.js"></script>
+	<script src="data/district_demographic_data.json"></script>
 	<script src="js/leaflet-providers.js"></script>
 	<script src="js/geojson-utils.js"></script>
 	<script src="js/app.js"></script>
