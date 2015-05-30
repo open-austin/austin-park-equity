@@ -1,6 +1,5 @@
 (function(){
 
-
 	$('.parks').click( toggleParksLayer );
 
 	// $('.districts-toggles li').on( 'click', function(){
@@ -137,16 +136,22 @@
 	});
 
 	function populateDistrictFacts(districtIndex){
-		var districtFeatures = districts.features[districtIndex].properties,
-				districtDemographics = distDemoData[districtIndex],
-				totParkAcres = (districtFeatures.TOT_PARK_ACRES).toFixed(2),
-				totParksNum = districtFeatures.TOT_PARKS_NUM,
-				familyIncome = districtDemographics.medianFamilyIncome2013,
-				percRenter = districtDemographics.percentRenterOccupiedHousingUnitsOfTotalOccupied2010,
-				pocketParks = districtFeatures.POCKET_PARKS,
-				neighborhoodParks = districtFeatures.NEIGHBORHOOD_PARKS,
-				districtParks = districtFeatures.DISTRICT_PARKS ,
-				metroParks = districtFeatures.METRO_PARKS,
+		var districtFeatures 			= districts.features[districtIndex].properties,
+				districtDemographics 	= distDemoData[districtIndex],
+
+				// Parks Data
+				totParkAcres 	= (districtFeatures.TOT_PARK_ACRES).toFixed(2),
+				totParksNum 	= districtFeatures.TOT_PARKS_NUM,
+				// pocketParks 					= districtFeatures.POCKET_PARKS,
+				// neighborhoodParks 		= districtFeatures.NEIGHBORHOOD_PARKS,
+				// districtParks 				= districtFeatures.DISTRICT_PARKS,
+				// metroParks 						= districtFeatures.METRO_PARKS,
+
+				// Demographic Data
+				familyIncome 	= districtDemographics.medianFamilyIncome2013,
+				percRenter 		= districtDemographics.percentRenterOccupiedHousingUnitsOfTotalOccupied2010,
+				percPoverty		= districtDemographics.povertyRate2013,
+				percInsurance		= districtDemographics.percentWithoutHealthInsurance2013,
 				popUnder18;
 
 		popUnder18 = (parseFloat(districtDemographics.ageUnderTen2010) +
@@ -158,6 +163,8 @@
 		$('#pop-under-18').text( popUnder18 );
 		$('#family-income').text( familyIncome );
 		$('#perc-renters').text( percRenter );
+		$('#perc-poverty').text( percPoverty );
+		$('#perc-insurance').text( percInsurance );
 	}
 
 
