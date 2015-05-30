@@ -323,3 +323,11 @@ table.facts-table th {
 table.facts-table tr:nth-child(odd) {
   background: #eee;
 }
+table.facts-table tr:hover {
+  background: #64c062;
+  /* The Fallback */
+  background: rgba(100, 192, 98, 0.2);
+}
+table.facts-table tr:hover td {
+  font-weight: bold;
+}

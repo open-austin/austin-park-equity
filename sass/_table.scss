@@ -6,8 +6,8 @@ table.facts-table {
 	td {
 		padding: 5px;
 		&:nth-child(even) {
-			  text-align: right;
-			}
+		  text-align: right;
+		}
 	}
 
 	th {
@@ -19,8 +19,16 @@ table.facts-table {
 		color: $white;
 	}
 
-	tr:nth-child(odd) {
-	  background: #eee;
+	tr {
+		&:nth-child(odd) {
+		  background: #eee;
+		}
+ 		&:hover {
+			@include background-opacity($bright-green, 0.2);
+			td {
+				font-weight: bold;
+			}
+		}
 	}
 }
 

@@ -1,15 +1,15 @@
 .navigation {
   list-style: none;
-  margin: 0; 
+  margin: 0;
   height: 5%;
-  background: $dark-green;
-  
+  background: $bright-green;
+
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
-  
+
   -webkit-flex-flow: row wrap;
   justify-content: flex-end;
   background-image: linear-gradient(to bottom, rgba(230, 230, 230, 0.1), rgba(68, 160, 72, 1));
@@ -23,7 +23,7 @@
 }
 
 .navigation a:hover {
-  background: darken($dark-green, 20%);
+  background: darken($bright-green, 20%);
 }
 
 @media all and (max-width: 800px) {
@@ -38,15 +38,15 @@
     flex-flow: column wrap;
     padding: 0;
   }
-  
-  .navigation a { 
-    text-align: center; 
+
+  .navigation a {
+    text-align: center;
     padding: 10px;
-    border-top: 1px solid rgba(255,255,255,0.3); 
-    border-bottom: 1px solid rgba(0,0,0,0.1); 
+    border-top: 1px solid rgba(255,255,255,0.3);
+    border-bottom: 1px solid rgba(0,0,0,0.1);
   }
 
-  
+
   .navigation li:last-of-type a {
     border-bottom: none;
   }
