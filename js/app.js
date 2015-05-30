@@ -117,13 +117,13 @@
 	// DROPDOWN
 	$(".dropdown .title").click(function () {
 	  $(this).parent().toggleClass("closed");
-	  $('.district-facts').toggleClass("no-show");
+	  $('.facts-table').toggleClass("no-show");
 	});
 
 	$(".dropdown li").click(function () {
 	  $this = $(this);
 	  $this.parent().parent().toggleClass("closed").find(".title").text($this.text());
-	  $('.district-facts').toggleClass("no-show");
+	  $('.facts-table').toggleClass("no-show");
 
 	  // capture district num/index
 	  var districtNum = parseInt($this.data('district'));

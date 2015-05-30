@@ -301,16 +301,25 @@ div.dropdown ul li:before {
     border-bottom: none;
   }
 }
-table.district-facts {
+table.facts-table {
   width: 90%;
   margin: 5%;
+  border: 1px solid #eee;
 }
-table.district-facts td {
+table.facts-table td {
   padding: 5px;
 }
-table.district-facts tbody td:nth-child(even) {
+table.facts-table td:nth-child(even) {
   text-align: right;
 }
-table.district-facts tbody tr:nth-child(odd) {
+table.facts-table th {
+  text-align: center;
+  font-weight: bold;
+  padding: 5px;
+  border: 1px solid #eee;
+  background: #9f5ea7;
+  color: white;
+}
+table.facts-table tr:nth-child(odd) {
   background: #eee;
 }

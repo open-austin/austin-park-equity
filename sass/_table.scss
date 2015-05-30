@@ -1,16 +1,26 @@
-table.district-facts {
+table.facts-table {
 	width: 90%;
 	margin: 5%;
+	border: 1px solid #eee;
 
 	td {
 		padding: 5px;
+		&:nth-child(even) {
+			  text-align: right;
+			}
 	}
 
-	tbody td:nth-child(even) {
-	  text-align: right;
+	th {
+		text-align: center;
+		font-weight: bold;
+		padding: 5px;
+		border: 1px solid #eee;
+		background: $purple;
+		color: $white;
 	}
 
-	tbody tr:nth-child(odd) {
+	tr:nth-child(odd) {
 	  background: #eee;
 	}
-} 
+}
+
