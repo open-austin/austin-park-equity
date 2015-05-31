@@ -4,22 +4,25 @@
 @import "http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800)";
 
 // NEUTRAL COLORS
-$black		   	: #111; 	
+$black		   	: #111;
 $white			: #fff;
 $grey			: #CDD2D4;
 $dark-grey		: #808080;
 $off-grey		: #ECDFED;
 
 // MORE COLORS
-$dark-green		: rgba(100, 192, 98, 1);
-$light-green	: #83A33E;
+$bright-green		: rgba(100, 192, 98, 1);
+$light-green	  : #83A33E;
 $footer-green-1	: #879C5B;
 $footer-green-2	: #657E30;
-$grey-green		: #B8C59C;
+$grey-green		  : #B8C59C;
 
 $lilac-purlpe	: #C9A6CE;
-$purple			: #9F5EA7;
+$purple			  : #9F5EA7;
 $dark-purple	: #6D4073;
+
+$red    : #C00C0F;
+$yellow : #DD9E28;
 
 // COLOR THEMES
 $main-color		: $black;

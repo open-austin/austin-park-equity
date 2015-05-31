@@ -7,7 +7,8 @@ var district_1 = districts.features[0].properties,
 	district_7 = districts.features[6].properties,
 	district_8 = districts.features[7].properties,
 	district_9 = districts.features[8].properties,
-	district_10 = districts.features[9].properties;
+	district_10 = districts.features[9].properties,
+  parkAcreRankingArray;
 
 district_1.TOT_PARK_ACRES 		= 4896.1482;
 district_1.TOT_PARKS_NUM 		= 53;
@@ -138,4 +139,17 @@ district_10.AVG_INCOME 			= "$53,263";
 district_10.PERC_RENTERS 		= "59%";
 district_10.COUNCILPERSON		= "Councilperson10";
 district_10.COUNCILPERSON_EMAIL	= "Councilperson10@gmail.com";
+
+parkAcreRankingArray = [
+  district_1.TOT_PARK_ACRES,
+  district_2.TOT_PARK_ACRES,
+  district_3.TOT_PARK_ACRES,
+  district_4.TOT_PARK_ACRES,
+  district_5.TOT_PARK_ACRES,
+  district_6.TOT_PARK_ACRES,
+  district_7.TOT_PARK_ACRES,
+  district_8.TOT_PARK_ACRES,
+  district_9.TOT_PARK_ACRES,
+  district_10.TOT_PARK_ACRES
+]
 

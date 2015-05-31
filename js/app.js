@@ -1,6 +1,5 @@
 (function(){
 
-
 	$('.parks').click( toggleParksLayer );
 
 	// $('.districts-toggles li').on( 'click', function(){
@@ -114,20 +113,27 @@
 			'#bc80bd';
 	}
 
+	var distDemoData;
+
+	d3.json("/data/district-demographics.json", function(data) {
+		distDemoData = data;
+		console.log(data[0]);
+	});
+
 	// DROPDOWN
 	$(".dropdown .title").click(function () {
 	  $(this).parent().toggleClass("closed");
-	  $('.district-facts').toggleClass("no-show");
+	  $('.facts-table').toggleClass("no-show");
 	});
 
 	$(".dropdown li").click(function () {
-	  $this = $(this);
-	  $this.parent().parent().toggleClass("closed").find(".title").text($this.text());
-	  $('.district-facts').toggleClass("no-show");
+	  // capture district num/index selected
+	  var $this = $(this),
+	  		districtNum 	= parseInt( $this.data('district') ),
+	  		districtIndex = districtNum - 1;
 
-	  // capture district num/index
-	  var districtNum = parseInt($this.data('district'));
-	  var districtIndex = districtNum - 1;
+	  $this.parent().parent().toggleClass("closed").find(".title").text($this.text());
+	  $('.facts-table').toggleClass("no-show");
 
 	  // add district polygon to map
 	  if (districtLayer){ map.removeLayer(districtLayer); };
@@ -137,28 +143,73 @@
 	});
 
 	function populateDistrictFacts(districtIndex){
-		var districtFeatures = districts.features[districtIndex].properties,
-				districtDemographics = distDemoData[districtIndex],
-				totParkAcres = (districtFeatures.TOT_PARK_ACRES).toFixed(2),
-				totParksNum = districtFeatures.TOT_PARKS_NUM,
-				familyIncome = districtDemographics.medianFamilyIncome2013,
-				percRenter = districtDemographics.percentRenterOccupiedHousingUnitsOfTotalOccupied2010,
-				pocketParks = districtFeatures.POCKET_PARKS,
-				neighborhoodParks = districtFeatures.NEIGHBORHOOD_PARKS,
-				districtParks = districtFeatures.DISTRICT_PARKS ,
-				metroParks = districtFeatures.METRO_PARKS,
-				popUnder18;
+		var districtFeatures 			= districts.features[districtIndex].properties,
+				districtDemographics 	= distDemoData[districtIndex];
 
-		popUnder18 = (parseFloat(districtDemographics.ageUnderTen2010) +
-								  parseFloat(districtDemographics.ageTenToSeventeen2010))
-								 .toFixed(2);
+			// Parks Data
+			totParkAcres 	= (districtFeatures.TOT_PARK_ACRES).toFixed(2),
+			totParksNum 	= districtFeatures.TOT_PARKS_NUM,
+			// pocketParks 					= districtFeatures.POCKET_PARKS,
+			// neighborhoodParks 		= districtFeatures.NEIGHBORHOOD_PARKS,
+			// districtParks 				= districtFeatures.DISTRICT_PARKS,
+			// metroParks 						= districtFeatures.METRO_PARKS,
+
+			// Demographic Data
+			familyIncome 	= districtDemographics.medianFamilyIncome2013,
+			rankIncome 		= districtDemographics.rankMedianFamilyIncome2013,
+			percRenter 		= districtDemographics.percentRenterOccupiedHousingUnitsOfTotalOccupied2010,
+			rankRenter 		= districtDemographics.rankRenterOccupiedHousing2010,
+			percPoverty		= districtDemographics.povertyRate2013,
+			rankPoverty		= districtDemographics.rankAgeUnderEighteen2010,
+			percInsurance	= districtDemographics.percentWithoutHealthInsurance2013,
+			rankInsurance	= districtDemographics.rankWithoutHealthInsurance2013,
+			popUnder18 		= districtDemographics.ageUnderEighteen2010,
+			rankUnder18 	= districtDemographics.rankAgeUnderEighteen2010;
 
 		$('#tot-park-acres').text( totParkAcres );
 		$('#tot-parks-num').text( totParksNum );
 		$('#pop-under-18').text( popUnder18 );
+		$('#pop-under-18-rank').text( rankUnder18 );
 		$('#family-income').text( familyIncome );
+		$('#family-income-rank').text( rankIncome );
 		$('#perc-renters').text( percRenter );
-	}
+		$('#perc-renters-rank').text( rankRenter );
+		$('#perc-poverty').text( percPoverty );
+		$('#perc-poverty-rank').text( rankPoverty );
+		$('#perc-insurance').text( percInsurance );
+		$('#perc-insurance-rank').text( rankInsurance );
+
+		applyInverseRankingColors( $("#perc-insurance-rank") );
+		applyInverseRankingColors( $("#perc-poverty-rank") );
+		applyRankingColors( $("#family-income-rank") );
+
+	};
+
+	function applyRankingColors($rankValue){
+		var rankInt = parseInt($rankValue.text());
+		$rankValue.parent().parent().removeClass();
+
+		if ( rankInt <= 3 ) {
+			$rankValue.parent().parent().addClass("positive-ranking");
+		} else if ( rankInt > 3 && rankInt <= 7  ) {
+			$rankValue.parent().parent().addClass("neutral-ranking");
+		} else {
+			$rankValue.parent().parent().addClass("negative-ranking");
+		}
+	};
+
+	function applyInverseRankingColors($rankValue){
+		var rankInt = parseInt($rankValue.text());
+		$rankValue.parent().parent().removeClass();
+
+		if ( rankInt <= 3 ) {
+			$rankValue.parent().parent().addClass("negative-ranking");
+		} else if ( rankInt > 3 && rankInt <= 7  ) {
+			$rankValue.parent().parent().addClass("neutral-ranking");
+		} else {
+			$rankValue.parent().parent().addClass("positive-ranking");
+		}
+	};
 
 
 })();
