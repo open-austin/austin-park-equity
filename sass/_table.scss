@@ -5,53 +5,13 @@ table.facts-table {
 
 	td {
 		padding: 5px;
-		&:nth-child(n+2) {
-		  text-align: right;
-		}
-		&:nth-child(n+3) {
-		  text-align: center;
-		}
-		&.rgdiv0-10 {
-			background-color: $rgdiv0-10;
-			border: 1px solid #eee;
-		}
-		&.rgdiv1-10 {
-			background-color: $rgdiv1-10;
-			border: 1px solid #eee;
-		}
-		&.rgdiv2-10 {
-			background-color: $rgdiv2-10;
-			border: 1px solid #eee;
-		}
-		&.rgdiv3-10 {
-			background-color: $rgdiv3-10;
-			border: 1px solid #eee;
-		}
-		&.rgdiv4-10 {
-			background-color: $rgdiv4-10;
-			border: 1px solid #eee;
-		}
-		&.rgdiv5-10 {
-			background-color: $rgdiv5-10;
-			border: 1px solid #eee;
-		}
-		&.rgdiv6-10 {
-			background-color: $rgdiv6-10;
-			border: 1px solid #eee;
-		}
-		&.rgdiv7-10 {
-			background-color: $rgdiv7-10;
-			border: 1px solid #eee;
-		}
-		&.rgdiv8-10 {
-			background-color: $rgdiv8-10;
-			border: 1px solid #eee;
-		}
-		&.rgdiv9-10 {
-			background-color: $rgdiv9-10;
-			border: 1px solid #eee;
-		}
-
+		text-align: left;
+		// &:nth-child(n+2) {
+		//   text-align: right;
+		// }
+		// &:nth-child(n+3) {
+		//   text-align: center;
+		// }
 	}
 
 	th {
@@ -80,5 +40,36 @@ table.facts-table {
 			}
 		}
 	}
+}
+
+.rank-legend {
+	margin: 5%;
+	width: 80%;
+	div {
+		float: left;
+		display: block;
+		width: 19%;
+		text-align: center;
+	}
+}
+.rgdiv0-5 {
+	background-color: $rgdiv0-5;
+	border: 1px solid #eee;
+}
+.rgdiv1-5 {
+	background-color: $rgdiv1-5;
+	border: 1px solid #eee;
+}
+.rgdiv2-5 {
+	background-color: $rgdiv2-5;
+	border: 1px solid #eee;
+}
+.rgdiv3-5 {
+	background-color: $rgdiv3-5;
+	border: 1px solid #eee;
+}
+.rgdiv4-5 {
+	background-color: $rgdiv4-5;
+	border: 1px solid #eee;
 }
 
