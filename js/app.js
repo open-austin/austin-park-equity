@@ -113,12 +113,33 @@
 			'#bc80bd';
 	}
 
-	var distDemoData;
+	// Loading Data with D3
+	var distDemoData,
+			parkAcreageData;
 
-	d3.json("data/district-demographics.json", function(data) {
-		distDemoData = data;
-		console.log(data[0]);
-	});
+	queue()
+	  .defer(d3.json, "data/district-demographics.json")
+	  .defer(d3.json, "data/park-acreage-data.json")
+	  .await(analyze);
+
+	function analyze(error, demographics, parks) {
+	  if(error) { console.log(error); }
+
+	  distDemoData = demographics;
+	  parkAcreageData = parks;
+
+	  console.log(parkAcreageData[0])
+	}
+
+	// d3.json("data/district-demographics.json", function(data) {
+	// 	distDemoData = data;
+	// 	console.log(distDemoData[0]);
+	// });
+
+	// d3.json("data/district-park-acreage.json", function(data) {
+	// 	parkAcreageData = data;
+	// 	console.log(parkAcreageData[0]);
+	// });
 
 	// DROPDOWN
 	$(".dropdown .title").click(function () {
@@ -144,30 +165,39 @@
 
 	function populateDistrictFacts(districtIndex){
 		var districtFeatures 			= districts.features[districtIndex].properties,
-				districtDemographics 	= distDemoData[districtIndex];
+				districtDemographics 	= distDemoData[districtIndex],
+				districtParks 				= parkAcreageData[districtIndex];
 
-			// Parks Data
-			totParkAcres 	= (districtFeatures.TOT_PARK_ACRES).toFixed(2),
-			totParksNum 	= districtFeatures.TOT_PARKS_NUM,
-			// pocketParks 					= districtFeatures.POCKET_PARKS,
-			// neighborhoodParks 		= districtFeatures.NEIGHBORHOOD_PARKS,
-			// districtParks 				= districtFeatures.DISTRICT_PARKS,
-			// metroParks 						= districtFeatures.METRO_PARKS,
+		// Parks Data
+		totParkAcres 			= (districtParks["Total Park Acres"]).toFixed(2),
+		parkAcresRank 		= districtParks["Park Acres Rank"],
+		totParksNum 			= districtParks["Park Count"],
+		parksNumRank 			= districtParks["Park Count Rank"],
+		percParkCoverage 	= districtParks["Percent Park Coverage"],
+		parkCoverageRank 	= districtParks["Coverage Rank"],
+		// pocketParks 					= districtFeatures.POCKET_PARKS,
+		// neighborhoodParks 		= districtFeatures.NEIGHBORHOOD_PARKS,
+		// districtParks 				= districtFeatures.DISTRICT_PARKS,
+		// metroParks 						= districtFeatures.METRO_PARKS,
 
-			// Demographic Data
-			familyIncome 	= districtDemographics.medianFamilyIncome2013,
-			rankIncome 		= districtDemographics.rankMedianFamilyIncome2013,
-			percRenter 		= districtDemographics.percentRenterOccupiedHousingUnitsOfTotalOccupied2010,
-			rankRenter 		= districtDemographics.rankRenterOccupiedHousing2010,
-			percPoverty		= districtDemographics.povertyRate2013,
-			rankPoverty		= districtDemographics.rankPoveryRate2013,
-			percInsurance	= districtDemographics.percentWithoutHealthInsurance2013,
-			rankInsurance	= districtDemographics.rankWithoutHealthInsurance2013,
-			popUnder18 		= districtDemographics.ageUnderEighteen2010,
-			rankUnder18 	= districtDemographics.rankAgeUnderEighteen2010;
+		// Demographic Data
+		familyIncome 	= districtDemographics.medianFamilyIncome2013,
+		rankIncome 		= districtDemographics.rankMedianFamilyIncome2013,
+		percRenter 		= districtDemographics.percentRenterOccupiedHousingUnitsOfTotalOccupied2010,
+		rankRenter 		= districtDemographics.rankRenterOccupiedHousing2010,
+		percPoverty		= districtDemographics.povertyRate2013,
+		rankPoverty		= districtDemographics.rankPoveryRate2013,
+		percInsurance	= districtDemographics.percentWithoutHealthInsurance2013,
+		rankInsurance	= districtDemographics.rankWithoutHealthInsurance2013,
+		popUnder18 		= districtDemographics.ageUnderEighteen2010,
+		rankUnder18 	= districtDemographics.rankAgeUnderEighteen2010;
 
 		$('#tot-park-acres').text( totParkAcres );
+		$('#park-acres-rank').text( parkAcresRank );
 		$('#tot-parks-num').text( totParksNum );
+		$('#parks-num-rank').text( parksNumRank );
+		$('#perc-park-coverage').text( percParkCoverage );
+		$('#park-coverage-rank').text( parkCoverageRank );
 		$('#pop-under-18').text( popUnder18 );
 		$('#pop-under-18-rank').text( rankUnder18 );
 		$('#family-income').text( familyIncome );
@@ -179,63 +209,29 @@
 		$('#perc-insurance').text( percInsurance );
 		$('#perc-insurance-rank').text( rankInsurance );
 
-		applyInverseRankingColors( $("#perc-insurance-rank") );
-		applyInverseRankingColors( $("#perc-poverty-rank") );
+		applyRankingColors( $("#perc-insurance-rank") );
+		applyRankingColors( $("#perc-poverty-rank") );
 		applyRankingColors( $("#family-income-rank") );
+		applyRankingColors( $("#park-acres-rank") );
+		applyRankingColors( $("#parks-num-rank") );
+		applyRankingColors( $("#park-coverage-rank") );
 
-	};
-
-	function applyInverseRankingColors($rankValue){
-		var rankInt = parseInt($rankValue.text());
-		$rankValue.parent().removeClass();
-
-		if ( rankInt == 1 ) {
-			$rankValue.parent().addClass("rgdiv0-10");
-		} else if ( rankInt == 2  ) {
-			$rankValue.parent().addClass("rgdiv1-10");
-		} else if ( rankInt == 3  ) {
-			$rankValue.parent().addClass("rgdiv2-10");
-		} else if ( rankInt == 4  ) {
-			$rankValue.parent().addClass("rgdiv3-10");
-		} else if ( rankInt == 5  ) {
-			$rankValue.parent().addClass("rgdiv4-10");
-		} else if ( rankInt == 6  ) {
-			$rankValue.parent().addClass("rgdiv5-10");
-		} else if ( rankInt == 7  ) {
-			$rankValue.parent().addClass("rgdiv6-10");
-		} else if ( rankInt == 8  ) {
-			$rankValue.parent().addClass("rgdiv7-10");
-		} else if ( rankInt == 9  ) {
-			$rankValue.parent().addClass("rgdiv8-10");
-		} else {
-			$rankValue.parent().addClass("rgdiv9-10");
-		}
 	};
 
 	function applyRankingColors($rankValue){
 		var rankInt = parseInt($rankValue.text());
 		$rankValue.parent().removeClass();
 
-		if ( rankInt == 1 ) {
-			$rankValue.parent().addClass("rgdiv9-10");
-		} else if ( rankInt == 2  ) {
-			$rankValue.parent().addClass("rgdiv8-10");
-		} else if ( rankInt == 3  ) {
-			$rankValue.parent().addClass("rgdiv7-10");
-		} else if ( rankInt == 4  ) {
-			$rankValue.parent().addClass("rgdiv6-10");
-		} else if ( rankInt == 5  ) {
-			$rankValue.parent().addClass("rgdiv5-10");
-		} else if ( rankInt == 6  ) {
-			$rankValue.parent().addClass("rgdiv4-10");
-		} else if ( rankInt == 7  ) {
-			$rankValue.parent().addClass("rgdiv3-10");
-		} else if ( rankInt == 8  ) {
-			$rankValue.parent().addClass("rgdiv2-10");
-		} else if ( rankInt == 9  ) {
-			$rankValue.parent().addClass("rgdiv1-10");
-		} else {
-			$rankValue.parent().addClass("rgdiv0-10");
+		if ( rankInt == 1 || rankInt == 2 ) {
+			$rankValue.parent().addClass("rgdiv4-5");
+		} else if ( rankInt == 3 || rankInt == 4 ) {
+			$rankValue.parent().addClass("rgdiv3-5");
+		} else if ( rankInt == 5 || rankInt == 6 ) {
+			$rankValue.parent().addClass("rgdiv2-5");
+		} else if ( rankInt == 7 || rankInt == 8 ) {
+			$rankValue.parent().addClass("rgdiv1-5");
+		} else if ( rankInt == 9 || rankInt == 10 ) {
+			$rankValue.parent().addClass("rgdiv0-5");
 		}
 	};
 

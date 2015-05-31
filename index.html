@@ -52,14 +52,19 @@
 				</thead>
 				<tbody>
 					<tr>
-						<td>Total Park Acres:</td>
+						<td>Total Park Acres</td>
 						<td><span id="tot-park-acres"></span> acres</td>
-						<td><span id="rank-park-acres"></span></td>
+						<td><span id="park-acres-rank"></span></td>
 					</tr>
 					<tr>
-						<td>Total Parks: </td>
+						<td>Percent Park Coverage</td>
+						<td><span id="perc-park-coverage"></span>%</td>
+						<td><span id="park-coverage-rank"></span></td>
+					</tr>
+					<tr>
+						<td>Total Parks</td>
 						<td><span id="tot-parks-num"></span> parks</td>
-						<td><span id="rank-parks-num"></span></td>
+						<td><span id="parks-num-rank"></span></td>
 					</tr>
 				</tbody>
 			</table>
@@ -77,32 +82,41 @@
 				</thead>
 				<tbody>
 					<tr>
-						<td>Population Under 18 years old: </td>
+						<td>Population Under 18 years old</td>
 						<td><span id="pop-under-18"></span></td>
-						<td>(<span id="pop-under-18-rank"></span>)</td>
+						<td><span id="pop-under-18-rank"></span></td>
 					</tr>
 					<tr>
-						<td>Percent Rented Housing Units: </td>
+						<td>Percent Rented Housing Units</td>
 						<td><span id="perc-renters"></span></td>
-						<td>(<span id="perc-renters-rank"></span>)</td>
+						<td><span id="perc-renters-rank"></span></td>
 					</tr>
 					<tr>
-						<td>Poverty Rate: </td>
+						<td>Poverty Rate</td>
 						<td><span id="perc-poverty"></span></td>
-						<td>(<span id="perc-poverty-rank"></span>)</td>
+						<td><span id="perc-poverty-rank"></span></td>
 					</tr>
 					<tr>
-						<td>Percent without Health Insurance: </td>
+						<td>Percent without Health Insurance</td>
 						<td><span id="perc-insurance"></span></td>
-						<td>(<span id="perc-insurance-rank"></span>)</td>
+						<td><span id="perc-insurance-rank"></span></td>
 					</tr>
 					<tr>
-						<td>Median Family Income: </td>
+						<td>Median Family Income</td>
 						<td>$<span id="family-income"></span></td>
-						<td>(<span id="family-income-rank"></span>)</td>
+						<td><span id="family-income-rank"></span></td>
 					</tr>
 				</tbody>
 			</table>
+
+			<div class="rank-legend">
+				<p>Ranking Legend</p>
+				<div class="rgdiv4-5">1-2</div>
+				<div class="rgdiv3-5">3-4</div>
+				<div class="rgdiv2-5">5-6</div>
+				<div class="rgdiv1-5">7-8</div>
+				<div class="rgdiv0-5">9-10</div>
+			</div>
 
 		</div>
 	</div>
@@ -121,6 +135,7 @@
 	<script src="data/district-extra-data.js"></script>
 	<script src="data/city_of_austin_parks.js"></script>
 	<script src="data/district-demographics.json"></script>
+	<script src="data/park-acreage-data.json"></script>
 
 	<!-- App files -->
 	<!-- <script src="js/data-munge.js"></script> -->

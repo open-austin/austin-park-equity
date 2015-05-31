@@ -308,52 +308,7 @@ table.facts-table {
 }
 table.facts-table td {
   padding: 5px;
-}
-table.facts-table td:nth-child(n+2) {
-  text-align: right;
-}
-table.facts-table td:nth-child(n+3) {
-  text-align: center;
-}
-table.facts-table td.rgdiv0-10 {
-  background-color: rgba(165, 0, 38, 0.7);
-  border: 1px solid #eee;
-}
-table.facts-table td.rgdiv1-10 {
-  background-color: rgba(215, 48, 39, 0.7);
-  border: 1px solid #eee;
-}
-table.facts-table td.rgdiv2-10 {
-  background-color: rgba(244, 109, 67, 0.7);
-  border: 1px solid #eee;
-}
-table.facts-table td.rgdiv3-10 {
-  background-color: rgba(253, 174, 97, 0.7);
-  border: 1px solid #eee;
-}
-table.facts-table td.rgdiv4-10 {
-  background-color: rgba(254, 224, 139, 0.7);
-  border: 1px solid #eee;
-}
-table.facts-table td.rgdiv5-10 {
-  background-color: rgba(217, 239, 139, 0.7);
-  border: 1px solid #eee;
-}
-table.facts-table td.rgdiv6-10 {
-  background-color: rgba(166, 217, 106, 0.7);
-  border: 1px solid #eee;
-}
-table.facts-table td.rgdiv7-10 {
-  background-color: rgba(102, 189, 99, 0.7);
-  border: 1px solid #eee;
-}
-table.facts-table td.rgdiv8-10 {
-  background-color: rgba(26, 152, 80, 0.7);
-  border: 1px solid #eee;
-}
-table.facts-table td.rgdiv9-10 {
-  background-color: rgba(0, 104, 55, 0.7);
-  border: 1px solid #eee;
+  text-align: left;
 }
 table.facts-table th {
   text-align: center;
@@ -381,4 +336,40 @@ table.facts-table tr:hover {
 }
 table.facts-table tr:hover td {
   font-weight: bold;
+}
+
+.rank-legend {
+  margin: 5%;
+  width: 80%;
+}
+.rank-legend div {
+  float: left;
+  display: block;
+  width: 19%;
+  text-align: center;
+}
+
+.rgdiv0-5 {
+  background-color: rgba(215, 25, 28, 0.7);
+  border: 1px solid #eee;
+}
+
+.rgdiv1-5 {
+  background-color: rgba(253, 174, 97, 0.7);
+  border: 1px solid #eee;
+}
+
+.rgdiv2-5 {
+  background-color: rgba(255, 255, 191, 0.7);
+  border: 1px solid #eee;
+}
+
+.rgdiv3-5 {
+  background-color: rgba(166, 217, 106, 0.7);
+  border: 1px solid #eee;
+}
+
+.rgdiv4-5 {
+  background-color: rgba(26, 150, 65, 0.7);
+  border: 1px solid #eee;
 }
