@@ -10,8 +10,48 @@ table.facts-table {
 		}
 		&:nth-child(n+3) {
 		  text-align: center;
-		  font-style: italic;
 		}
+		&.rgdiv0-10 {
+			background-color: $rgdiv0-10;
+			border: 1px solid #eee;
+		}
+		&.rgdiv1-10 {
+			background-color: $rgdiv1-10;
+			border: 1px solid #eee;
+		}
+		&.rgdiv2-10 {
+			background-color: $rgdiv2-10;
+			border: 1px solid #eee;
+		}
+		&.rgdiv3-10 {
+			background-color: $rgdiv3-10;
+			border: 1px solid #eee;
+		}
+		&.rgdiv4-10 {
+			background-color: $rgdiv4-10;
+			border: 1px solid #eee;
+		}
+		&.rgdiv5-10 {
+			background-color: $rgdiv5-10;
+			border: 1px solid #eee;
+		}
+		&.rgdiv6-10 {
+			background-color: $rgdiv6-10;
+			border: 1px solid #eee;
+		}
+		&.rgdiv7-10 {
+			background-color: $rgdiv7-10;
+			border: 1px solid #eee;
+		}
+		&.rgdiv8-10 {
+			background-color: $rgdiv8-10;
+			border: 1px solid #eee;
+		}
+		&.rgdiv9-10 {
+			background-color: $rgdiv9-10;
+			border: 1px solid #eee;
+		}
+
 	}
 
 	th {
@@ -38,15 +78,6 @@ table.facts-table {
 			td {
 				font-weight: bold;
 			}
-		}
-		&.positive-ranking {
-			color: green;
-		}
-		&.neutral-ranking {
-			color: yellow;
-		}
-		&.negative-ranking {
-			color: red;
 		}
 	}
 }

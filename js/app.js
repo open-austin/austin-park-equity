@@ -160,7 +160,7 @@
 			percRenter 		= districtDemographics.percentRenterOccupiedHousingUnitsOfTotalOccupied2010,
 			rankRenter 		= districtDemographics.rankRenterOccupiedHousing2010,
 			percPoverty		= districtDemographics.povertyRate2013,
-			rankPoverty		= districtDemographics.rankAgeUnderEighteen2010,
+			rankPoverty		= districtDemographics.rankPoveryRate2013,
 			percInsurance	= districtDemographics.percentWithoutHealthInsurance2013,
 			rankInsurance	= districtDemographics.rankWithoutHealthInsurance2013,
 			popUnder18 		= districtDemographics.ageUnderEighteen2010,
@@ -185,29 +185,57 @@
 
 	};
 
-	function applyRankingColors($rankValue){
+	function applyInverseRankingColors($rankValue){
 		var rankInt = parseInt($rankValue.text());
-		$rankValue.parent().parent().removeClass();
+		$rankValue.parent().removeClass();
 
-		if ( rankInt <= 3 ) {
-			$rankValue.parent().parent().addClass("positive-ranking");
-		} else if ( rankInt > 3 && rankInt <= 7  ) {
-			$rankValue.parent().parent().addClass("neutral-ranking");
+		if ( rankInt == 1 ) {
+			$rankValue.parent().addClass("rgdiv0-10");
+		} else if ( rankInt == 2  ) {
+			$rankValue.parent().addClass("rgdiv1-10");
+		} else if ( rankInt == 3  ) {
+			$rankValue.parent().addClass("rgdiv2-10");
+		} else if ( rankInt == 4  ) {
+			$rankValue.parent().addClass("rgdiv3-10");
+		} else if ( rankInt == 5  ) {
+			$rankValue.parent().addClass("rgdiv4-10");
+		} else if ( rankInt == 6  ) {
+			$rankValue.parent().addClass("rgdiv5-10");
+		} else if ( rankInt == 7  ) {
+			$rankValue.parent().addClass("rgdiv6-10");
+		} else if ( rankInt == 8  ) {
+			$rankValue.parent().addClass("rgdiv7-10");
+		} else if ( rankInt == 9  ) {
+			$rankValue.parent().addClass("rgdiv8-10");
 		} else {
-			$rankValue.parent().parent().addClass("negative-ranking");
+			$rankValue.parent().addClass("rgdiv9-10");
 		}
 	};
 
-	function applyInverseRankingColors($rankValue){
+	function applyRankingColors($rankValue){
 		var rankInt = parseInt($rankValue.text());
-		$rankValue.parent().parent().removeClass();
+		$rankValue.parent().removeClass();
 
-		if ( rankInt <= 3 ) {
-			$rankValue.parent().parent().addClass("negative-ranking");
-		} else if ( rankInt > 3 && rankInt <= 7  ) {
-			$rankValue.parent().parent().addClass("neutral-ranking");
+		if ( rankInt == 1 ) {
+			$rankValue.parent().addClass("rgdiv9-10");
+		} else if ( rankInt == 2  ) {
+			$rankValue.parent().addClass("rgdiv8-10");
+		} else if ( rankInt == 3  ) {
+			$rankValue.parent().addClass("rgdiv7-10");
+		} else if ( rankInt == 4  ) {
+			$rankValue.parent().addClass("rgdiv6-10");
+		} else if ( rankInt == 5  ) {
+			$rankValue.parent().addClass("rgdiv5-10");
+		} else if ( rankInt == 6  ) {
+			$rankValue.parent().addClass("rgdiv4-10");
+		} else if ( rankInt == 7  ) {
+			$rankValue.parent().addClass("rgdiv3-10");
+		} else if ( rankInt == 8  ) {
+			$rankValue.parent().addClass("rgdiv2-10");
+		} else if ( rankInt == 9  ) {
+			$rankValue.parent().addClass("rgdiv1-10");
 		} else {
-			$rankValue.parent().parent().addClass("positive-ranking");
+			$rankValue.parent().addClass("rgdiv0-10");
 		}
 	};
 
