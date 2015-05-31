@@ -115,7 +115,7 @@
 
 	var distDemoData;
 
-	d3.json("/data/district-demographics.json", function(data) {
+	d3.json("data/district-demographics.json", function(data) {
 		distDemoData = data;
 		console.log(data[0]);
 	});
