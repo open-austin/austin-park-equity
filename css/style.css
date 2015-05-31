@@ -309,8 +309,12 @@ table.facts-table {
 table.facts-table td {
   padding: 5px;
 }
-table.facts-table td:nth-child(even) {
+table.facts-table td:nth-child(n+2) {
   text-align: right;
+}
+table.facts-table td:nth-child(n+3) {
+  text-align: center;
+  font-style: italic;
 }
 table.facts-table th {
   text-align: center;
@@ -319,6 +323,14 @@ table.facts-table th {
   border: 1px solid #eee;
   background: #9f5ea7;
   color: white;
+}
+table.facts-table th.subhead {
+  font-weight: 400;
+  border: none;
+  padding: 3px;
+  background: #9f5ea7;
+  /* The Fallback */
+  background: rgba(159, 94, 167, 0.7);
 }
 table.facts-table tr:nth-child(odd) {
   background: #eee;
@@ -330,4 +342,13 @@ table.facts-table tr:hover {
 }
 table.facts-table tr:hover td {
   font-weight: bold;
+}
+table.facts-table tr.positive-ranking {
+  color: green;
+}
+table.facts-table tr.neutral-ranking {
+  color: yellow;
+}
+table.facts-table tr.negative-ranking {
+  color: red;
 }

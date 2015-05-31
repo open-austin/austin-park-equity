@@ -5,8 +5,12 @@ table.facts-table {
 
 	td {
 		padding: 5px;
-		&:nth-child(even) {
+		&:nth-child(n+2) {
 		  text-align: right;
+		}
+		&:nth-child(n+3) {
+		  text-align: center;
+		  font-style: italic;
 		}
 	}
 
@@ -17,6 +21,12 @@ table.facts-table {
 		border: 1px solid #eee;
 		background: $purple;
 		color: $white;
+		&.subhead {
+			font-weight: 400;
+			border: none;
+			padding: 3px;
+			@include background-opacity($purple, 0.7);
+		}
 	}
 
 	tr {
@@ -28,6 +38,15 @@ table.facts-table {
 			td {
 				font-weight: bold;
 			}
+		}
+		&.positive-ranking {
+			color: green;
+		}
+		&.neutral-ranking {
+			color: yellow;
+		}
+		&.negative-ranking {
+			color: red;
 		}
 	}
 }

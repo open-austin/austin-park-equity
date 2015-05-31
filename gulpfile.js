@@ -4,7 +4,7 @@ var gulp = require('gulp'),
 	connect = require('gulp-connect'),
 	deploy = require('gulp-gh-pages');
 
-var jsSources = ['js/app.js'];
+var jsSources = ['js/*.js'];
 var sassSources = ['sass/style.scss'];
 var htmlSources = ['*.html'];
 
