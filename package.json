@@ -1,5 +1,5 @@
 {
-  "name": "parks_acreage",
+  "name": "austin_parks_equity",
   "version": "1.0.0",
   "description": "This is a civic app that aims to help visualize how Austin's park resources are distributed throughout the City of Austin.",
   "main": "gulpfile.js",
@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/mateoclarke/Austin_Parks_Acreage.git"
+    "url": "https://github.com/open-austin/Austin_Parks_Equity.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/mateoclarke/Austin_Parks_Acreage/issues"
+    "url": "https://github.com/open-austin/Austin_Parks_Equity/issues"
   },
-  "homepage": "https://github.com/mateoclarke/Austin_Parks_Acreage",
+  "homepage": "https://github.com/open-austin/Austin_Parks_Equity",
   "devDependencies": {
     "gulp": "^3.8.11",
     "gulp-compass": "^2.1.0",
