@@ -337,6 +337,14 @@ table.facts-table tr:hover td {
   font-weight: bold;
 }
 
+.legend-header {
+  font-size: 24px;
+  font-weight: bold;
+  padding: 5px;
+  text-align: center;
+  width: 100%;
+}
+
 .rank-legend {
   margin: 5%;
   width: 80%;
@@ -348,7 +356,7 @@ table.facts-table tr:hover td {
   text-align: center;
 }
 .rank-legend div.eight-legend {
-  width: 10%;
+  width: 11.9%;
   height: 20px;
 }
 
