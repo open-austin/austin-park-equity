@@ -116,7 +116,7 @@
 		popupContent = "<p><span class='park-title'>Need Score: "+score+"</span> \
 					<br>Pop Under 19: "+children+" \
 					<br>Health Insurance Coverage : "+health+" \
-					<br>Ratio Single Unit Housing : "+apartment+"</p>";
+					<br>Ratio Single Unit Housing : "+Math.round(apartment, -2)+"</p>";
 
 	    if (feature.properties) {
 	        layer.bindPopup( popupContent );
