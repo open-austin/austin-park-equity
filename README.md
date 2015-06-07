@@ -30,7 +30,7 @@ See our notes on [Hackpad](https://openaustin.hackpad.com/Austin-Parks-Equity-H1
 2. **Health Insurance Coverage**
 	- 0 points > 40%
 	- 7 points < 10%
-3. **Ratio of Housing Buildings with 2 or less units**
+3. **Ratio of Housing Buildings with 2 or less units** (_Density_)
 	- 0 points > 80%
 	- 7 points < 20%
 
