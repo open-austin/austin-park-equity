@@ -53,7 +53,9 @@
 															 	   current.needScore += 7; 
 
 		// Muilthousing Units
-		current.multihousingRatio = (parseFloat(current.unitsSingleAttached) + parseFloat(current.unitsSingleDetached))/ parseFloat(current.unitsTotal);
+		current.multihousingRatio = ( parseFloat(current.unitsSingleAttached) + 
+									  parseFloat(current.unitsSingleDetached) + 
+									  parseFloat(current.unitsTwo) ) / parseFloat(current.unitsTotal);
 		censusTract[i].demographics.multihousingRatio > 0.80 ? current.needScore += 0 :
 		censusTract[i].demographics.multihousingRatio > 0.70 ? current.needScore += 1 :
 		censusTract[i].demographics.multihousingRatio > 0.60 ? current.needScore += 2 :
@@ -76,7 +78,7 @@
 				opacity: 1,
 				color: 'white',
 				dashArray: '3',
-				fillOpacity: 0.5
+				fillOpacity: 0.7
 			};
 		},
 		onEachFeature: onEachCensusFeature
@@ -84,25 +86,25 @@
 	censusLayer.bringToBack();
 
 	function getAgeColor(d) {
-        return d < 0.10  ? '#FFEDA0' :
-	           d < 0.15  ? '#FED976' :
-	           d < 0.20  ? '#FEB24C' :
-	           d < 0.25  ? '#FD8D3C' :
-	           d < 0.30  ? '#FC4E2A' :
-	           d < 0.35  ? '#E31A1C' :
-	           d < 0.40  ? '#BD0026' :
-	     	   			   '#800026';
+        return d < 0.10  ? '#f7fcfd' :
+	           d < 0.15  ? '#e0ecf4' :
+	           d < 0.20  ? '#bfd3e6' :
+	           d < 0.25  ? '#9ebcda' :
+	           d < 0.30  ? '#8c96c6' :
+	           d < 0.35  ? '#8c6bb1' :
+	           d < 0.40  ? '#88419d' :
+	     	   			   '#6e016b';
 	}	
 
 	function getColor(d) {
-        return d < 14 ? '#FFEDA0' :
-	           d < 15 ? '#FED976' :
-	           d < 16 ? '#FEB24C' :
-	           d < 17  ? '#FD8D3C' :
-	           d < 18  ? '#FC4E2A' :
-	           d < 19  ? '#E31A1C' :
-	           d < 20  ? '#BD0026' :
-	     	   			   '#800026';
+        return d < 13 ? '#f7fcfd' :
+	           d < 14 ? '#e0ecf4' :
+	           d < 15 ? '#bfd3e6' :
+	           d < 16 ? '#9ebcda' :
+	           d < 17 ? '#8c96c6' :
+	           d < 18 ? '#8c6bb1' :
+	           d < 19 ? '#88419d' :
+	     	   			'#6e016b';
 	}
 
 	function onEachCensusFeature(feature, layer) {
