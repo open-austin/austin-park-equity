@@ -23,19 +23,6 @@ See our notes on [Hackpad](https://openaustin.hackpad.com/Austin-Parks-Equity-H1
 - [@mattybow](https://github.com/mattybow) - dev
 - [@johntryee](https://github.com/johntyree) - dev
 
-## "Need Score" Methodology:
-1. **Percent Population Age Under 19** 
-	- 0 points < 10%
-	- 7 points > 40%
-2. **Health Insurance Coverage**
-	- 0 points > 40%
-	- 7 points < 10%
-3. **Ratio of Housing Buildings with 2 or less units** (_Density_)
-	- 0 points > 80%
-	- 7 points < 20%
-
-**Current Max Score: 21**
-
 ## Running Code Locally:
 	
 **1. [npm](https://www.npmjs.com/) is required**
@@ -72,6 +59,19 @@ Gulp serves the app at `http://localhost:8080`.
 - **Convert Shapefile to [GeoJSON](https://github.com/mateoclarke/Austin_Parks_Acreage/blob/master/data/city_of_austin_parks.geojson)** using GDAL. I referenced [this blog post](http://ben.balter.com/2013/06/26/how-to-convert-shapefiles-to-geojson-for-use-on-github/) from Ben Balter for help.
 
 ### 3. Add District Shapefiles from a [past project](http://mateoclarke.github.io/311vs10One/)
+
+## "Need Score" Methodology:
+1. **Percent Population Age Under 19** 
+	- 0 points < 10%
+	- 7 points > 40%
+2. **Health Insurance Coverage**
+	- 0 points > 40%
+	- 7 points < 10%
+3. **Ratio of Housing Buildings with 2 or less units** (_Density_)
+	- 0 points > 80%
+	- 7 points < 20%
+
+**Current Max Score: 21**
 
 ## License:
 needs review
