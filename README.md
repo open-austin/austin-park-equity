@@ -23,6 +23,19 @@ See our notes on [Hackpad](https://openaustin.hackpad.com/Austin-Parks-Equity-H1
 - [@mattybow](https://github.com/mattybow) - dev
 - [@johntryee](https://github.com/johntyree) - dev
 
+## Score Methodology:
+1. **Percent Population Age Under 19** 
+	- 0 points < 10%
+	- 7 points > 40%
+2. **Health Insurance Coverage**
+	- 0 points > 40%
+	- 7 points < 10%
+3. **Ratio of Housing Buildings with 2 or less units**
+	- 0 points > 80%
+	- 7 points < 20%
+
+**Current Max Score: 21**
+
 ## Running Code Locally:
 	
 **1. [npm](https://www.npmjs.com/) is required**
