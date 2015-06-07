@@ -51,7 +51,13 @@ table.facts-table {
 		width: 19%;
 		text-align: center;
 	}
+	div.eight-legend {
+		width: 10%;
+		height: 20px;
+	}
 }
+
+// red legend
 .rgdiv0-5 {
 	background-color: $rgdiv0-5;
 	border: 1px solid #eee;
@@ -70,6 +76,40 @@ table.facts-table {
 }
 .rgdiv4-5 {
 	background-color: $rgdiv4-5;
+	border: 1px solid #eee;
+}
+
+// purple legend
+.purpdiv0-8 {
+	background-color: $purpdiv0-8;
+	border: 1px solid #eee;
+}
+.purpdiv1-8 {
+	background-color: $purpdiv1-8;
+	border: 1px solid #eee;
+}
+.purpdiv2-8 {
+	background-color: $purpdiv2-8;
+	border: 1px solid #eee;
+}
+.purpdiv3-8 {
+	background-color: $purpdiv3-8;
+	border: 1px solid #eee;
+}
+.purpdiv4-8 {
+	background-color: $purpdiv4-8;
+	border: 1px solid #eee;
+}
+.purpdiv5-8 {
+	background-color: $purpdiv5-8;
+	border: 1px solid #eee;
+}
+.purpdiv6-8 {
+	background-color: $purpdiv6-8;
+	border: 1px solid #eee;
+}
+.purpdiv7-8 {
+	background-color: $purpdiv7-8;
 	border: 1px solid #eee;
 }
 

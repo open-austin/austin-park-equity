@@ -347,6 +347,10 @@ table.facts-table tr:hover td {
   width: 19%;
   text-align: center;
 }
+.rank-legend div.eight-legend {
+  width: 10%;
+  height: 20px;
+}
 
 .rgdiv0-5 {
   background-color: rgba(215, 25, 28, 0.7);
@@ -370,5 +374,45 @@ table.facts-table tr:hover td {
 
 .rgdiv4-5 {
   background-color: rgba(26, 150, 65, 0.7);
+  border: 1px solid #eee;
+}
+
+.purpdiv0-8 {
+  background-color: #f7fcfd;
+  border: 1px solid #eee;
+}
+
+.purpdiv1-8 {
+  background-color: #e0ecf4;
+  border: 1px solid #eee;
+}
+
+.purpdiv2-8 {
+  background-color: #bfd3e6;
+  border: 1px solid #eee;
+}
+
+.purpdiv3-8 {
+  background-color: #9ebcda;
+  border: 1px solid #eee;
+}
+
+.purpdiv4-8 {
+  background-color: #8c96c6;
+  border: 1px solid #eee;
+}
+
+.purpdiv5-8 {
+  background-color: #8c6bb1;
+  border: 1px solid #eee;
+}
+
+.purpdiv6-8 {
+  background-color: #88419d;
+  border: 1px solid #eee;
+}
+
+.purpdiv7-8 {
+  background-color: #6e016b;
   border: 1px solid #eee;
 }
