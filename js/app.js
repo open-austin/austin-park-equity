@@ -115,20 +115,22 @@
 
 	// Loading Data with D3
 	var distDemoData,
-			parkAcreageData;
+		parkAcreageData,
+		censusData;
 
 	queue()
 	  .defer(d3.json, "data/district-demographics.json")
 	  .defer(d3.json, "data/park-acreage-data.json")
+	  .defer(d3.json, "data/census-tract.json")
 	  .await(analyze);
 
-	function analyze(error, demographics, parks) {
+	function analyze(error, demographics, parks, census) {
 	  if(error) { console.log(error); }
 
-	  distDemoData = demographics;
-	  parkAcreageData = parks;
+	  distDemoData 		= demographics;
+	  parkAcreageData 	= parks;
+	  censusData 		= census;
 
-	  console.log(parkAcreageData[0])
 	}
 
 	// d3.json("data/district-demographics.json", function(data) {

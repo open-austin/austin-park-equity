@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>City of Austin Parks Equity</title>
+	<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<nav>
+		<ul class="navigation">
+		  <li><a href="/index.html">Austin Park Equity</a></li>
+		  <li><a href="/districts.html">Districts</a></li>
+		  <li><a href="https://github.com/open-austin/Austin_Parks_Acreage" target="_blank">About</a></li>
+		</ul>
+	</nav>
+
+	<div class="main-content-wrapper">
+		<div id="map" class="map"></div>
+
+		<div class="aside">
+			<!-- <div class="toggles">
+				<button class="parks">Parks</button>
+			</div> -->
+			<div class="dropdown">
+				<div class="title">Districts</div>
+				<ul class="districts-toggles">
+					<li class="district-1" data-district="1">District 1</li>
+					<li class="district-2" data-district="2">District 2</li>
+					<li class="district-3" data-district="3">District 3</li>
+					<li class="district-4" data-district="4">District 4</li>
+					<li class="district-5" data-district="5">District 5</li>
+					<li class="district-6" data-district="6">District 6</li>
+					<li class="district-7" data-district="7">District 7</li>
+					<li class="district-8" data-district="8">District 8</li>
+					<li class="district-9" data-district="9">District 9</li>
+					<li class="district-10" data-district="10">District 10</li>
+				</ul>
+			</div>
+
+			<table class="facts-table park-facts no-show">
+				<thead>
+					<tr>
+						<th colspan="3">Park Information</th>
+					</tr>
+					<tr>
+						<th class="subhead"></th>
+						<th class="subhead"></th>
+						<th class="subhead">Rank</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Total Park Acres</td>
+						<td><span id="tot-park-acres"></span> acres</td>
+						<td><span id="park-acres-rank"></span></td>
+					</tr>
+					<tr>
+						<td>Percent Park Coverage</td>
+						<td><span id="perc-park-coverage"></span>%</td>
+						<td><span id="park-coverage-rank"></span></td>
+					</tr>
+					<tr>
+						<td>Total Parks</td>
+						<td><span id="tot-parks-num"></span> parks</td>
+						<td><span id="parks-num-rank"></span></td>
+					</tr>
+				</tbody>
+			</table>
+
+			<table class="facts-table district-facts no-show">
+				<thead>
+					<tr>
+						<th colspan="3">Demographic Information</th>
+					</tr>
+					<tr>
+						<th class="subhead"></th>
+						<th class="subhead"></th>
+						<th class="subhead">Rank</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Population Under 18 years old</td>
+						<td><span id="pop-under-18"></span></td>
+						<td><span id="pop-under-18-rank"></span></td>
+					</tr>
+					<tr>
+						<td>Percent Rented Housing Units</td>
+						<td><span id="perc-renters"></span></td>
+						<td><span id="perc-renters-rank"></span></td>
+					</tr>
+					<tr>
+						<td>Poverty Rate</td>
+						<td><span id="perc-poverty"></span></td>
+						<td><span id="perc-poverty-rank"></span></td>
+					</tr>
+					<tr>
+						<td>Percent without Health Insurance</td>
+						<td><span id="perc-insurance"></span></td>
+						<td><span id="perc-insurance-rank"></span></td>
+					</tr>
+					<tr>
+						<td>Median Family Income</td>
+						<td>$<span id="family-income"></span></td>
+						<td><span id="family-income-rank"></span></td>
+					</tr>
+				</tbody>
+			</table>
+
+			<div class="rank-legend">
+				<p>Ranking Legend</p>
+				<div class="rgdiv4-5">1-2</div>
+				<div class="rgdiv3-5">3-4</div>
+				<div class="rgdiv2-5">5-6</div>
+				<div class="rgdiv1-5">7-8</div>
+				<div class="rgdiv0-5">9-10</div>
+			</div>
+
+		</div>
+	</div>
+
+	<!-- Vendors -->
+	<script src="https://code.jquery.com/jquery-2.1.1.js"></script>
+	<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+	<script src="js/leaflet-providers.js"></script>
+	<script src="js/geojson-utils.js"></script>
+	<script src="js/lodash.js"></script>
+	<script src="js/d3.js"></script>
+	<script src="http://d3js.org/queue.v1.min.js"></script>
+
+	<!-- Data files -->
+	<script src="data/district-shapefiles.js"></script>
+	<script src="data/district-extra-data.js"></script>
+	<script src="data/city_of_austin_parks.js"></script>
+	<script src="data/district-demographics.json"></script>
+	<script src="data/park-acreage-data.json"></script>
+
+	<!-- App files -->
+	<!-- <script src="js/data-munge.js"></script> -->
+	<script src="js/app.js"></script>
+
+</body>
+</html>
