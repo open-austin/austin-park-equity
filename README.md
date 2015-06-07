@@ -18,6 +18,8 @@ See our notes on [Hackpad](https://openaustin.hackpad.com/Austin-Parks-Equity-H1
 
 - Katie Yoder - GIS Data Analysis
 - Mateo Clarke - Web Development
+- @fremn
+- @luqmaan
 
 ## Running Code Locally:
 	
