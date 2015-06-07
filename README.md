@@ -23,7 +23,7 @@ See our notes on [Hackpad](https://openaustin.hackpad.com/Austin-Parks-Equity-H1
 - [@mattybow](https://github.com/mattybow) - dev
 - [@johntryee](https://github.com/johntyree) - dev
 
-## Score Methodology:
+## "Need Score" Methodology:
 1. **Percent Population Age Under 19** 
 	- 0 points < 10%
 	- 7 points > 40%
