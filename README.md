@@ -17,9 +17,11 @@ See our notes on [Hackpad](https://openaustin.hackpad.com/Austin-Parks-Equity-H1
 ##Credits
 
 - Katie Yoder - GIS Data Analysis
-- Mateo Clarke - Web Development
-- @fremn
-- @luqmaan
+- [@mateoclarke](https://github.com/mateoclarke) - Web Development/"Project Champion"
+- [@fremn](https://github.com/fremn)
+- [@luqmaan](https://github.com/luqmaan)
+- [@mattybow](https://github.com/mattybow)
+- [@johntryee](https://github.com/johntyree)
 
 ## Running Code Locally:
 	
