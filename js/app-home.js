@@ -40,9 +40,9 @@
 		censusTract[i].demographics.ageRatioUnder19 < 0.30 ? current.needScore = 4 :
 		censusTract[i].demographics.ageRatioUnder19 < 0.35 ? current.needScore = 5 :
 		censusTract[i].demographics.ageRatioUnder19 < 0.40 ? current.needScore = 6 :
-															 current.needScore = 7; 
+															 current.needScore = 7;
 
-		// Health Insurance Coverage 
+		// Health Insurance Coverage
 		censusTract[i].demographics.healthInsuranceCoverage > 40 ? current.needScore += 0 :
 		censusTract[i].demographics.healthInsuranceCoverage > 35 ? current.needScore += 1 :
 		censusTract[i].demographics.healthInsuranceCoverage > 30 ? current.needScore += 2 :
@@ -50,11 +50,11 @@
 		censusTract[i].demographics.healthInsuranceCoverage > 20 ? current.needScore += 4 :
 		censusTract[i].demographics.healthInsuranceCoverage > 15 ? current.needScore += 5 :
 		censusTract[i].demographics.healthInsuranceCoverage > 10 ? current.needScore += 6 :
-															 	   current.needScore += 7; 
+															 	   current.needScore += 7;
 
 		// Muilthousing Units
-		current.multihousingRatio = ( parseFloat(current.unitsSingleAttached) + 
-									  parseFloat(current.unitsSingleDetached) + 
+		current.multihousingRatio = ( parseFloat(current.unitsSingleAttached) +
+									  parseFloat(current.unitsSingleDetached) +
 									  parseFloat(current.unitsTwo) ) / parseFloat(current.unitsTotal);
 		censusTract[i].demographics.multihousingRatio > 0.80 ? current.needScore += 0 :
 		censusTract[i].demographics.multihousingRatio > 0.70 ? current.needScore += 1 :
@@ -63,13 +63,12 @@
 		censusTract[i].demographics.multihousingRatio > 0.40 ? current.needScore += 4 :
 		censusTract[i].demographics.multihousingRatio > 0.30 ? current.needScore += 5 :
 		censusTract[i].demographics.multihousingRatio > 0.20 ? current.needScore += 6 :
-															   current.needScore += 7; 
-		scores.push(current.needScore); 
+															   current.needScore += 7;
+		scores.push(current.needScore);
 	};
 
-	console.log(scores);
 	// Adding Census Tract Shapefiles to Map
-	var censusLayer = L.geoJson(censusTract, { 
+	var censusLayer = L.geoJson(censusTract, {
 		style: function style(feature){
 			return {
 				// fillColor: getAgeColor(feature.demographics.ageRatioUnder19),
@@ -94,7 +93,7 @@
 	           d < 0.35  ? '#8c6bb1' :
 	           d < 0.40  ? '#88419d' :
 	     	   			   '#6e016b';
-	}	
+	}
 
 	function getColor(d) {
         return d < 13 ? '#f7fcfd' :
@@ -158,7 +157,22 @@
 	  return array.indexOf(value) > -1;
 	}
 
-
+	function showOnMap(geojsonFeatures) {
+	    if (!geojsonFeatures) { return; }
+	    L.geoJson(geojsonFeatures, {
+	        onEachFeature: function (feature, layer) {
+	            var text =  [];
+	            for (prop in feature.properties) {
+	                if (hasOwnProperty.call(feature.properties, prop)) {
+	                    text.push("<b>" + prop + "</b>: " + feature.properties[prop]);
+	                }
+	              }
+	            if (text.length) {
+	                layer.bindPopup(text.join('<br>'));
+	            }
+	        }
+	    }).addTo(map);
+	}
 
 
 })();
