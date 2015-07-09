@@ -12,7 +12,7 @@
 	<nav>
 		<ul class="navigation">
 		  <li><a href="index.html">Austin Park Equity</a></li>
-		  <li><a href="districts.html">Districts</a></li>
+		  <!-- <li><a href="districts.html">Districts</a></li> -->
 		  <li><a href="https://github.com/open-austin/Austin_Parks_Acreage" target="_blank">About</a></li>
 		</ul>
 	</nav>
@@ -21,17 +21,104 @@
 		<div id="map" class="map"></div>
 
 		<div class="aside">
-			<div class="rank-legend">
-				<h2 class="legend-header">Park Need ---> </h2>
-				<div class="eight-legend purpdiv0-8"></div>
-				<div class="eight-legend purpdiv1-8"></div>
-				<div class="eight-legend purpdiv2-8"></div>
-				<div class="eight-legend purpdiv3-8"></div>
-				<div class="eight-legend purpdiv4-8"></div>
-				<div class="eight-legend purpdiv5-8"></div>
-				<div class="eight-legend purpdiv6-8"></div>
-				<div class="eight-legend purpdiv7-8"></div>
+			<!-- <div class="toggles">
+				<button class="parks">Parks</button>
+			</div> -->
+			<div class="dropdown">
+				<div class="title">Districts</div>
+				<ul class="districts-toggles">
+					<li class="district-1" data-district="1">District 1</li>
+					<li class="district-2" data-district="2">District 2</li>
+					<li class="district-3" data-district="3">District 3</li>
+					<li class="district-4" data-district="4">District 4</li>
+					<li class="district-5" data-district="5">District 5</li>
+					<li class="district-6" data-district="6">District 6</li>
+					<li class="district-7" data-district="7">District 7</li>
+					<li class="district-8" data-district="8">District 8</li>
+					<li class="district-9" data-district="9">District 9</li>
+					<li class="district-10" data-district="10">District 10</li>
+				</ul>
 			</div>
+
+			<table class="facts-table park-facts no-show">
+				<thead>
+					<tr>
+						<th colspan="3">Park Information</th>
+					</tr>
+					<tr>
+						<th class="subhead"></th>
+						<th class="subhead"></th>
+						<th class="subhead">Rank</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Total Park Acres</td>
+						<td><span id="tot-park-acres"></span> acres</td>
+						<td><span id="park-acres-rank"></span></td>
+					</tr>
+					<tr>
+						<td>Percent Park Coverage</td>
+						<td><span id="perc-park-coverage"></span>%</td>
+						<td><span id="park-coverage-rank"></span></td>
+					</tr>
+					<tr>
+						<td>Total Parks</td>
+						<td><span id="tot-parks-num"></span> parks</td>
+						<td><span id="parks-num-rank"></span></td>
+					</tr>
+				</tbody>
+			</table>
+
+			<table class="facts-table district-facts no-show">
+				<thead>
+					<tr>
+						<th colspan="3">Demographic Information</th>
+					</tr>
+					<tr>
+						<th class="subhead"></th>
+						<th class="subhead"></th>
+						<th class="subhead">Rank</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Population Under 18 years old</td>
+						<td><span id="pop-under-18"></span></td>
+						<td><span id="pop-under-18-rank"></span></td>
+					</tr>
+					<tr>
+						<td>Percent Rented Housing Units</td>
+						<td><span id="perc-renters"></span></td>
+						<td><span id="perc-renters-rank"></span></td>
+					</tr>
+					<tr>
+						<td>Poverty Rate</td>
+						<td><span id="perc-poverty"></span></td>
+						<td><span id="perc-poverty-rank"></span></td>
+					</tr>
+					<tr>
+						<td>Percent without Health Insurance</td>
+						<td><span id="perc-insurance"></span></td>
+						<td><span id="perc-insurance-rank"></span></td>
+					</tr>
+					<tr>
+						<td>Median Family Income</td>
+						<td>$<span id="family-income"></span></td>
+						<td><span id="family-income-rank"></span></td>
+					</tr>
+				</tbody>
+			</table>
+
+			<div class="rank-legend">
+				<p>Ranking Legend</p>
+				<div class="rgdiv4-5">1-2</div>
+				<div class="rgdiv3-5">3-4</div>
+				<div class="rgdiv2-5">5-6</div>
+				<div class="rgdiv1-5">7-8</div>
+				<div class="rgdiv0-5">9-10</div>
+			</div>
+
 		</div>
 	</div>
 
@@ -50,10 +137,21 @@
 	<script src="data/city_of_austin_parks.js"></script>
 	<script src="data/district-demographics.json"></script>
 	<script src="data/park-acreage-data.json"></script>
-	<script src="data/census-tract.js"></script>
 
 	<!-- App files -->
-	<script src="js/app-home.js"></script>
+	<!-- <script src="js/data-munge.js"></script> -->
+	<script src="js/app.js"></script>
+
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-64317625-1', 'auto');
+	  ga('send', 'pageview');
+
+	</script>
 
 </body>
 </html>
