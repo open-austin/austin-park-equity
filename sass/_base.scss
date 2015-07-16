@@ -9,10 +9,22 @@ html, body {
 h1, h2, h3, p {
   font-family: $body-font;
   color: $main-color;
+  margin-bottom: 1rem;
 }
 
 h1 {
-  font-size: 3em;
+  font-size: 3rem;
+  font-family: $head-font;
+  text-transform: uppercase;
+  color: white;
+  text-shadow: 0px 2px 1px black;
+}
+
+h2 {
+  color: $grey;
+  font-size: 1.75rem;
+  line-height: 2rem;
+  font-family: $head-font;
 }
 
 body {

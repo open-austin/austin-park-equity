@@ -2,16 +2,19 @@
 // =================
 
 @import "http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800)";
+@import "http://fonts.googleapis.com/css?family=Raleway:800,100,400";
 
 // NEUTRAL COLORS
 $black		   	: #111;
 $white			: #fff;
-$grey			: #CDD2D4;
+$grey			: #D5D5D5;
 $dark-grey		: #808080;
 $off-grey		: #ECDFED;
 
 // MORE COLORS
 $bright-green		: rgba(100, 192, 98, 1);
+$middle-green   : #60B25E;
+$dark-green     : #388636;
 $light-green	  : #83A33E;
 $footer-green-1	: #879C5B;
 $footer-green-2	: #657E30;
@@ -46,6 +49,6 @@ $purpdiv7-8 : #6e016b;
 $main-color		: $black;
 
 // FONTS
-$head-font : 'Open Sans', sans-serif;
+$head-font : 'Raleway', sans-serif;
 $body-font : 'Open Sans', sans-serif;
 
