@@ -80,6 +80,7 @@ h2 {
   font-size: 1.75rem;
   line-height: 2rem;
   font-family: "Raleway", sans-serif;
+  text-shadow: 0px 2px 1px black;
 }
 
 body {
