@@ -2,7 +2,7 @@
 
 ### This is a civic app that aims to help visualize how Austin's park resources are distributed throughout the City of Austin.
 
-###Status: _under development_ 
+###Status: _under development_
 
 ###Related News:
 
@@ -11,20 +11,20 @@
 - [District 4 community meeting on parks - April 30, 2015](http://us8.campaign-archive1.com/?u=6fe419e1bea63f17bb6c8842d&id=13e7c71daa)
 - [North Austin green space becomes a priority for council - March 25, 2015](http://impactnews.com/austin-metro/northwest-austin/north-austin-green-space-becomes-a-priority-for-council)
 
-See our progress: [Live Demo](http://open-austin.github.io/Austin_Parks_Acreage/)  
+See our progress: [Live Demo](http://open-austin.github.io/Austin_Parks_Acreage/)
 See our notes on [Hackpad](https://openaustin.hackpad.com/Austin-Parks-Equity-H1aHh4ggGaQ)
 
 ##Credits
 
-- Katie Yoder - GIS Data Analysis
 - [@mateoclarke](https://github.com/mateoclarke) - "Project Champion"/dev
+- [@kyoder](https://github.com/kyoder) - GIS Data Analysis
 - [@fremn](https://github.com/fremn) - dev
 - [@luqmaan](https://github.com/luqmaan) - dev
 - [@mattybow](https://github.com/mattybow) - dev
 - [@johntryee](https://github.com/johntyree) - dev
 
 ## Running Code Locally:
-	
+
 **1. [npm](https://www.npmjs.com/) is required**
 
 _npm is Node's package manager. You can install Node at [their site](https://nodejs.org/download/) or with a command like `brew install node` if you use Homebrew._
@@ -33,16 +33,16 @@ _npm is Node's package manager. You can install Node at [their site](https://nod
 
 Before you can serve the app locally, you need to install some gulp libraries with npm:
 
-	$ npm install gulp gulp-util gulp-compass gulp-connect gulp-gh-pages --save-dev
-	
+	$ npm install gulp gulp-util gulp-compass gulp-connect gulp-gh-pages gulp-file-include gulp-rename gulp-notify --save-dev
+
 To run the local server and see the app in your browser:
-	
+
 	$ gulp
-	 
+
 Gulp serves the app at `http://localhost:8080`.
-	
-	
-	
+
+
+
 ## Methodology:
 
 ### 1. Clean & Convert Raw Parks Acreage Data
@@ -61,7 +61,7 @@ Gulp serves the app at `http://localhost:8080`.
 ### 3. Add District Shapefiles from a [past project](http://mateoclarke.github.io/311vs10One/)
 
 ## "Need Score" Methodology:
-1. **Percent Population Age Under 19** 
+1. **Percent Population Age Under 19**
 	- 0 points < 10%
 	- 7 points > 40%
 2. **Health Insurance Coverage**
