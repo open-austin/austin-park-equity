@@ -260,8 +260,9 @@ div.dropdown ul li:before {
 }
 
 .hero-section {
-  background-image: url("/img/pool.jpeg");
+  background-image: url("../img/pool.jpeg");
   background-attachment: fixed !important;
+  background-size: cover;
   height: 500px;
   position: relative;
   overflow: hidden;
