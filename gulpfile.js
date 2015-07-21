@@ -43,8 +43,7 @@ gulp.task( 'fileinclude', function(){
 		.pipe( gulp.dest( './' ))
 		.pipe( connect.reload() )
 		.pipe( notify({ message: 'Includes: included' }));
-
-} )
+});
 
 gulp.task('watch', function(){
 	gulp.watch(jsSources, ['js']);
