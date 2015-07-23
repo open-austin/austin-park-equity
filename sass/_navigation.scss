@@ -1,29 +1,31 @@
 .navigation {
+  font-family: $head-font;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-shadow: #444 2px 2px;
   list-style: none;
   margin: 0;
-  height: 5%;
-  background: $bright-green;
+  background: $dark-green;
 
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
-
-  -webkit-flex-flow: row wrap;
-  justify-content: flex-end;
-  background-image: linear-gradient(to bottom, rgba(230, 230, 230, 0.1), rgba(68, 160, 72, 1));
 }
 
 .navigation a {
   text-decoration: none;
   display: block;
-  padding: 1em;
+  padding: .5em;
   color: white;
+  &:hover {
+    background: $middle-green;
+  }
 }
 
-.navigation a:hover {
-  background: darken($bright-green, 20%);
+.navigation li {
+  margin-right: 1em;
 }
 
 @media all and (max-width: 800px) {

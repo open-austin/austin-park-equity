@@ -2,3 +2,5 @@ node_modules
 **/.sass-cache
 **/.sass-cache/*
 .publish
+
+sass/_dropdown.scss
