@@ -46,9 +46,10 @@ gulp.task( 'fileinclude', function(){
 });
 
 gulp.task('watch', function(){
-	gulp.watch(jsSources, ['js']);
-	gulp.watch('sass/*.scss', ['compass']);
-	gulp.watch(htmlSources, ['html']);
+	gulp.watch( jsSources, ['js'] );
+	gulp.watch( 'sass/*.scss', ['compass'] );
+	gulp.watch( htmlSources, ['html'] );
+	gulp.watch( 'templates/*', ['fileinclude'] );
 });
 
 gulp.task('connect', function(){
