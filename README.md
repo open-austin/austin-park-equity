@@ -73,6 +73,6 @@ Gulp serves the app at `http://localhost:8080`.
 
 **Current Max Score: 21**
 
-## License:
-needs review
+## Unlicense:
+Released to the public domain under the [Unlicense](http://unlicense.org/) by [Open Austin](http://open-austin.org), 2015.
 
