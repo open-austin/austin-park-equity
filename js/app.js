@@ -1,5 +1,7 @@
 (function(){
 
+  "use strict";
+
 	$('.parks').click( toggleParksLayer );
 
 	// $('.districts-toggles li').on( 'click', function(){
@@ -20,7 +22,7 @@
 		// 'Esri.WorldGrayCanvas'
 		// 'CartoDB.DarkMatter'
 
-	var map = L.map('map', {
+	var map = L.map('main-map', {
 		center: [30.26618, -97.74467], //Austin!
 		zoom: 12,
 		scrollWheelZoom: false,
@@ -32,11 +34,39 @@
 	    "Grayscale": grayscale
 	};
 
+	L.geoJson( districts, {
+		weight: 1,
+		opacity: 1,
+		color: '#666',
+		fillOpacity: 0
+	}).addTo(map)
+
+	L.geoJson( parkAccessRing, {
+		style: function style(feature){
+			return {
+				fillColor: getRingColor(feature.properties.distance_l),
+				weight: 0,
+				opacity: 0,
+				fillOpacity: 0.6
+			};
+		}
+	}).addTo(map)
+
+	function getRingColor(d) {
+		return d === "> 1 mile" ? '#FF8080' :
+		 			 d === "1 mile" 	? '#FFB380' :
+					 d === "1/2 mile" ? '#FFE680' :
+					 d === "1/4 mile" ? '#E5F57F' :
+					 d === "500'" 		? '#BBE47F' :
+					 d === "100'" 		? '#9BD37F' :
+					 													null;
+	}
+
 	// adding parks shapefiles to Map
 	var parkLayer = L.geoJson(parks, {
 		style: function style(feature){
 			return {
-				fillColor: '#56DD54',
+				fillColor: getParkColor(feature.properties["DEVELOPMEN"]),
 				weight: 1,
 				opacity: 0.7,
 				color: '#44A048',
@@ -46,14 +76,20 @@
 		onEachFeature: onEachFeature
 	}).addTo(map);
 
+	function getParkColor(d) {
+		return d === "Developed" ? '#56DD54' : "#9f7048";
+	}
+
 	function onEachFeature(feature, layer) {
 		var parkName 	= feature.properties.PARK_NAME,
 			parkAcres 	= feature.properties.PARK_ACRES.toFixed(2),
-			parkType 	= feature.properties.PARK_TYPE,
+			parkType 		= feature.properties.PARK_TYPE,
+			parkStatus	= feature.properties.DEVELOPMEN,
 
 			popupContent = "<p><span class='park-title'>"+parkName+"</span> \
 						<br>"+parkAcres+" Acres \
-						<br>Park Type: "+parkType+"</p>";
+						<br>Park Type: "+parkType+"</p>" +
+						"<br>Status: " + parkStatus;
 
 	    if (feature.properties) {
 	        layer.bindPopup( popupContent );
@@ -102,15 +138,15 @@
 
 	function getColor(d) {
 		return d > 9 ? '#8dd3c7' :
-			d > 8 ? '#ffffb3' :
-			d > 7 ? '#bebada' :
-			d > 6 ? '#fb8072' :
-			d > 5 ? '#80b1d3' :
-			d > 4 ? '#fdb462' :
-			d > 3 ? '#b3de69' :
-			d > 2 ? '#fccde5' :
-			d > 1 ? '#98e986' :
-			'#bc80bd';
+					 d > 8 ? '#ffffb3' :
+					 d > 7 ? '#bebada' :
+					 d > 6 ? '#fb8072' :
+					 d > 5 ? '#80b1d3' :
+					 d > 4 ? '#fdb462' :
+					 d > 3 ? '#b3de69' :
+					 d > 2 ? '#fccde5' :
+					 d > 1 ? '#98e986' :
+					 				  '#bc80bd';
 	}
 
 	// Loading Data with D3
