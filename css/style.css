@@ -98,7 +98,7 @@ a:visited {
 }
 
 .main-content-wrapper {
-  height: 95%;
+  height: 96%;
 }
 
 .map {
@@ -125,6 +125,10 @@ a:visited {
 
 .no-show {
   display: none;
+}
+
+.rank-color {
+  width: 20%;
 }
 
 /* OPTIONS */
@@ -313,7 +317,7 @@ div.dropdown ul li:before {
   color: #fff;
 }
 
-.navigation {
+.nav {
   font-family: "Raleway", sans-serif;
   font-weight: bold;
   text-transform: uppercase;
@@ -328,53 +332,69 @@ div.dropdown ul li:before {
   display: flex;
 }
 
-.navigation a {
+.nav a {
   text-decoration: none;
   display: block;
   padding: .5em;
   color: white;
 }
-.navigation a:hover {
+.nav a:hover {
   background: #60B25E;
 }
 
-.navigation li {
+.nav li {
   margin-right: 1em;
 }
 
 @media all and (max-width: 800px) {
-  .navigation {
+  .nav {
     justify-content: space-around;
   }
 }
 @media all and (max-width: 600px) {
-  .navigation {
+  .nav {
     -webkit-flex-flow: column wrap;
     flex-flow: column wrap;
     padding: 0;
   }
 
-  .navigation a {
+  .nav a {
     text-align: center;
     padding: 10px;
     border-top: 1px solid rgba(255, 255, 255, 0.3);
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   }
 
-  .navigation li:last-of-type a {
+  .nav li:last-of-type a {
     border-bottom: none;
   }
 }
-table.facts-table {
+/* Sub Menus */
+.submenu:hover .submenu-items {
+  display: block;
+  z-index: 1;
+  background-color: #388636;
+}
+
+.submenu-items {
+  position: absolute;
+  display: none;
+}
+
+.submenu-items li {
+  margin: 0;
+}
+
+.facts-table {
   width: 90%;
   margin: 5%;
   border: 1px solid #eee;
 }
-table.facts-table td {
+.facts-table td {
   padding: 5px;
   text-align: left;
 }
-table.facts-table th {
+.facts-table th {
   text-align: center;
   font-weight: bold;
   padding: 5px;
@@ -382,7 +402,7 @@ table.facts-table th {
   background: #9F5EA7;
   color: #fff;
 }
-table.facts-table th.subhead {
+.facts-table th.subhead {
   font-weight: 400;
   border: none;
   padding: 3px;
@@ -390,16 +410,20 @@ table.facts-table th.subhead {
   /* The Fallback */
   background: rgba(159, 94, 167, 0.7);
 }
-table.facts-table tr:nth-child(odd) {
+.facts-table tr:nth-child(odd) {
   background: #eee;
 }
-table.facts-table tr:hover {
+.facts-table tr:hover {
   background: #64c062;
   /* The Fallback */
   background: rgba(100, 192, 98, 0.2);
 }
-table.facts-table tr:hover td {
+.facts-table tr:hover td {
   font-weight: bold;
+}
+
+.rankings-table td {
+  text-align: center;
 }
 
 .legend-header {
@@ -487,5 +511,46 @@ table.facts-table tr:hover td {
 
 .purpdiv7-8 {
   background-color: #6e016b;
+  border: 1px solid #eee;
+}
+
+.access-legend .rank-color {
+  width: 20%;
+  text-align: center;
+  font-size: 0.8em;
+}
+
+.heatmap-legend-1 {
+  background: #BBE47F;
+  /* The Fallback */
+  background: rgba(187, 228, 127, 0.5);
+  border: 1px solid #eee;
+}
+
+.heatmap-legend-2 {
+  background: #E5F57F;
+  /* The Fallback */
+  background: rgba(229, 245, 127, 0.5);
+  border: 1px solid #eee;
+}
+
+.heatmap-legend-3 {
+  background: #FFE680;
+  /* The Fallback */
+  background: rgba(255, 230, 128, 0.5);
+  border: 1px solid #eee;
+}
+
+.heatmap-legend-4 {
+  background: #FFB380;
+  /* The Fallback */
+  background: rgba(255, 179, 128, 0.5);
+  border: 1px solid #eee;
+}
+
+.heatmap-legend-5 {
+  background: #FF8080;
+  /* The Fallback */
+  background: rgba(255, 128, 128, 0.5);
   border: 1px solid #eee;
 }

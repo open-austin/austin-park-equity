@@ -1,4 +1,4 @@
-table.facts-table {
+.facts-table {
 	width: 90%;
 	margin: 5%;
 	border: 1px solid #eee;
@@ -42,6 +42,12 @@ table.facts-table {
 	}
 }
 
+.rankings-table {
+	td {
+		text-align: center;
+	}
+}
+
 .legend-header {
 	font-size: 24px;
 	font-weight: bold;
@@ -64,6 +70,7 @@ table.facts-table {
 		height: 20px;
 	}
 }
+
 
 // red legend
 .rgdiv0-5 {
@@ -118,6 +125,33 @@ table.facts-table {
 }
 .purpdiv7-8 {
 	background-color: $purpdiv7-8;
+	border: 1px solid #eee;
+}
+
+.access-legend .rank-color {
+	width: 20%;
+	text-align: center;
+	font-size: 0.8em;
+}
+
+.heatmap-legend-1 {
+	@include background-opacity(#BBE47F, 0.5);
+	border: 1px solid #eee;
+}
+.heatmap-legend-2 {
+	@include background-opacity(#E5F57F, 0.5);
+	border: 1px solid #eee;
+}
+.heatmap-legend-3 {
+	@include background-opacity(#FFE680, 0.5);
+	border: 1px solid #eee;
+}
+.heatmap-legend-4 {
+	@include background-opacity(#FFB380, 0.5);
+	border: 1px solid #eee;
+}
+.heatmap-legend-5 {
+	@include background-opacity(#FF8080, 0.5);
 	border: 1px solid #eee;
 }
 
