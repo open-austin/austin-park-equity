@@ -55,17 +55,18 @@
 }
 
 /* Sub Menus */
-.submenu:hover .submenu-item {
+.submenu:hover .submenu-items {
   display: block;
   z-index: 1;
   background-color: $dark-green;
 }
 
-.submenu-item {
-  position: absolute
+.submenu-items {
+  position: absolute;
+  display: none;
 }
 
-.submenu-item li {
+.submenu-items li {
   margin: 0
 }
 

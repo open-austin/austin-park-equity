@@ -47,7 +47,7 @@
 				fillColor: getRingColor(feature.properties.distance_l),
 				weight: 0,
 				opacity: 0,
-				fillOpacity: 0.6
+				fillOpacity: 0.5
 			};
 		}
 	}).addTo(map)
@@ -66,7 +66,7 @@
 	var parkLayer = L.geoJson(parks, {
 		style: function style(feature){
 			return {
-				fillColor: getParkColor(feature.properties["DEVELOPMEN"]),
+				fillColor: getParkColor(feature.properties.DEVELOPMEN),
 				weight: 1,
 				opacity: 0.7,
 				color: '#44A048',
@@ -81,15 +81,14 @@
 	}
 
 	function onEachFeature(feature, layer) {
-		var parkName 	= feature.properties.PARK_NAME,
-			parkAcres 	= feature.properties.PARK_ACRES.toFixed(2),
-			parkType 		= feature.properties.PARK_TYPE,
-			parkStatus	= feature.properties.DEVELOPMEN,
-
+		var parkName 	 = feature.properties.PARK_NAME,
+			parkAcres 	 = feature.properties.PARK_ACRES.toFixed(2),
+			parkType 		 = feature.properties.PARK_TYPE,
+			parkStatus	 = feature.properties.DEVELOPMEN,
 			popupContent = "<p><span class='park-title'>"+parkName+"</span> \
-						<br>"+parkAcres+" Acres \
-						<br>Park Type: "+parkType+"</p>" +
-						"<br>Status: " + parkStatus;
+											<br>" + parkAcres + " Acres \
+											<br>Park Type: " + parkType +
+											"<br>Status: " + parkStatus + "</p>";
 
 	    if (feature.properties) {
 	        layer.bindPopup( popupContent );
@@ -123,30 +122,15 @@
 		districtLayer = L.geoJson(districts.features[districtNum], {
 			style: function style(feature) {
 				return {
-					fillColor: getColor(feature.properties.DISTRICT_N),
-					weight: 1,
+					fillColor: "transparent",
+					weight: 3,
 					opacity: 1,
 					color: '#666',
 					dashArray: '',
-					fillOpacity: 0.6
 				};
 			}
 		}).addTo(map);
 		map.fitBounds(districtLayer.getBounds());
-		districtLayer.bringToBack();
-	}
-
-	function getColor(d) {
-		return d > 9 ? '#8dd3c7' :
-					 d > 8 ? '#ffffb3' :
-					 d > 7 ? '#bebada' :
-					 d > 6 ? '#fb8072' :
-					 d > 5 ? '#80b1d3' :
-					 d > 4 ? '#fdb462' :
-					 d > 3 ? '#b3de69' :
-					 d > 2 ? '#fccde5' :
-					 d > 1 ? '#98e986' :
-					 				  '#bc80bd';
 	}
 
 	// Loading Data with D3
