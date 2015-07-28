@@ -1,4 +1,4 @@
-.navigation {
+.nav {
   font-family: $head-font;
   font-weight: bold;
   text-transform: uppercase;
@@ -14,7 +14,7 @@
   display: flex;
 }
 
-.navigation a {
+.nav a {
   text-decoration: none;
   display: block;
   padding: .5em;
@@ -24,24 +24,24 @@
   }
 }
 
-.navigation li {
+.nav li {
   margin-right: 1em;
 }
 
 @media all and (max-width: 800px) {
-  .navigation {
+  .nav {
     justify-content: space-around;
   }
 }
 
 @media all and (max-width: 600px) {
-  .navigation {
+  .nav {
     -webkit-flex-flow: column wrap;
     flex-flow: column wrap;
     padding: 0;
   }
 
-  .navigation a {
+  .nav a {
     text-align: center;
     padding: 10px;
     border-top: 1px solid rgba(255,255,255,0.3);
@@ -49,7 +49,23 @@
   }
 
 
-  .navigation li:last-of-type a {
+  .nav li:last-of-type a {
     border-bottom: none;
   }
 }
+
+/* Sub Menus */
+.submenu:hover .submenu-item {
+  display: block;
+  z-index: 1;
+  background-color: $dark-green;
+}
+
+.submenu-item {
+  position: absolute
+}
+
+.submenu-item li {
+  margin: 0
+}
+

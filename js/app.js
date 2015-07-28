@@ -204,31 +204,31 @@
 	function populateDistrictFacts(districtIndex){
 		var districtFeatures 			= districts.features[districtIndex].properties,
 				districtDemographics 	= distDemoData[districtIndex],
-				districtParks 				= parkAcreageData[districtIndex];
+				districtParks 				= parkAcreageData[districtIndex],
 
-		// Parks Data
-		totParkAcres 			= (districtParks["Total Park Acres"]).toFixed(2),
-		parkAcresRank 		= districtParks["Park Acres Rank"],
-		totParksNum 			= districtParks["Park Count"],
-		parksNumRank 			= districtParks["Park Count Rank"],
-		percParkCoverage 	= districtParks["Percent Park Coverage"],
-		parkCoverageRank 	= districtParks["Coverage Rank"],
-		// pocketParks 					= districtFeatures.POCKET_PARKS,
-		// neighborhoodParks 		= districtFeatures.NEIGHBORHOOD_PARKS,
-		// districtParks 				= districtFeatures.DISTRICT_PARKS,
-		// metroParks 						= districtFeatures.METRO_PARKS,
+			// Parks Data
+			totParkAcres 			= (districtParks["Total Park Acres"]).toFixed(2),
+			parkAcresRank 		= districtParks["Park Acres Rank"],
+			totParksNum 			= districtParks["Park Count"],
+			parksNumRank 			= districtParks["Park Count Rank"],
+			percParkCoverage 	= districtParks["Percent Park Coverage"],
+			parkCoverageRank 	= districtParks["Coverage Rank"],
+			// pocketParks 					= districtFeatures.POCKET_PARKS,
+			// neighborhoodParks 		= districtFeatures.NEIGHBORHOOD_PARKS,
+			// districtParks 				= districtFeatures.DISTRICT_PARKS,
+			// metroParks 						= districtFeatures.METRO_PARKS,
 
-		// Demographic Data
-		familyIncome 	= districtDemographics.medianFamilyIncome2013,
-		rankIncome 		= districtDemographics.rankMedianFamilyIncome2013,
-		percRenter 		= districtDemographics.percentRenterOccupiedHousingUnitsOfTotalOccupied2010,
-		rankRenter 		= districtDemographics.rankRenterOccupiedHousing2010,
-		percPoverty		= districtDemographics.povertyRate2013,
-		rankPoverty		= districtDemographics.rankPoveryRate2013,
-		percInsurance	= districtDemographics.percentWithoutHealthInsurance2013,
-		rankInsurance	= districtDemographics.rankWithoutHealthInsurance2013,
-		popUnder18 		= districtDemographics.ageUnderEighteen2010,
-		rankUnder18 	= districtDemographics.rankAgeUnderEighteen2010;
+			// Demographic Data
+			familyIncome 	= districtDemographics.medianFamilyIncome2013,
+			rankIncome 		= districtDemographics.rankMedianFamilyIncome2013,
+			percRenter 		= districtDemographics.percentRenterOccupiedHousingUnitsOfTotalOccupied2010,
+			rankRenter 		= districtDemographics.rankRenterOccupiedHousing2010,
+			percPoverty		= districtDemographics.povertyRate2013,
+			rankPoverty		= districtDemographics.rankPoveryRate2013,
+			percInsurance	= districtDemographics.percentWithoutHealthInsurance2013,
+			rankInsurance	= districtDemographics.rankWithoutHealthInsurance2013,
+			popUnder18 		= districtDemographics.ageUnderEighteen2010,
+			rankUnder18 	= districtDemographics.rankAgeUnderEighteen2010;
 
 		$('#tot-park-acres').text( totParkAcres );
 		$('#park-acres-rank').text( parkAcresRank );
