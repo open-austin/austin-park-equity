@@ -25,38 +25,23 @@ parks_data["features"].each do |park|
   parks << hash
 end
 
-# loop through pard_amenity_points.json for count of amenities for each park
-amenities_data["features"].each do |amenity|
-  am_park_id = amenity["properties"]["PARK_ID"].to_i
+# method to count features by park_id
+def count_park_feature(data, count, parks)
+  data["features"].each do |item|
+    feature_park_id = item["properties"]["PARK_ID"].to_i
 
-  parks.select do |park|
-    if park["park_id"] == am_park_id
-      park["amenities_count"] += 1
+    parks.select do |park|
+      if park["park_id"] == feature_park_id
+        park[count] += 1
+      end
     end
   end
 end
 
-# loop through pard_facility_points.json for count of facilities for each park
-facilities_data["features"].each do |facility|
-  fac_park_id = facility["properties"]["PARK_ID"].to_i
-
-  parks.select do |park|
-    if park["park_id"] == fac_park_id
-      park["facilities_count"] += 1
-    end
-  end
-end
-
-# loop through pard_trails_points.json for count of trails for each park
-trails_data["features"].each do |facility|
-  tr_park_id = facility["properties"]["PARK_ID"].to_i
-
-  parks.select do |park|
-    if park["park_id"] == tr_park_id
-      park["trails_count"] += 1
-    end
-  end
-end
+# loop through pard_***_points.json's for count of features for each park
+count_park_feature( amenities_data, "amenities_count", parks)
+count_park_feature( facilities_data, "facilities_count", parks)
+count_park_feature( trails_data, "trails_count", parks)
 
 # sum number of amenities, facilities, and trails for each park
 parks.each do |park|
@@ -75,8 +60,6 @@ parks.each do |park|
   if am_fac_sum == 0 && park["status"] == "Developed"
     puts "#{park["name"]} -- #{am_fac_sum} amenities/facilities -- Listed as #{park['status']}"
   end
-
-
 end
 
 # export as csv
@@ -87,9 +70,6 @@ CSV.open("park_attraction_counts.csv", "w") do |csv|
     csv << [park["name"], park["park_id"], park["status"], park["amenities_count"], park["facilities_count"], park["trails_count"], park["am_plus_fac_sum"], park["attractions_sum"]]
   end
 end
-
-
-# puts parks
 
 
 
