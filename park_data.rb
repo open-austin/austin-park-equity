@@ -60,17 +60,20 @@ end
 
 # sum number of amenities, facilities, and trails for each park
 parks.each do |park|
+  am_fac_sum = park["amenities_count"] + park["facilities_count"]
+  park["am_plus_fac_sum"] = am_fac_sum
+
   attractions_sum = park["trails_count"] + park["amenities_count"] + park["facilities_count"]
   park["attractions_sum"] = attractions_sum
 
-  am_fac_sum = park["amenities_count"] + park["facilities_count"]
 
+  # Text Summary of Inconsistencies
   if am_fac_sum > 0 && park["status"] == "Undeveloped"
-    puts "#{park["name"]} -- #{am_fac_sum} amenities/facilities"
+    puts "#{park["name"]} -- #{am_fac_sum} amenities/facilities -- Listed as #{park['status']}"
   end
 
   if am_fac_sum == 0 && park["status"] == "Developed"
-    puts "#{park["name"]} -- #{am_fac_sum} amenities/facilities"
+    puts "#{park["name"]} -- #{am_fac_sum} amenities/facilities -- Listed as #{park['status']}"
   end
 
 
@@ -78,8 +81,10 @@ end
 
 # export as csv
 CSV.open("park_attraction_counts.csv", "w") do |csv|
+  csv << ["Park Name", "Park ID", "Development Status", "Amenities", "Facilities", "Trails", "Amenities + Facilities","Attractions Sum"]
+
   parks.each_with_index do |park, index|
-    csv << parks[index].to_a
+    csv << [park["name"], park["park_id"], park["status"], park["amenities_count"], park["facilities_count"], park["trails_count"], park["am_plus_fac_sum"], park["attractions_sum"]]
   end
 end
 

@@ -22,3 +22,7 @@ pard_trails_nrpa="http://services.arcgis.com/0L95CJ0VTaxqcmED/ArcGIS/rest/servic
 curl $pard_trails_nrpa | jq '' - > raw/pard_trails_nrpa.json
 
 ruby park_data.rb
+
+# topojson --id-property PARK_ID --out data/city_of_austin_parks.topo.json -- data/city_of_austin_parks.geojson
+
+# topojson --out data/pard_trails_nrpa.topo.json -- data/pard_trails_nrpa.geojson

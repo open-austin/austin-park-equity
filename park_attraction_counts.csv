@@ -1,289 +1,291 @@
-"[""name"", ""Barrow Nature Preserve""]","[""park_id"", 112]","[""status"", ""Undeveloped""]","[""amenities_count"", 0]","[""facilities_count"", 0]","[""trails_count"", 0]","[""attractions_sum"", 0]"
-"[""name"", ""Battle Bend Neighborhood Park""]","[""park_id"", 117]","[""status"", ""Developed""]","[""amenities_count"", 15]","[""facilities_count"", 3]","[""trails_count"", 3]","[""attractions_sum"", 21]"
-"[""name"", ""Butler Shores at Town Lake Metro Park""]","[""park_id"", 291]","[""status"", ""Developed""]","[""amenities_count"", 6]","[""facilities_count"", 25]","[""trails_count"", 13]","[""attractions_sum"", 44]"
-"[""name"", ""Bauerle Ranch Park""]","[""park_id"", 269]","[""status"", ""Developed""]","[""amenities_count"", 0]","[""facilities_count"", 0]","[""trails_count"", 6]","[""attractions_sum"", 6]"
-"[""name"", ""Beverly S. Sheffield Northwest District Park""]","[""park_id"", 119]","[""status"", ""Developed""]","[""amenities_count"", 28]","[""facilities_count"", 23]","[""trails_count"", 0]","[""attractions_sum"", 51]"
-"[""name"", ""Buttermilk Neighborhood Park""]","[""park_id"", 303]","[""status"", ""Developed""]","[""amenities_count"", 4]","[""facilities_count"", 14]","[""trails_count"", 11]","[""attractions_sum"", 29]"
-"[""name"", ""Big Stacy Neighborhood Park""]","[""park_id"", 120]","[""status"", ""Developed""]","[""amenities_count"", 0]","[""facilities_count"", 12]","[""trails_count"", 0]","[""attractions_sum"", 12]"
-"[""name"", ""Big Walnut Creek Nature Preserve""]","[""park_id"", 369]","[""status"", ""Undeveloped""]","[""amenities_count"", 0]","[""facilities_count"", 0]","[""trails_count"", 0]","[""attractions_sum"", 0]"
-"[""name"", ""Buttermilk Branch Greenbelt""]","[""park_id"", 130]","[""status"", ""Developed""]","[""amenities_count"", 0]","[""facilities_count"", 0]","[""trails_count"", 4]","[""attractions_sum"", 4]"
-"[""name"", ""Earl J. Pomerleau Pocket Park""]","[""park_id"", 400]","[""status"", ""Undeveloped""]","[""amenities_count"", 0]","[""facilities_count"", 2]","[""trails_count"", 0]","[""attractions_sum"", 2]"
-"[""name"", ""Blowing Sink Research Management Area""]","[""park_id"", 121]","[""status"", ""Undeveloped""]","[""amenities_count"", 0]","[""facilities_count"", 1]","[""trails_count"", 0]","[""attractions_sum"", 1]"
-"[""name"", ""Kendra Page Neighborhood Park""]","[""park_id"", 186]","[""status"", ""Developed""]","[""amenities_count"", 5]","[""facilities_count"", 3]","[""trails_count"", 4]","[""attractions_sum"", 12]"
-"[""name"", ""East Boggy Creek Greenbelt""]","[""park_id"", 367]","[""status"", ""Developed""]","[""amenities_count"", 0]","[""facilities_count"", 0]","[""trails_count"", 8]","[""attractions_sum"", 8]"
-"[""name"", ""Blunn Creek Greenbelt""]","[""park_id"", 122]","[""status"", ""Developed""]","[""amenities_count"", 9]","[""facilities_count"", 5]","[""trails_count"", 1]","[""attractions_sum"", 15]"
-"[""name"", ""East Bouldin Creek Greenbelt""]","[""park_id"", 156]","[""status"", ""Undeveloped""]","[""amenities_count"", 0]","[""facilities_count"", 0]","[""trails_count"", 0]","[""attractions_sum"", 0]"
-"[""name"", ""Blunn Creek Nature Preserve""]","[""park_id"", 123]","[""status"", ""Developed""]","[""amenities_count"", 2]","[""facilities_count"", 4]","[""trails_count"", 6]","[""attractions_sum"", 12]"
-"[""name"", ""Blunn Creek Pocket Park""]","[""park_id"", 389]","[""status"", ""Undeveloped""]","[""amenities_count"", 0]","[""facilities_count"", 0]","[""trails_count"", 0]","[""attractions_sum"", 0]"
-"[""name"", ""Duncan Neighborhood Park""]","[""park_id"", 155]","[""status"", ""Developed""]","[""amenities_count"", 7]","[""facilities_count"", 2]","[""trails_count"", 4]","[""attractions_sum"", 13]"
-"[""name"", ""Kennemer Pool""]","[""park_id"", 187]","[""status"", ""Developed""]","[""amenities_count"", 0]","[""facilities_count"", 3]","[""trails_count"", 0]","[""attractions_sum"", 3]"
-"[""name"", ""Boggy Creek Greenbelt""]","[""park_id"", 124]","[""status"", ""Developed""]","[""amenities_count"", 8]","[""facilities_count"", 8]","[""trails_count"", 20]","[""attractions_sum"", 36]"
-"[""name"", ""Eastwoods Neighborhood Park""]","[""park_id"", 157]","[""status"", ""Developed""]","[""amenities_count"", 16]","[""facilities_count"", 15]","[""trails_count"", 8]","[""attractions_sum"", 39]"
-"[""name"", ""Bolm Road District Park""]","[""park_id"", 399]","[""status"", ""Undeveloped""]","[""amenities_count"", 0]","[""facilities_count"", 0]","[""trails_count"", 0]","[""attractions_sum"", 0]"
-"[""name"", ""Brentwood Neighborhood Park""]","[""park_id"", 125]","[""status"", ""Developed""]","[""amenities_count"", 11]","[""facilities_count"", 16]","[""trails_count"", 8]","[""attractions_sum"", 35]"
-"[""name"", ""Edward Rendon Sr. Metro Park at Festival Beach""]","[""park_id"", 293]","[""status"", ""Developed""]","[""amenities_count"", 52]","[""facilities_count"", 60]","[""trails_count"", 37]","[""attractions_sum"", 149]"
-"[""name"", ""Brownie Pocket Park""]","[""park_id"", 327]","[""status"", ""Developed""]","[""amenities_count"", 3]","[""facilities_count"", 1]","[""trails_count"", 0]","[""attractions_sum"", 4]"
-"[""name"", ""Brushy Creek Greenbelt""]","[""park_id"", 326]","[""status"", ""Undeveloped""]","[""amenities_count"", 0]","[""facilities_count"", 0]","[""trails_count"", 0]","[""attractions_sum"", 0]"
-"[""name"", ""Brush Square Triangle""]","[""park_id"", 104]","[""status"", ""Undeveloped""]","[""amenities_count"", 0]","[""facilities_count"", 0]","[""trails_count"", 0]","[""attractions_sum"", 0]"
-"[""name"", ""Gaines Greenbelt""]","[""park_id"", 163]","[""status"", ""Undeveloped""]","[""amenities_count"", 0]","[""facilities_count"", 0]","[""trails_count"", 0]","[""attractions_sum"", 0]"
-"[""name"", ""Bull Creek District Park""]","[""park_id"", 128]","[""status"", ""Developed""]","[""amenities_count"", 18]","[""facilities_count"", 12]","[""trails_count"", 1]","[""attractions_sum"", 31]"
-"[""name"", ""Adams-Hemphill Neighborhood Park""]","[""park_id"", 100]","[""status"", ""Developed""]","[""amenities_count"", 3]","[""facilities_count"", 20]","[""trails_count"", 0]","[""attractions_sum"", 23]"
-"[""name"", ""Bartholomew District Park""]","[""park_id"", 113]","[""status"", ""Developed""]","[""amenities_count"", 41]","[""facilities_count"", 61]","[""trails_count"", 0]","[""attractions_sum"", 102]"
-"[""name"", ""Alamo Pocket Park""]","[""park_id"", 101]","[""status"", ""Developed""]","[""amenities_count"", 7]","[""facilities_count"", 7]","[""trails_count"", 1]","[""attractions_sum"", 15]"
-"[""name"", ""Alderbrook Pocket Park""]","[""park_id"", 385]","[""status"", ""Undeveloped""]","[""amenities_count"", 0]","[""facilities_count"", 0]","[""trails_count"", 0]","[""attractions_sum"", 0]"
-"[""name"", ""Barton Creek Greenbelt""]","[""park_id"", 114]","[""status"", ""Developed""]","[""amenities_count"", 13]","[""facilities_count"", 24]","[""trails_count"", 27]","[""attractions_sum"", 64]"
-"[""name"", ""Andrews School Park""]","[""park_id"", 102]","[""status"", ""Developed""]","[""amenities_count"", 0]","[""facilities_count"", 2]","[""trails_count"", 0]","[""attractions_sum"", 2]"
-"[""name"", ""Archstone Greenbelt""]","[""park_id"", 103]","[""status"", ""Undeveloped""]","[""amenities_count"", 0]","[""facilities_count"", 0]","[""trails_count"", 0]","[""attractions_sum"", 0]"
-"[""name"", ""Barton Creek Wilderness Park""]","[""park_id"", 115]","[""status"", ""Developed""]","[""amenities_count"", 0]","[""facilities_count"", 0]","[""trails_count"", 0]","[""attractions_sum"", 0]"
-"[""name"", ""Armadillo Neighborhood Park""]","[""park_id"", 105]","[""status"", ""Undeveloped""]","[""amenities_count"", 8]","[""facilities_count"", 1]","[""trails_count"", 2]","[""attractions_sum"", 11]"
-"[""name"", ""Astor Place Pocket Park""]","[""park_id"", 405]","[""status"", ""Undeveloped""]","[""amenities_count"", 0]","[""facilities_count"", 0]","[""trails_count"", 0]","[""attractions_sum"", 0]"
-"[""name"", ""Barton Hills School Park""]","[""park_id"", 116]","[""status"", ""Developed""]","[""amenities_count"", 7]","[""facilities_count"", 5]","[""trails_count"", 1]","[""attractions_sum"", 13]"
-"[""name"", ""Auditorium Shores at Town Lake Metro Park""]","[""park_id"", 290]","[""status"", ""Developed""]","[""amenities_count"", 19]","[""facilities_count"", 56]","[""trails_count"", 13]","[""attractions_sum"", 88]"
-"[""name"", ""Burnett \""Blondie\"" Pharr Tennis Center""]","[""park_id"", 243]","[""status"", ""Developed""]","[""amenities_count"", 18]","[""facilities_count"", 16]","[""trails_count"", 6]","[""attractions_sum"", 40]"
-"[""name"", ""Austin High Tennis Center""]","[""park_id"", 107]","[""status"", ""Developed""]","[""amenities_count"", 0]","[""facilities_count"", 14]","[""trails_count"", 3]","[""attractions_sum"", 17]"
-"[""name"", ""Lamar Senior Activity Center""]","[""park_id"", 189]","[""status"", ""Developed""]","[""amenities_count"", 1]","[""facilities_count"", 3]","[""trails_count"", 0]","[""attractions_sum"", 4]"
-"[""name"", ""Austin Memorial Park Cemetery""]","[""park_id"", 392]","[""status"", ""Developed""]","[""amenities_count"", 0]","[""facilities_count"", 5]","[""trails_count"", 0]","[""attractions_sum"", 5]"
-"[""name"", ""Butler Metro Park""]","[""park_id"", 358]","[""status"", ""Developed""]","[""amenities_count"", 12]","[""facilities_count"", 47]","[""trails_count"", 27]","[""attractions_sum"", 86]"
-"[""name"", ""Austin Recreation Center""]","[""park_id"", 108]","[""status"", ""Developed""]","[""amenities_count"", 0]","[""facilities_count"", 2]","[""trails_count"", 0]","[""attractions_sum"", 2]"
-"[""name"", ""Austin's Colony Neighborhood Park""]","[""park_id"", 106]","[""status"", ""Undeveloped""]","[""amenities_count"", 0]","[""facilities_count"", 0]","[""trails_count"", 0]","[""attractions_sum"", 0]"
-"[""name"", ""Bailey Neighborhood Park""]","[""park_id"", 109]","[""status"", ""Developed""]","[""amenities_count"", 2]","[""facilities_count"", 10]","[""trails_count"", 0]","[""attractions_sum"", 12]"
-"[""name"", ""Latta Branch Greenbelt""]","[""park_id"", 190]","[""status"", ""Developed""]","[""amenities_count"", 16]","[""facilities_count"", 3]","[""trails_count"", 0]","[""attractions_sum"", 19]"
-"[""name"", ""Balcones District Park""]","[""park_id"", 110]","[""status"", ""Developed""]","[""amenities_count"", 22]","[""facilities_count"", 9]","[""trails_count"", 5]","[""attractions_sum"", 36]"
-"[""name"", ""Barrington School Park""]","[""park_id"", 111]","[""status"", ""Developed""]","[""amenities_count"", 8]","[""facilities_count"", 7]","[""trails_count"", 2]","[""attractions_sum"", 17]"
-"[""name"", ""Canyon Vista Pool""]","[""park_id"", 131]","[""status"", ""Developed""]","[""amenities_count"", 0]","[""facilities_count"", 4]","[""trails_count"", 0]","[""attractions_sum"", 4]"
-"[""name"", ""Dove Springs District Park""]","[""park_id"", 153]","[""status"", ""Developed""]","[""amenities_count"", 17]","[""facilities_count"", 24]","[""trails_count"", 18]","[""attractions_sum"", 59]"
-"[""name"", ""Crestland Triangle""]","[""park_id"", 118]","[""status"", ""Undeveloped""]","[""amenities_count"", 0]","[""facilities_count"", 0]","[""trails_count"", 0]","[""attractions_sum"", 0]"
-"[""name"", ""Caswell Tennis Center""]","[""park_id"", 133]","[""status"", ""Developed""]","[""amenities_count"", 0]","[""facilities_count"", 11]","[""trails_count"", 2]","[""attractions_sum"", 13]"
-"[""name"", ""Central Maintenance Complex at Town Lake Metro Park""]","[""park_id"", 292]","[""status"", ""Developed""]","[""amenities_count"", 0]","[""facilities_count"", 7]","[""trails_count"", 0]","[""attractions_sum"", 7]"
-"[""name"", ""Cunningham School Park""]","[""park_id"", 147]","[""status"", ""Developed""]","[""amenities_count"", 3]","[""facilities_count"", 4]","[""trails_count"", 0]","[""attractions_sum"", 7]"
-"[""name"", ""Cherry Creek Neighborhood Park""]","[""park_id"", 134]","[""status"", ""Developed""]","[""amenities_count"", 8]","[""facilities_count"", 1]","[""trails_count"", 1]","[""attractions_sum"", 10]"
-"[""name"", ""Cherrywood Pocket Park""]","[""park_id"", 353]","[""status"", ""Developed""]","[""amenities_count"", 0]","[""facilities_count"", 0]","[""trails_count"", 2]","[""attractions_sum"", 2]"
-"[""name"", ""Davis Hill Neighborhood Park""]","[""park_id"", 148]","[""status"", ""Undeveloped""]","[""amenities_count"", 0]","[""facilities_count"", 1]","[""trails_count"", 0]","[""attractions_sum"", 1]"
-"[""name"", ""Chestnut Pocket Park""]","[""park_id"", 135]","[""status"", ""Developed""]","[""amenities_count"", 7]","[""facilities_count"", 4]","[""trails_count"", 3]","[""attractions_sum"", 14]"
-"[""name"", ""Dougherty Arts Center""]","[""park_id"", 359]","[""status"", ""Developed""]","[""amenities_count"", 0]","[""facilities_count"", 5]","[""trails_count"", 2]","[""attractions_sum"", 7]"
-"[""name"", ""Circle C Ranch Metro Park""]","[""park_id"", 136]","[""status"", ""Developed""]","[""amenities_count"", 25]","[""facilities_count"", 73]","[""trails_count"", 14]","[""attractions_sum"", 112]"
-"[""name"", ""Civitan Neighborhood Park""]","[""park_id"", 137]","[""status"", ""Developed""]","[""amenities_count"", 6]","[""facilities_count"", 8]","[""trails_count"", 0]","[""attractions_sum"", 14]"
-"[""name"", ""Colony District Park""]","[""park_id"", 139]","[""status"", ""Developed""]","[""amenities_count"", 0]","[""facilities_count"", 11]","[""trails_count"", 0]","[""attractions_sum"", 11]"
-"[""name"", ""Davis/White Northeast Neighborhood Park""]","[""park_id"", 221]","[""status"", ""Developed""]","[""amenities_count"", 26]","[""facilities_count"", 8]","[""trails_count"", 0]","[""attractions_sum"", 34]"
-"[""name"", ""Colorado River Park WIldlife Sanctuary""]","[""park_id"", 140]","[""status"", ""Developed""]","[""amenities_count"", 0]","[""facilities_count"", 2]","[""trails_count"", 0]","[""attractions_sum"", 2]"
-"[""name"", ""Eilers (Deep Eddy) Neighborhood Park""]","[""park_id"", 158]","[""status"", ""Developed""]","[""amenities_count"", 6]","[""facilities_count"", 24]","[""trails_count"", 5]","[""attractions_sum"", 35]"
-"[""name"", ""Colorado/Walnut Greenbelt""]","[""park_id"", 141]","[""status"", ""Undeveloped""]","[""amenities_count"", 0]","[""facilities_count"", 0]","[""trails_count"", 0]","[""attractions_sum"", 0]"
-"[""name"", ""Comal Pocket Park""]","[""park_id"", 142]","[""status"", ""Developed""]","[""amenities_count"", 5]","[""facilities_count"", 7]","[""trails_count"", 0]","[""attractions_sum"", 12]"
-"[""name"", ""Elizabet Ney Museum""]","[""park_id"", 159]","[""status"", ""Developed""]","[""amenities_count"", 0]","[""facilities_count"", 7]","[""trails_count"", 1]","[""attractions_sum"", 8]"
-"[""name"", ""Commons Ford Ranch Metro Park""]","[""park_id"", 143]","[""status"", ""Developed""]","[""amenities_count"", 9]","[""facilities_count"", 19]","[""trails_count"", 0]","[""attractions_sum"", 28]"
-"[""name"", ""Downs Mabson Fields""]","[""park_id"", 154]","[""status"", ""Developed""]","[""amenities_count"", 1]","[""facilities_count"", 5]","[""trails_count"", 5]","[""attractions_sum"", 11]"
-"[""name"", ""Conley-Guerrero Senior Activity Center""]","[""park_id"", 144]","[""status"", ""Developed""]","[""amenities_count"", 6]","[""facilities_count"", 7]","[""trails_count"", 0]","[""attractions_sum"", 13]"
-"[""name"", ""Ellen Higgins Pocket Park""]","[""park_id"", 160]","[""status"", ""Developed""]","[""amenities_count"", 5]","[""facilities_count"", 1]","[""trails_count"", 2]","[""attractions_sum"", 8]"
-"[""name"", ""Convict Hill Quarry Neighborhood Park""]","[""park_id"", 145]","[""status"", ""Developed""]","[""amenities_count"", 3]","[""facilities_count"", 1]","[""trails_count"", 1]","[""attractions_sum"", 5]"
-"[""name"", ""Dry Creek Greenbelt""]","[""park_id"", 406]","[""status"", ""Undeveloped""]","[""amenities_count"", 0]","[""facilities_count"", 0]","[""trails_count"", 0]","[""attractions_sum"", 0]"
-"[""name"", ""Cook School Park""]","[""park_id"", 146]","[""status"", ""Developed""]","[""amenities_count"", 5]","[""facilities_count"", 4]","[""trails_count"", 0]","[""attractions_sum"", 9]"
-"[""name"", ""Copperfield Neighborhood Park""]","[""park_id"", 377]","[""status"", ""Undeveloped""]","[""amenities_count"", 0]","[""facilities_count"", 3]","[""trails_count"", 1]","[""attractions_sum"", 4]"
-"[""name"", ""Elroy Neighborhood Park""]","[""park_id"", 403]","[""status"", ""Undeveloped""]","[""amenities_count"", 0]","[""facilities_count"", 0]","[""trails_count"", 0]","[""attractions_sum"", 0]"
-"[""name"", ""Country Club Creek Greenbelt""]","[""park_id"", 376]","[""status"", ""Developed""]","[""amenities_count"", 0]","[""facilities_count"", 0]","[""trails_count"", 0]","[""attractions_sum"", 0]"
-"[""name"", ""Covert Park at Mount Bonnell""]","[""park_id"", 213]","[""status"", ""Developed""]","[""amenities_count"", 3]","[""facilities_count"", 8]","[""trails_count"", 0]","[""attractions_sum"", 11]"
-"[""name"", ""Emma Long Metro Park""]","[""park_id"", 161]","[""status"", ""Developed""]","[""amenities_count"", 253]","[""facilities_count"", 110]","[""trails_count"", 35]","[""attractions_sum"", 398]"
-"[""name"", ""Decker Tallgrass Prairie Preserve""]","[""park_id"", 370]","[""status"", ""Undeveloped""]","[""amenities_count"", 0]","[""facilities_count"", 2]","[""trails_count"", 0]","[""attractions_sum"", 2]"
-"[""name"", ""Hartford Planting Strip""]","[""park_id"", 361]","[""status"", ""Developed""]","[""amenities_count"", 0]","[""facilities_count"", 0]","[""trails_count"", 0]","[""attractions_sum"", 0]"
-"[""name"", ""Deer Park at Maple Run Preserve""]","[""park_id"", 329]","[""status"", ""Undeveloped""]","[""amenities_count"", 0]","[""facilities_count"", 0]","[""trails_count"", 0]","[""attractions_sum"", 0]"
-"[""name"", ""Evergreen Cemetery\r\n""]","[""park_id"", 393]","[""status"", ""Developed""]","[""amenities_count"", 0]","[""facilities_count"", 1]","[""trails_count"", 0]","[""attractions_sum"", 1]"
-"[""name"", ""Dick Nichols District Park""]","[""park_id"", 149]","[""status"", ""Developed""]","[""amenities_count"", 30]","[""facilities_count"", 18]","[""trails_count"", 5]","[""attractions_sum"", 53]"
-"[""name"", ""Dittmar District Park""]","[""park_id"", 150]","[""status"", ""Developed""]","[""amenities_count"", 17]","[""facilities_count"", 12]","[""trails_count"", 10]","[""attractions_sum"", 39]"
-"[""name"", ""Forest North Neighborhood Park""]","[""park_id"", 386]","[""status"", ""Developed""]","[""amenities_count"", 1]","[""facilities_count"", 9]","[""trails_count"", 0]","[""attractions_sum"", 10]"
-"[""name"", ""Doss School Park""]","[""park_id"", 151]","[""status"", ""Developed""]","[""amenities_count"", 1]","[""facilities_count"", 4]","[""trails_count"", 1]","[""attractions_sum"", 6]"
-"[""name"", ""Dottie Jordan Neighborhood Park""]","[""park_id"", 152]","[""status"", ""Developed""]","[""amenities_count"", 11]","[""facilities_count"", 9]","[""trails_count"", 10]","[""attractions_sum"", 30]"
-"[""name"", ""Franklin Neighborhood Park""]","[""park_id"", 162]","[""status"", ""Developed""]","[""amenities_count"", 8]","[""facilities_count"", 5]","[""trails_count"", 0]","[""attractions_sum"", 13]"
-"[""name"", ""Hartford Triangle""]","[""park_id"", 362]","[""status"", ""Undeveloped""]","[""amenities_count"", 0]","[""facilities_count"", 0]","[""trails_count"", 0]","[""attractions_sum"", 0]"
-"[""name"", ""Gaines Creek Neighborhood Park""]","[""park_id"", 164]","[""status"", ""Developed""]","[""amenities_count"", 2]","[""facilities_count"", 2]","[""trails_count"", 2]","[""attractions_sum"", 6]"
-"[""name"", ""Haskell House""]","[""park_id"", 177]","[""status"", ""Developed""]","[""amenities_count"", 0]","[""facilities_count"", 1]","[""trails_count"", 0]","[""attractions_sum"", 1]"
-"[""name"", ""Garrison District Park""]","[""park_id"", 165]","[""status"", ""Developed""]","[""amenities_count"", 35]","[""facilities_count"", 19]","[""trails_count"", 1]","[""attractions_sum"", 55]"
-"[""name"", ""Knollwood Neighborhood Park""]","[""park_id"", 397]","[""status"", ""Undeveloped""]","[""amenities_count"", 0]","[""facilities_count"", 0]","[""trails_count"", 0]","[""attractions_sum"", 0]"
-"[""name"", ""George Washington Carver Museum""]","[""park_id"", 132]","[""status"", ""Developed""]","[""amenities_count"", 0]","[""facilities_count"", 1]","[""trails_count"", 0]","[""attractions_sum"", 1]"
-"[""name"", ""Heath Eiland and Morgan Moss BMX Skate Park""]","[""park_id"", 381]","[""status"", ""Developed""]","[""amenities_count"", 0]","[""facilities_count"", 5]","[""trails_count"", 0]","[""attractions_sum"", 5]"
-"[""name"", ""Georgian Acres Neighborhood Park""]","[""park_id"", 407]","[""status"", ""Undeveloped""]","[""amenities_count"", 0]","[""facilities_count"", 0]","[""trails_count"", 0]","[""attractions_sum"", 0]"
-"[""name"", ""Gillis Neighborhood Park""]","[""park_id"", 166]","[""status"", ""Developed""]","[""amenities_count"", 12]","[""facilities_count"", 7]","[""trails_count"", 0]","[""attractions_sum"", 19]"
-"[""name"", ""Heritage Oaks Neighborhood Park""]","[""park_id"", 388]","[""status"", ""Undeveloped""]","[""amenities_count"", 0]","[""facilities_count"", 0]","[""trails_count"", 0]","[""attractions_sum"", 0]"
-"[""name"", ""Givens District Park""]","[""park_id"", 167]","[""status"", ""Developed""]","[""amenities_count"", 26]","[""facilities_count"", 20]","[""trails_count"", 0]","[""attractions_sum"", 46]"
-"[""name"", ""Lakeline Neighborhood Park""]","[""park_id"", 188]","[""status"", ""Undeveloped""]","[""amenities_count"", 0]","[""facilities_count"", 0]","[""trails_count"", 0]","[""attractions_sum"", 0]"
-"[""name"", ""Goat Cave Karst Nature Preserve""]","[""park_id"", 184]","[""status"", ""Undeveloped""]","[""amenities_count"", 0]","[""facilities_count"", 0]","[""trails_count"", 0]","[""attractions_sum"", 0]"
-"[""name"", ""Hielscher Tract Greenbelt""]","[""park_id"", 351]","[""status"", ""Undeveloped""]","[""amenities_count"", 0]","[""facilities_count"", 0]","[""trails_count"", 0]","[""attractions_sum"", 0]"
-"[""name"", ""Metz Neighborhood Park""]","[""park_id"", 207]","[""status"", ""Developed""]","[""amenities_count"", 13]","[""facilities_count"", 13]","[""trails_count"", 0]","[""attractions_sum"", 26]"
-"[""name"", ""Hill School Park""]","[""park_id"", 178]","[""status"", ""Developed""]","[""amenities_count"", 2]","[""facilities_count"", 5]","[""trails_count"", 0]","[""attractions_sum"", 7]"
-"[""name"", ""Lakeshore at Town Lake Metro Park""]","[""park_id"", 295]","[""status"", ""Developed""]","[""amenities_count"", 4]","[""facilities_count"", 3]","[""trails_count"", 0]","[""attractions_sum"", 7]"
-"[""name"", ""Holly Shores at Town Lake Metro Park""]","[""park_id"", 294]","[""status"", ""Developed""]","[""amenities_count"", 2]","[""facilities_count"", 6]","[""trails_count"", 0]","[""attractions_sum"", 8]"
-"[""name"", ""Houston School Park""]","[""park_id"", 179]","[""status"", ""Developed""]","[""amenities_count"", 0]","[""facilities_count"", 2]","[""trails_count"", 0]","[""attractions_sum"", 2]"
-"[""name"", ""Lamar Beach at Town Lake Metro Park""]","[""park_id"", 296]","[""status"", ""Developed""]","[""amenities_count"", 10]","[""facilities_count"", 44]","[""trails_count"", 0]","[""attractions_sum"", 54]"
-"[""name"", ""Hubert C. Schroeter Neighborhood Park""]","[""park_id"", 264]","[""status"", ""Developed""]","[""amenities_count"", 13]","[""facilities_count"", 4]","[""trails_count"", 0]","[""attractions_sum"", 17]"
-"[""name"", ""Millennium Center""]","[""park_id"", 208]","[""status"", ""Developed""]","[""amenities_count"", 0]","[""facilities_count"", 5]","[""trails_count"", 10]","[""attractions_sum"", 15]"
-"[""name"", ""Indiangrass Wildlife Sanctuary""]","[""park_id"", 368]","[""status"", ""Undeveloped""]","[""amenities_count"", 0]","[""facilities_count"", 0]","[""trails_count"", 0]","[""attractions_sum"", 0]"
-"[""name"", ""International Shores at Town Lake Metro Park""]","[""park_id"", 363]","[""status"", ""Developed""]","[""amenities_count"", 4]","[""facilities_count"", 3]","[""trails_count"", 0]","[""attractions_sum"", 7]"
-"[""name"", ""Govalle Neighborhood Park""]","[""park_id"", 168]","[""status"", ""Developed""]","[""amenities_count"", 20]","[""facilities_count"", 13]","[""trails_count"", 1]","[""attractions_sum"", 34]"
-"[""name"", ""Gracywoods Neighborhood Park""]","[""park_id"", 169]","[""status"", ""Developed""]","[""amenities_count"", 34]","[""facilities_count"", 5]","[""trails_count"", 9]","[""attractions_sum"", 48]"
-"[""name"", ""J.J. Seabrook Greenbelt""]","[""park_id"", 180]","[""status"", ""Undeveloped""]","[""amenities_count"", 3]","[""facilities_count"", 0]","[""trails_count"", 0]","[""attractions_sum"", 3]"
-"[""name"", ""Grand Meadow Neighborhood Park""]","[""park_id"", 171]","[""status"", ""Undeveloped""]","[""amenities_count"", 0]","[""facilities_count"", 0]","[""trails_count"", 0]","[""attractions_sum"", 0]"
-"[""name"", ""Great Hills Neighborhood Park""]","[""park_id"", 172]","[""status"", ""Developed""]","[""amenities_count"", 16]","[""facilities_count"", 13]","[""trails_count"", 18]","[""attractions_sum"", 47]"
-"[""name"", ""Jimmy Clay Golf Course""]","[""park_id"", 181]","[""status"", ""Developed""]","[""amenities_count"", 4]","[""facilities_count"", 110]","[""trails_count"", 0]","[""attractions_sum"", 114]"
-"[""name"", ""Legend Oaks Neighborhood Park""]","[""park_id"", 191]","[""status"", ""Undeveloped""]","[""amenities_count"", 0]","[""facilities_count"", 0]","[""trails_count"", 0]","[""attractions_sum"", 0]"
-"[""name"", ""Grey Rock Golf Course""]","[""park_id"", 404]","[""status"", ""Developed""]","[""amenities_count"", 0]","[""facilities_count"", 85]","[""trails_count"", 0]","[""attractions_sum"", 85]"
-"[""name"", ""Gullett School Park""]","[""park_id"", 173]","[""status"", ""Developed""]","[""amenities_count"", 0]","[""facilities_count"", 12]","[""trails_count"", 1]","[""attractions_sum"", 13]"
-"[""name"", ""John Trevino Jr. Metro Park at Morrison Ranch""]","[""park_id"", 212]","[""status"", ""Developed""]","[""amenities_count"", 0]","[""facilities_count"", 5]","[""trails_count"", 0]","[""attractions_sum"", 5]"
-"[""name"", ""Gustavo \""Gus\"" L. Garcia District Park""]","[""park_id"", 174]","[""status"", ""Developed""]","[""amenities_count"", 8]","[""facilities_count"", 6]","[""trails_count"", 6]","[""attractions_sum"", 20]"
-"[""name"", ""Lewis Mountain Ranch Neighborhood Park""]","[""park_id"", 192]","[""status"", ""Undeveloped""]","[""amenities_count"", 2]","[""facilities_count"", 0]","[""trails_count"", 0]","[""attractions_sum"", 2]"
-"[""name"", ""Hall/Goodnight Planting Strip""]","[""park_id"", 170]","[""status"", ""Undeveloped""]","[""amenities_count"", 0]","[""facilities_count"", 0]","[""trails_count"", 0]","[""attractions_sum"", 0]"
-"[""name"", ""Joslin Neighborhood Park""]","[""park_id"", 183]","[""status"", ""Developed""]","[""amenities_count"", 3]","[""facilities_count"", 6]","[""trails_count"", 0]","[""attractions_sum"", 9]"
-"[""name"", ""Hancock Golf Course""]","[""park_id"", 175]","[""status"", ""Developed""]","[""amenities_count"", 8]","[""facilities_count"", 34]","[""trails_count"", 0]","[""attractions_sum"", 42]"
-"[""name"", ""Harris Branch Neighborhood Park""]","[""park_id"", 176]","[""status"", ""Developed""]","[""amenities_count"", 3]","[""facilities_count"", 2]","[""trails_count"", 0]","[""attractions_sum"", 5]"
-"[""name"", ""Kealing School Park""]","[""park_id"", 185]","[""status"", ""Developed""]","[""amenities_count"", 8]","[""facilities_count"", 19]","[""trails_count"", 20]","[""attractions_sum"", 47]"
-"[""name"", ""Harris Triangle""]","[""park_id"", 253]","[""status"", ""Developed""]","[""amenities_count"", 0]","[""facilities_count"", 0]","[""trails_count"", 0]","[""attractions_sum"", 0]"
-"[""name"", ""Mary Moore Searight Metro Park""]","[""park_id"", 203]","[""status"", ""Developed""]","[""amenities_count"", 46]","[""facilities_count"", 55]","[""trails_count"", 16]","[""attractions_sum"", 117]"
-"[""name"", ""Norman School Park""]","[""park_id"", 217]","[""status"", ""Developed""]","[""amenities_count"", 3]","[""facilities_count"", 3]","[""trails_count"", 0]","[""attractions_sum"", 6]"
-"[""name"", ""Mayfield House""]","[""park_id"", 204]","[""status"", ""Developed""]","[""amenities_count"", 11]","[""facilities_count"", 8]","[""trails_count"", 0]","[""attractions_sum"", 19]"
-"[""name"", ""Oertli Neighborhood Park""]","[""park_id"", 398]","[""status"", ""Undeveloped""]","[""amenities_count"", 0]","[""facilities_count"", 0]","[""trails_count"", 0]","[""attractions_sum"", 0]"
-"[""name"", ""Mayfield Nature Preserve""]","[""park_id"", 205]","[""status"", ""Developed""]","[""amenities_count"", 4]","[""facilities_count"", 5]","[""trails_count"", 11]","[""attractions_sum"", 20]"
-"[""name"", ""Meadows at Trinity Crossing Neighborhood Park""]","[""park_id"", 206]","[""status"", ""Developed""]","[""amenities_count"", 0]","[""facilities_count"", 3]","[""trails_count"", 0]","[""attractions_sum"", 3]"
-"[""name"", ""Oakwood Cemetery""]","[""park_id"", 394]","[""status"", ""Developed""]","[""amenities_count"", 0]","[""facilities_count"", 1]","[""trails_count"", 0]","[""attractions_sum"", 1]"
-"[""name"", ""Meadowview Triangle""]","[""park_id"", 380]","[""status"", ""Developed""]","[""amenities_count"", 5]","[""facilities_count"", 3]","[""trails_count"", 8]","[""attractions_sum"", 16]"
-"[""name"", ""North Acres Neighborhood Park""]","[""park_id"", 195]","[""status"", ""Undeveloped""]","[""amenities_count"", 2]","[""facilities_count"", 0]","[""trails_count"", 0]","[""attractions_sum"", 2]"
-"[""name"", ""Odom School Park""]","[""park_id"", 227]","[""status"", ""Developed""]","[""amenities_count"", 2]","[""facilities_count"", 7]","[""trails_count"", 0]","[""attractions_sum"", 9]"
-"[""name"", ""Little Stacy Neighborhood Park""]","[""park_id"", 194]","[""status"", ""Developed""]","[""amenities_count"", 13]","[""facilities_count"", 14]","[""trails_count"", 0]","[""attractions_sum"", 27]"
-"[""name"", ""Margaret Hoffman Oak Park""]","[""park_id"", 390]","[""status"", ""Developed""]","[""amenities_count"", 0]","[""facilities_count"", 0]","[""trails_count"", 0]","[""attractions_sum"", 0]"
-"[""name"", ""Little Walnut Creek District Park""]","[""park_id"", 196]","[""status"", ""Undeveloped""]","[""amenities_count"", 0]","[""facilities_count"", 0]","[""trails_count"", 0]","[""attractions_sum"", 0]"
-"[""name"", ""Old Bakery""]","[""park_id"", 228]","[""status"", ""Developed""]","[""amenities_count"", 0]","[""facilities_count"", 2]","[""trails_count"", 0]","[""attractions_sum"", 2]"
-"[""name"", ""Little Zilker Neighborhood Park""]","[""park_id"", 323]","[""status"", ""Developed""]","[""amenities_count"", 9]","[""facilities_count"", 6]","[""trails_count"", 2]","[""attractions_sum"", 17]"
-"[""name"", ""Mary Dawson Pocket Park""]","[""park_id"", 202]","[""status"", ""Undeveloped""]","[""amenities_count"", 0]","[""facilities_count"", 0]","[""trails_count"", 0]","[""attractions_sum"", 0]"
-"[""name"", ""Longhorn Shores at Town Lake Metro Park""]","[""park_id"", 297]","[""status"", ""Developed""]","[""amenities_count"", 3]","[""facilities_count"", 2]","[""trails_count"", 5]","[""attractions_sum"", 10]"
-"[""name"", ""Mary Frances Baylor Clarksville Pocket Park""]","[""park_id"", 138]","[""status"", ""Developed""]","[""amenities_count"", 3]","[""facilities_count"", 5]","[""trails_count"", 0]","[""attractions_sum"", 8]"
-"[""name"", ""Old Moore's Crossing Neighborhood Park""]","[""park_id"", 230]","[""status"", ""Undeveloped""]","[""amenities_count"", 0]","[""facilities_count"", 0]","[""trails_count"", 0]","[""attractions_sum"", 0]"
-"[""name"", ""Manuel and Robert Donley Pocket Park""]","[""park_id"", 328]","[""status"", ""Developed""]","[""amenities_count"", 2]","[""facilities_count"", 1]","[""trails_count"", 0]","[""attractions_sum"", 3]"
-"[""name"", ""Longview Neighborhood Park""]","[""park_id"", 197]","[""status"", ""Developed""]","[""amenities_count"", 3]","[""facilities_count"", 6]","[""trails_count"", 4]","[""attractions_sum"", 13]"
-"[""name"", ""Lott Pocket Park""]","[""park_id"", 198]","[""status"", ""Developed""]","[""amenities_count"", 3]","[""facilities_count"", 6]","[""trails_count"", 0]","[""attractions_sum"", 9]"
-"[""name"", ""Marble Creek Greenbelt""]","[""park_id"", 201]","[""status"", ""Undeveloped""]","[""amenities_count"", 0]","[""facilities_count"", 0]","[""trails_count"", 0]","[""attractions_sum"", 0]"
-"[""name"", ""Lower Bull Creek Greenbelt""]","[""park_id"", 127]","[""status"", ""Developed""]","[""amenities_count"", 5]","[""facilities_count"", 14]","[""trails_count"", 13]","[""attractions_sum"", 32]"
-"[""name"", ""Old San Antonio Greenbelt""]","[""park_id"", 374]","[""status"", ""Undeveloped""]","[""amenities_count"", 0]","[""facilities_count"", 0]","[""trails_count"", 0]","[""attractions_sum"", 0]"
-"[""name"", ""Lucy Read School Park""]","[""park_id"", 199]","[""status"", ""Developed""]","[""amenities_count"", 2]","[""facilities_count"", 3]","[""trails_count"", 4]","[""attractions_sum"", 9]"
-"[""name"", ""Mabel Davis District Park""]","[""park_id"", 200]","[""status"", ""Developed""]","[""amenities_count"", 1]","[""facilities_count"", 10]","[""trails_count"", 2]","[""attractions_sum"", 13]"
-"[""name"", ""Old San Antonio Park""]","[""park_id"", 391]","[""status"", ""Undeveloped""]","[""amenities_count"", 0]","[""facilities_count"", 1]","[""trails_count"", 0]","[""attractions_sum"", 1]"
-"[""name"", ""South Park Meadows Greenbelt""]","[""park_id"", 375]","[""status"", ""Undeveloped""]","[""amenities_count"", 0]","[""facilities_count"", 1]","[""trails_count"", 0]","[""attractions_sum"", 1]"
-"[""name"", ""Montopolis Neighborhood Park""]","[""park_id"", 209]","[""status"", ""Developed""]","[""amenities_count"", 13]","[""facilities_count"", 13]","[""trails_count"", 0]","[""attractions_sum"", 26]"
-"[""name"", ""Oswaldo A.B. Cantu/Pan-American Recreation Center""]","[""park_id"", 237]","[""status"", ""Developed""]","[""amenities_count"", 10]","[""facilities_count"", 12]","[""trails_count"", 7]","[""attractions_sum"", 29]"
-"[""name"", ""Montopolis Practice Fields""]","[""park_id"", 210]","[""status"", ""Developed""]","[""amenities_count"", 2]","[""facilities_count"", 4]","[""trails_count"", 0]","[""attractions_sum"", 6]"
-"[""name"", ""Morris Williams Golf Course""]","[""park_id"", 211]","[""status"", ""Developed""]","[""amenities_count"", 1]","[""facilities_count"", 123]","[""trails_count"", 0]","[""attractions_sum"", 124]"
-"[""name"", ""Palma Plaza Triangle Pocket Park""]","[""park_id"", 354]","[""status"", ""Undeveloped""]","[""amenities_count"", 0]","[""facilities_count"", 0]","[""trails_count"", 0]","[""attractions_sum"", 0]"
-"[""name"", ""Mountain View Neighborhood Park""]","[""park_id"", 214]","[""status"", ""Developed""]","[""amenities_count"", 27]","[""facilities_count"", 12]","[""trails_count"", 0]","[""attractions_sum"", 39]"
-"[""name"", ""Southland Oaks Neighborhood Park""]","[""park_id"", 275]","[""status"", ""Undeveloped""]","[""amenities_count"", 0]","[""facilities_count"", 0]","[""trails_count"", 0]","[""attractions_sum"", 0]"
-"[""name"", ""Murchison Pool""]","[""park_id"", 215]","[""status"", ""Developed""]","[""amenities_count"", 0]","[""facilities_count"", 4]","[""trails_count"", 0]","[""attractions_sum"", 4]"
-"[""name"", ""Parque Zaragoza Neighborhood Park""]","[""park_id"", 238]","[""status"", ""Developed""]","[""amenities_count"", 15]","[""facilities_count"", 17]","[""trails_count"", 15]","[""attractions_sum"", 47]"
-"[""name"", ""Nicholas Dawson Neighborhood Park""]","[""park_id"", 216]","[""status"", ""Developed""]","[""amenities_count"", 4]","[""facilities_count"", 1]","[""trails_count"", 0]","[""attractions_sum"", 5]"
-"[""name"", ""Patterson Neighborhood Park""]","[""park_id"", 239]","[""status"", ""Developed""]","[""amenities_count"", 18]","[""facilities_count"", 11]","[""trails_count"", 12]","[""attractions_sum"", 41]"
-"[""name"", ""Sparky Pocket Park""]","[""park_id"", 352]","[""status"", ""Developed""]","[""amenities_count"", 0]","[""facilities_count"", 3]","[""trails_count"", 0]","[""attractions_sum"", 3]"
-"[""name"", ""Payton Gin Pocket Park""]","[""park_id"", 382]","[""status"", ""Developed""]","[""amenities_count"", 0]","[""facilities_count"", 0]","[""trails_count"", 1]","[""attractions_sum"", 1]"
-"[""name"", ""Peace Point at Town Lake Metro Park""]","[""park_id"", 364]","[""status"", ""Developed""]","[""amenities_count"", 2]","[""facilities_count"", 10]","[""trails_count"", 0]","[""attractions_sum"", 12]"
-"[""name"", ""Springbrook Driving Range""]","[""park_id"", 276]","[""status"", ""Developed""]","[""amenities_count"", 0]","[""facilities_count"", 2]","[""trails_count"", 0]","[""attractions_sum"", 2]"
-"[""name"", ""Pease District Park""]","[""park_id"", 240]","[""status"", ""Developed""]","[""amenities_count"", 21]","[""facilities_count"", 23]","[""trails_count"", 1]","[""attractions_sum"", 45]"
-"[""name"", ""Pecan Springs School Park""]","[""park_id"", 241]","[""status"", ""Developed""]","[""amenities_count"", 4]","[""facilities_count"", 3]","[""trails_count"", 0]","[""attractions_sum"", 7]"
-"[""name"", ""Perry Neighborhood Park""]","[""park_id"", 242]","[""status"", ""Developed""]","[""amenities_count"", 4]","[""facilities_count"", 10]","[""trails_count"", 0]","[""attractions_sum"", 14]"
-"[""name"", ""Springdale Neighborhood Park""]","[""park_id"", 277]","[""status"", ""Developed""]","[""amenities_count"", 7]","[""facilities_count"", 7]","[""trails_count"", 0]","[""attractions_sum"", 14]"
-"[""name"", ""Pickfair Pocket Park""]","[""park_id"", 244]","[""status"", ""Developed""]","[""amenities_count"", 0]","[""facilities_count"", 6]","[""trails_count"", 0]","[""attractions_sum"", 6]"
-"[""name"", ""Springfield Neighborhood Park""]","[""park_id"", 278]","[""status"", ""Developed""]","[""amenities_count"", 0]","[""facilities_count"", 0]","[""trails_count"", 4]","[""attractions_sum"", 4]"
-"[""name"", ""North Austin Recreation Center/YMCA""]","[""park_id"", 355]","[""status"", ""Developed""]","[""amenities_count"", 0]","[""facilities_count"", 2]","[""trails_count"", 0]","[""attractions_sum"", 2]"
-"[""name"", ""North Cat Mountain Greenbelt""]","[""park_id"", 218]","[""status"", ""Undeveloped""]","[""amenities_count"", 0]","[""facilities_count"", 0]","[""trails_count"", 0]","[""attractions_sum"", 0]"
-"[""name"", ""Onion Creek Greenbelt""]","[""park_id"", 231]","[""status"", ""Developed""]","[""amenities_count"", 4]","[""facilities_count"", 3]","[""trails_count"", 0]","[""attractions_sum"", 7]"
-"[""name"", ""North Oaks Neighbohood Park""]","[""park_id"", 219]","[""status"", ""Developed""]","[""amenities_count"", 5]","[""facilities_count"", 1]","[""trails_count"", 0]","[""attractions_sum"", 6]"
-"[""name"", ""Pillow School Park""]","[""park_id"", 245]","[""status"", ""Developed""]","[""amenities_count"", 1]","[""facilities_count"", 5]","[""trails_count"", 0]","[""attractions_sum"", 6]"
-"[""name"", ""North Star Greenbelt""]","[""park_id"", 220]","[""status"", ""Developed""]","[""amenities_count"", 29]","[""facilities_count"", 0]","[""trails_count"", 7]","[""attractions_sum"", 36]"
-"[""name"", ""Onion Creek Soccer Complex""]","[""park_id"", 234]","[""status"", ""Developed""]","[""amenities_count"", 1]","[""facilities_count"", 12]","[""trails_count"", 12]","[""attractions_sum"", 25]"
-"[""name"", ""Northwest Balcones Neighborhood Park""]","[""park_id"", 222]","[""status"", ""Developed""]","[""amenities_count"", 15]","[""facilities_count"", 14]","[""trails_count"", 16]","[""attractions_sum"", 45]"
-"[""name"", ""Onion Creek Metro Park""]","[""park_id"", 232]","[""status"", ""Undeveloped""]","[""amenities_count"", 0]","[""facilities_count"", 0]","[""trails_count"", 0]","[""attractions_sum"", 0]"
-"[""name"", ""Northwest Recreation Center""]","[""park_id"", 223]","[""status"", ""Developed""]","[""amenities_count"", 5]","[""facilities_count"", 8]","[""trails_count"", 0]","[""attractions_sum"", 13]"
-"[""name"", ""Norwood Tract at Town Lake Metro Park""]","[""park_id"", 298]","[""status"", ""Developed""]","[""amenities_count"", 12]","[""facilities_count"", 1]","[""trails_count"", 0]","[""attractions_sum"", 13]"
-"[""name"", ""Onion Creek Wildlife Sanctuary""]","[""park_id"", 233]","[""status"", ""Undeveloped""]","[""amenities_count"", 0]","[""facilities_count"", 0]","[""trails_count"", 0]","[""attractions_sum"", 0]"
-"[""name"", ""Nuckols Crossing of Slaughter Creek Greenbelt""]","[""park_id"", 357]","[""status"", ""Undeveloped""]","[""amenities_count"", 0]","[""facilities_count"", 0]","[""trails_count"", 0]","[""attractions_sum"", 0]"
-"[""name"", ""Plummers Cemetery""]","[""park_id"", 396]","[""status"", ""Developed""]","[""amenities_count"", 0]","[""facilities_count"", 0]","[""trails_count"", 0]","[""attractions_sum"", 0]"
-"[""name"", ""Oak Springs School Park""]","[""park_id"", 224]","[""status"", ""Developed""]","[""amenities_count"", 2]","[""facilities_count"", 3]","[""trails_count"", 0]","[""attractions_sum"", 5]"
-"[""name"", ""Ortega School Park""]","[""park_id"", 235]","[""status"", ""Developed""]","[""amenities_count"", 3]","[""facilities_count"", 4]","[""trails_count"", 3]","[""attractions_sum"", 10]"
-"[""name"", ""Oakhill Neighborhood Park""]","[""park_id"", 225]","[""status"", ""Undeveloped""]","[""amenities_count"", 0]","[""facilities_count"", 0]","[""trails_count"", 0]","[""attractions_sum"", 0]"
-"[""name"", ""Piney Bend Neighborhood Park""]","[""park_id"", 346]","[""status"", ""Developed""]","[""amenities_count"", 0]","[""facilities_count"", 0]","[""trails_count"", 0]","[""attractions_sum"", 0]"
-"[""name"", ""Oakview Neighborhood Park""]","[""park_id"", 226]","[""status"", ""Developed""]","[""amenities_count"", 10]","[""facilities_count"", 5]","[""trails_count"", 0]","[""attractions_sum"", 15]"
-"[""name"", ""Oakwood Annex Cemetery""]","[""park_id"", 395]","[""status"", ""Developed""]","[""amenities_count"", 0]","[""facilities_count"", 1]","[""trails_count"", 0]","[""attractions_sum"", 1]"
-"[""name"", ""Roy G. Guerrero Colorado River Metro Park""]","[""park_id"", 260]","[""status"", ""Developed""]","[""amenities_count"", 56]","[""facilities_count"", 107]","[""trails_count"", 26]","[""attractions_sum"", 189]"
-"[""name"", ""Ponciana Neighborhood Park""]","[""park_id"", 248]","[""status"", ""Undeveloped""]","[""amenities_count"", 0]","[""facilities_count"", 0]","[""trails_count"", 0]","[""attractions_sum"", 0]"
-"[""name"", ""Quail Creek Neighborhood Park""]","[""park_id"", 249]","[""status"", ""Developed""]","[""amenities_count"", 21]","[""facilities_count"", 2]","[""trails_count"", 7]","[""attractions_sum"", 30]"
-"[""name"", ""Shipe Neighborhood Park""]","[""park_id"", 266]","[""status"", ""Developed""]","[""amenities_count"", 6]","[""facilities_count"", 13]","[""trails_count"", 0]","[""attractions_sum"", 19]"
-"[""name"", ""Ramsey Neighborhood Park""]","[""park_id"", 250]","[""status"", ""Developed""]","[""amenities_count"", 7]","[""facilities_count"", 11]","[""trails_count"", 0]","[""attractions_sum"", 18]"
-"[""name"", ""Red Bud Isle""]","[""park_id"", 251]","[""status"", ""Developed""]","[""amenities_count"", 10]","[""facilities_count"", 8]","[""trails_count"", 0]","[""attractions_sum"", 18]"
-"[""name"", ""Shoal Beach at Town Lake Metro Park""]","[""park_id"", 299]","[""status"", ""Developed""]","[""amenities_count"", 9]","[""facilities_count"", 25]","[""trails_count"", 24]","[""attractions_sum"", 58]"
-"[""name"", ""Reed Neighborhood Park""]","[""park_id"", 252]","[""status"", ""Developed""]","[""amenities_count"", 10]","[""facilities_count"", 7]","[""trails_count"", 0]","[""attractions_sum"", 17]"
-"[""name"", ""Springwoods Neighborhood Park""]","[""park_id"", 387]","[""status"", ""Developed""]","[""amenities_count"", 53]","[""facilities_count"", 14]","[""trails_count"", 21]","[""attractions_sum"", 88]"
-"[""name"", ""Shoal Creek Greenbelt""]","[""park_id"", 267]","[""status"", ""Developed""]","[""amenities_count"", 10]","[""facilities_count"", 10]","[""trails_count"", 40]","[""attractions_sum"", 60]"
-"[""name"", ""St. Edwards Greenbelt""]","[""park_id"", 279]","[""status"", ""Developed""]","[""amenities_count"", 1]","[""facilities_count"", 7]","[""trails_count"", 2]","[""attractions_sum"", 10]"
-"[""name"", ""Reilly School Park""]","[""park_id"", 254]","[""status"", ""Developed""]","[""amenities_count"", 1]","[""facilities_count"", 4]","[""trails_count"", 0]","[""attractions_sum"", 5]"
-"[""name"", ""Republic Square""]","[""park_id"", 255]","[""status"", ""Developed""]","[""amenities_count"", 5]","[""facilities_count"", 3]","[""trails_count"", 5]","[""attractions_sum"", 13]"
-"[""name"", ""Silk Oak Neighborhood Park""]","[""park_id"", 268]","[""status"", ""Developed""]","[""amenities_count"", 16]","[""facilities_count"", 3]","[""trails_count"", 1]","[""attractions_sum"", 20]"
-"[""name"", ""Riata Neighborhood Park""]","[""park_id"", 256]","[""status"", ""Developed""]","[""amenities_count"", 7]","[""facilities_count"", 3]","[""trails_count"", 4]","[""attractions_sum"", 14]"
-"[""name"", ""Ricky Guerrero Pocket Park""]","[""park_id"", 257]","[""status"", ""Developed""]","[""amenities_count"", 4]","[""facilities_count"", 6]","[""trails_count"", 3]","[""attractions_sum"", 13]"
-"[""name"", ""Sir Swante Palm Neighborhood Park""]","[""park_id"", 236]","[""status"", ""Developed""]","[""amenities_count"", 1]","[""facilities_count"", 3]","[""trails_count"", 2]","[""attractions_sum"", 6]"
-"[""name"", ""Ron Rigsby Pocket Park""]","[""park_id"", 258]","[""status"", ""Developed""]","[""amenities_count"", 3]","[""facilities_count"", 0]","[""trails_count"", 0]","[""attractions_sum"", 3]"
-"[""name"", ""Swede Hill Pocket Park""]","[""park_id"", 285]","[""status"", ""Undeveloped""]","[""amenities_count"", 0]","[""facilities_count"", 0]","[""trails_count"", 0]","[""attractions_sum"", 0]"
-"[""name"", ""Rosewood Neighborhood Park""]","[""park_id"", 259]","[""status"", ""Developed""]","[""amenities_count"", 20]","[""facilities_count"", 23]","[""trails_count"", 9]","[""attractions_sum"", 52]"
-"[""name"", ""Roy Kizer Golf Course""]","[""park_id"", 261]","[""status"", ""Developed""]","[""amenities_count"", 1]","[""facilities_count"", 126]","[""trails_count"", 10]","[""attractions_sum"", 137]"
-"[""name"", ""Ryan Planting Strip""]","[""park_id"", 383]","[""status"", ""Undeveloped""]","[""amenities_count"", 0]","[""facilities_count"", 0]","[""trails_count"", 0]","[""attractions_sum"", 0]"
-"[""name"", ""Symphony Square""]","[""park_id"", 286]","[""status"", ""Developed""]","[""amenities_count"", 0]","[""facilities_count"", 3]","[""trails_count"", 1]","[""attractions_sum"", 4]"
-"[""name"", ""Steck Valley Greenbelt""]","[""park_id"", 282]","[""status"", ""Undeveloped""]","[""amenities_count"", 0]","[""facilities_count"", 0]","[""trails_count"", 0]","[""attractions_sum"", 0]"
-"[""name"", ""Sanchez School Park""]","[""park_id"", 262]","[""status"", ""Developed""]","[""amenities_count"", 7]","[""facilities_count"", 4]","[""trails_count"", 2]","[""attractions_sum"", 13]"
-"[""name"", ""Schieffer Tract""]","[""park_id"", 263]","[""status"", ""Undeveloped""]","[""amenities_count"", 0]","[""facilities_count"", 0]","[""trails_count"", 0]","[""attractions_sum"", 0]"
-"[""name"", ""St. Elmo School Park""]","[""park_id"", 280]","[""status"", ""Developed""]","[""amenities_count"", 4]","[""facilities_count"", 6]","[""trails_count"", 3]","[""attractions_sum"", 13]"
-"[""name"", ""Scofield Farms Neighborhood Park""]","[""park_id"", 265]","[""status"", ""Developed""]","[""amenities_count"", 3]","[""facilities_count"", 4]","[""trails_count"", 2]","[""attractions_sum"", 9]"
-"[""name"", ""Waterloo Neighborhood Park""]","[""park_id"", 309]","[""status"", ""Developed""]","[""amenities_count"", 8]","[""facilities_count"", 7]","[""trails_count"", 0]","[""attractions_sum"", 15]"
-"[""name"", ""Seider Springs Greenbelt""]","[""park_id"", 366]","[""status"", ""Developed""]","[""amenities_count"", 7]","[""facilities_count"", 2]","[""trails_count"", 0]","[""attractions_sum"", 9]"
-"[""name"", ""St. John's Pocket Park""]","[""park_id"", 281]","[""status"", ""Developed""]","[""amenities_count"", 0]","[""facilities_count"", 2]","[""trails_count"", 0]","[""attractions_sum"", 2]"
-"[""name"", ""Sendera Mesa Neighborhood Park""]","[""park_id"", 325]","[""status"", ""Undeveloped""]","[""amenities_count"", 0]","[""facilities_count"", 0]","[""trails_count"", 0]","[""attractions_sum"", 0]"
-"[""name"", ""Shinoak Valley Greenbelt""]","[""park_id"", 384]","[""status"", ""Undeveloped""]","[""amenities_count"", 0]","[""facilities_count"", 0]","[""trails_count"", 0]","[""attractions_sum"", 0]"
-"[""name"", ""Slaughter Creek at Twin Oaks Greenbelt""]","[""park_id"", 356]","[""status"", ""Undeveloped""]","[""amenities_count"", 0]","[""facilities_count"", 0]","[""trails_count"", 0]","[""attractions_sum"", 0]"
-"[""name"", ""Wells Creek Greenbelt""]","[""park_id"", 310]","[""status"", ""Undeveloped""]","[""amenities_count"", 0]","[""facilities_count"", 0]","[""trails_count"", 0]","[""attractions_sum"", 0]"
-"[""name"", ""South Austin Island""]","[""park_id"", 271]","[""status"", ""Undeveloped""]","[""amenities_count"", 0]","[""facilities_count"", 0]","[""trails_count"", 0]","[""attractions_sum"", 0]"
-"[""name"", ""South Austin Neighborhood Park""]","[""park_id"", 270]","[""status"", ""Developed""]","[""amenities_count"", 17]","[""facilities_count"", 7]","[""trails_count"", 4]","[""attractions_sum"", 28]"
-"[""name"", ""Stillhouse Hollow Nature Preserve""]","[""park_id"", 284]","[""status"", ""Developed""]","[""amenities_count"", 2]","[""facilities_count"", 2]","[""trails_count"", 1]","[""attractions_sum"", 5]"
-"[""name"", ""South Austin Senior Activity Center""]","[""park_id"", 272]","[""status"", ""Developed""]","[""amenities_count"", 3]","[""facilities_count"", 6]","[""trails_count"", 5]","[""attractions_sum"", 14]"
-"[""name"", ""West Austin Neighborhood Park""]","[""park_id"", 311]","[""status"", ""Developed""]","[""amenities_count"", 11]","[""facilities_count"", 10]","[""trails_count"", 1]","[""attractions_sum"", 22]"
-"[""name"", ""South Austin Tennis Center""]","[""park_id"", 273]","[""status"", ""Developed""]","[""amenities_count"", 3]","[""facilities_count"", 13]","[""trails_count"", 6]","[""attractions_sum"", 22]"
-"[""name"", ""South Boggy Creek Greenbelt""]","[""park_id"", 274]","[""status"", ""Undeveloped""]","[""amenities_count"", 0]","[""facilities_count"", 0]","[""trails_count"", 0]","[""attractions_sum"", 0]"
-"[""name"", ""Stoney Ridge Neighborhood Park""]","[""park_id"", 229]","[""status"", ""Developed""]","[""amenities_count"", 4]","[""facilities_count"", 3]","[""trails_count"", 4]","[""attractions_sum"", 11]"
-"[""name"", ""Stephenson Nature Preserve & Outdoor Education Center""]","[""park_id"", 283]","[""status"", ""Developed""]","[""amenities_count"", 0]","[""facilities_count"", 0]","[""trails_count"", 23]","[""attractions_sum"", 23]"
-"[""name"", ""T.A. Brown School Park""]","[""park_id"", 287]","[""status"", ""Developed""]","[""amenities_count"", 0]","[""facilities_count"", 3]","[""trails_count"", 1]","[""attractions_sum"", 4]"
-"[""name"", ""Treaty Oak Square""]","[""park_id"", 301]","[""status"", ""Developed""]","[""amenities_count"", 2]","[""facilities_count"", 0]","[""trails_count"", 0]","[""attractions_sum"", 2]"
-"[""name"", ""Tanglewood Neighborhood Park""]","[""park_id"", 288]","[""status"", ""Developed""]","[""amenities_count"", 13]","[""facilities_count"", 14]","[""trails_count"", 0]","[""attractions_sum"", 27]"
-"[""name"", ""West Bouldin Creek Greenbelt""]","[""park_id"", 312]","[""status"", ""Developed""]","[""amenities_count"", 1]","[""facilities_count"", 1]","[""trails_count"", 2]","[""attractions_sum"", 4]"
-"[""name"", ""Tannehill Creek Greenbelt""]","[""park_id"", 401]","[""status"", ""Undeveloped""]","[""amenities_count"", 0]","[""facilities_count"", 0]","[""trails_count"", 0]","[""attractions_sum"", 0]"
-"[""name"", ""Triangle Commons Neighborhood Park""]","[""park_id"", 365]","[""status"", ""Developed""]","[""amenities_count"", 23]","[""facilities_count"", 3]","[""trails_count"", 17]","[""attractions_sum"", 43]"
-"[""name"", ""Tarrytown Neighborhood Park""]","[""park_id"", 289]","[""status"", ""Developed""]","[""amenities_count"", 8]","[""facilities_count"", 8]","[""trails_count"", 3]","[""attractions_sum"", 19]"
-"[""name"", ""The Circle ROW Greenbelt""]","[""park_id"", 360]","[""status"", ""Developed""]","[""amenities_count"", 0]","[""facilities_count"", 0]","[""trails_count"", 0]","[""attractions_sum"", 0]"
-"[""name"", ""Tom Lasseter-South Lamar Neighborhood Park""]","[""park_id"", 373]","[""status"", ""Undeveloped""]","[""amenities_count"", 9]","[""facilities_count"", 5]","[""trails_count"", 0]","[""attractions_sum"", 14]"
-"[""name"", ""Trailhead Neighborhood Park""]","[""park_id"", 378]","[""status"", ""Developed""]","[""amenities_count"", 19]","[""facilities_count"", 8]","[""trails_count"", 0]","[""attractions_sum"", 27]"
-"[""name"", ""Williamson Creek Central Greenbelt""]","[""park_id"", 315]","[""status"", ""Undeveloped""]","[""amenities_count"", 0]","[""facilities_count"", 0]","[""trails_count"", 0]","[""attractions_sum"", 0]"
-"[""name"", ""Williamson Creek East Greenbelt""]","[""park_id"", 316]","[""status"", ""Undeveloped""]","[""amenities_count"", 0]","[""facilities_count"", 0]","[""trails_count"", 0]","[""attractions_sum"", 0]"
-"[""name"", ""Umlauf Sculpture Garden""]","[""park_id"", 302]","[""status"", ""Developed""]","[""amenities_count"", 0]","[""facilities_count"", 4]","[""trails_count"", 9]","[""attractions_sum"", 13]"
-"[""name"", ""Westcreek Pocket Park""]","[""park_id"", 409]","[""status"", ""Undeveloped""]","[""amenities_count"", 0]","[""facilities_count"", 0]","[""trails_count"", 0]","[""attractions_sum"", 0]"
-"[""name"", ""Upper Bull Creek Greenbelt""]","[""park_id"", 129]","[""status"", ""Developed""]","[""amenities_count"", 6]","[""facilities_count"", 2]","[""trails_count"", 5]","[""attractions_sum"", 13]"
-"[""name"", ""Zilker Nature Preserve""]","[""park_id"", 371]","[""status"", ""Developed""]","[""amenities_count"", 13]","[""facilities_count"", 34]","[""trails_count"", 1]","[""attractions_sum"", 48]"
-"[""name"", ""Veterans Pocket Park""]","[""park_id"", 372]","[""status"", ""Undeveloped""]","[""amenities_count"", 0]","[""facilities_count"", 0]","[""trails_count"", 0]","[""attractions_sum"", 0]"
-"[""name"", ""Westenfield Neighborhood Park""]","[""park_id"", 313]","[""status"", ""Developed""]","[""amenities_count"", 9]","[""facilities_count"", 12]","[""trails_count"", 4]","[""attractions_sum"", 25]"
-"[""name"", ""Vic Mathias Shores at Town Lake Metro Park""]","[""park_id"", 410]","[""status"", ""Developed""]","[""amenities_count"", 0]","[""facilities_count"", 1]","[""trails_count"", 0]","[""attractions_sum"", 1]"
-"[""name"", ""Waller Beach at Town Lake Metro Park""]","[""park_id"", 300]","[""status"", ""Developed""]","[""amenities_count"", 6]","[""facilities_count"", 34]","[""trails_count"", 17]","[""attractions_sum"", 57]"
-"[""name"", ""Williams School Park""]","[""park_id"", 314]","[""status"", ""Developed""]","[""amenities_count"", 0]","[""facilities_count"", 2]","[""trails_count"", 1]","[""attractions_sum"", 3]"
-"[""name"", ""Stratford Overlook Greenbelt""]","[""park_id"", 412]","[""status"", ""Undeveloped""]","[""amenities_count"", 0]","[""facilities_count"", 0]","[""trails_count"", 0]","[""attractions_sum"", 0]"
-"[""name"", ""Highland Neighborhood Park""]","[""park_id"", 413]","[""status"", ""Developed""]","[""amenities_count"", 0]","[""facilities_count"", 0]","[""trails_count"", 0]","[""attractions_sum"", 0]"
-"[""name"", ""Waller Creek Greenbelt""]","[""park_id"", 304]","[""status"", ""Developed""]","[""amenities_count"", 1]","[""facilities_count"", 4]","[""trails_count"", 9]","[""attractions_sum"", 14]"
-"[""name"", ""Zilker Metro Park""]","[""park_id"", 324]","[""status"", ""Developed""]","[""amenities_count"", 96]","[""facilities_count"", 158]","[""trails_count"", 24]","[""attractions_sum"", 278]"
-"[""name"", ""Walnut Creek Greenbelt""]","[""park_id"", 305]","[""status"", ""Undeveloped""]","[""amenities_count"", 8]","[""facilities_count"", 1]","[""trails_count"", 9]","[""attractions_sum"", 18]"
-"[""name"", ""Gilbert-Davis Tract""]","[""park_id"", 411]","[""status"", ""Undeveloped""]","[""amenities_count"", 0]","[""facilities_count"", 0]","[""trails_count"", 0]","[""attractions_sum"", 0]"
-"[""name"", ""Walnut Creek Metro Park""]","[""park_id"", 306]","[""status"", ""Developed""]","[""amenities_count"", 20]","[""facilities_count"", 23]","[""trails_count"", 48]","[""attractions_sum"", 91]"
-"[""name"", ""Walnut Creek Sports Park""]","[""park_id"", 350]","[""status"", ""Developed""]","[""amenities_count"", 19]","[""facilities_count"", 30]","[""trails_count"", 0]","[""attractions_sum"", 49]"
-"[""name"", ""Walsh Boat Landing""]","[""park_id"", 307]","[""status"", ""Developed""]","[""amenities_count"", 3]","[""facilities_count"", 9]","[""trails_count"", 0]","[""attractions_sum"", 12]"
-"[""name"", ""Walter E. Long Metro Park""]","[""park_id"", 308]","[""status"", ""Developed""]","[""amenities_count"", 56]","[""facilities_count"", 37]","[""trails_count"", 0]","[""attractions_sum"", 93]"
-"[""name"", ""Williamson Creek West Greenbelt""]","[""park_id"", 317]","[""status"", ""Undeveloped""]","[""amenities_count"", 0]","[""facilities_count"", 0]","[""trails_count"", 0]","[""attractions_sum"", 0]"
-"[""name"", ""Wooldridge School Park""]","[""park_id"", 318]","[""status"", ""Developed""]","[""amenities_count"", 1]","[""facilities_count"", 5]","[""trails_count"", 1]","[""attractions_sum"", 7]"
-"[""name"", ""Wooldridge Square""]","[""park_id"", 319]","[""status"", ""Developed""]","[""amenities_count"", 2]","[""facilities_count"", 8]","[""trails_count"", 1]","[""attractions_sum"", 11]"
-"[""name"", ""Wooten Neighborhood Park""]","[""park_id"", 320]","[""status"", ""Developed""]","[""amenities_count"", 10]","[""facilities_count"", 4]","[""trails_count"", 3]","[""attractions_sum"", 17]"
-"[""name"", ""Wunneburger Park""]","[""park_id"", 402]","[""status"", ""Undeveloped""]","[""amenities_count"", 0]","[""facilities_count"", 0]","[""trails_count"", 0]","[""attractions_sum"", 0]"
-"[""name"", ""Yates Pocket Park""]","[""park_id"", 321]","[""status"", ""Undeveloped""]","[""amenities_count"", 0]","[""facilities_count"", 0]","[""trails_count"", 0]","[""attractions_sum"", 0]"
-"[""name"", ""Yett Creek Neighborhood Park""]","[""park_id"", 322]","[""status"", ""Developed""]","[""amenities_count"", 2]","[""facilities_count"", 0]","[""trails_count"", 0]","[""attractions_sum"", 2]"
-"[""name"", ""Janet Long Fish Park""]","[""park_id"", 414]","[""status"", ""Undeveloped""]","[""amenities_count"", 0]","[""facilities_count"", 0]","[""trails_count"", 0]","[""attractions_sum"", 0]"
+Park Name,Park ID,Development Status,Amenities,Facilities,Trails,Amenities + Facilities,Attractions Sum
+Barrow Nature Preserve,112,Undeveloped,0,0,0,0,0
+Battle Bend Neighborhood Park,117,Developed,15,3,3,18,21
+Butler Shores at Town Lake Metro Park,291,Developed,6,25,13,31,44
+Bauerle Ranch Park,269,Developed,0,0,6,0,6
+Beverly S. Sheffield Northwest District Park,119,Developed,28,23,0,51,51
+Buttermilk Neighborhood Park,303,Developed,4,14,11,18,29
+Big Stacy Neighborhood Park,120,Developed,0,12,0,12,12
+Big Walnut Creek Nature Preserve,369,Undeveloped,0,0,0,0,0
+Buttermilk Branch Greenbelt,130,Developed,0,0,4,0,4
+Earl J. Pomerleau Pocket Park,400,Undeveloped,0,2,0,2,2
+Blowing Sink Research Management Area,121,Undeveloped,0,1,0,1,1
+Kendra Page Neighborhood Park,186,Developed,5,3,4,8,12
+East Boggy Creek Greenbelt,367,Developed,0,0,8,0,8
+Blunn Creek Greenbelt,122,Developed,9,5,1,14,15
+East Bouldin Creek Greenbelt,156,Undeveloped,0,0,0,0,0
+Blunn Creek Nature Preserve,123,Developed,2,4,6,6,12
+Blunn Creek Pocket Park,389,Undeveloped,0,0,0,0,0
+Duncan Neighborhood Park,155,Developed,7,2,4,9,13
+Kennemer Pool,187,Developed,0,3,0,3,3
+Boggy Creek Greenbelt,124,Developed,8,8,20,16,36
+Eastwoods Neighborhood Park,157,Developed,16,15,8,31,39
+Bolm Road District Park,399,Undeveloped,0,0,0,0,0
+Brentwood Neighborhood Park,125,Developed,11,16,8,27,35
+Edward Rendon Sr. Metro Park at Festival Beach,293,Developed,52,60,37,112,149
+Brownie Pocket Park,327,Developed,3,1,0,4,4
+Brushy Creek Greenbelt,326,Undeveloped,0,0,0,0,0
+Brush Square Triangle,104,Undeveloped,0,0,0,0,0
+Gaines Greenbelt,163,Undeveloped,0,0,0,0,0
+Bull Creek District Park,128,Developed,18,12,1,30,31
+Adams-Hemphill Neighborhood Park,100,Developed,3,20,0,23,23
+Bartholomew District Park,113,Developed,41,61,0,102,102
+Alamo Pocket Park,101,Developed,7,7,1,14,15
+Alderbrook Pocket Park,385,Undeveloped,0,0,0,0,0
+Barton Creek Greenbelt,114,Developed,13,24,27,37,64
+Andrews School Park,102,Developed,0,2,0,2,2
+Archstone Greenbelt,103,Undeveloped,0,0,0,0,0
+Barton Creek Wilderness Park,115,Developed,0,0,0,0,0
+Armadillo Neighborhood Park,105,Undeveloped,8,1,2,9,11
+Astor Place Pocket Park,405,Undeveloped,0,0,0,0,0
+Barton Hills School Park,116,Developed,7,5,1,12,13
+Auditorium Shores at Town Lake Metro Park,290,Developed,19,56,13,75,88
+"Burnett ""Blondie"" Pharr Tennis Center",243,Developed,18,16,6,34,40
+Austin High Tennis Center,107,Developed,0,14,3,14,17
+Lamar Senior Activity Center,189,Developed,1,3,0,4,4
+Austin Memorial Park Cemetery,392,Developed,0,5,0,5,5
+Butler Metro Park,358,Developed,12,47,27,59,86
+Austin Recreation Center,108,Developed,0,2,0,2,2
+Austin's Colony Neighborhood Park,106,Undeveloped,0,0,0,0,0
+Bailey Neighborhood Park,109,Developed,2,10,0,12,12
+Latta Branch Greenbelt,190,Developed,16,3,0,19,19
+Balcones District Park,110,Developed,22,9,5,31,36
+Barrington School Park,111,Developed,8,7,2,15,17
+Canyon Vista Pool,131,Developed,0,4,0,4,4
+Dove Springs District Park,153,Developed,17,24,18,41,59
+Crestland Triangle,118,Undeveloped,0,0,0,0,0
+Caswell Tennis Center,133,Developed,0,11,2,11,13
+Central Maintenance Complex at Town Lake Metro Park,292,Developed,0,7,0,7,7
+Cunningham School Park,147,Developed,3,4,0,7,7
+Cherry Creek Neighborhood Park,134,Developed,8,1,1,9,10
+Cherrywood Pocket Park,353,Developed,0,0,2,0,2
+Davis Hill Neighborhood Park,148,Undeveloped,0,1,0,1,1
+Chestnut Pocket Park,135,Developed,7,4,3,11,14
+Dougherty Arts Center,359,Developed,0,5,2,5,7
+Circle C Ranch Metro Park,136,Developed,25,73,14,98,112
+Civitan Neighborhood Park,137,Developed,6,8,0,14,14
+Colony District Park,139,Developed,0,11,0,11,11
+Davis/White Northeast Neighborhood Park,221,Developed,26,8,0,34,34
+Colorado River Park WIldlife Sanctuary,140,Developed,0,2,0,2,2
+Eilers (Deep Eddy) Neighborhood Park,158,Developed,6,24,5,30,35
+Colorado/Walnut Greenbelt,141,Undeveloped,0,0,0,0,0
+Comal Pocket Park,142,Developed,5,7,0,12,12
+Elizabet Ney Museum,159,Developed,0,7,1,7,8
+Commons Ford Ranch Metro Park,143,Developed,9,19,0,28,28
+Downs Mabson Fields,154,Developed,1,5,5,6,11
+Conley-Guerrero Senior Activity Center,144,Developed,6,7,0,13,13
+Ellen Higgins Pocket Park,160,Developed,5,1,2,6,8
+Convict Hill Quarry Neighborhood Park,145,Developed,3,1,1,4,5
+Dry Creek Greenbelt,406,Undeveloped,0,0,0,0,0
+Cook School Park,146,Developed,5,4,0,9,9
+Copperfield Neighborhood Park,377,Undeveloped,0,3,1,3,4
+Elroy Neighborhood Park,403,Undeveloped,0,0,0,0,0
+Country Club Creek Greenbelt,376,Developed,0,0,0,0,0
+Covert Park at Mount Bonnell,213,Developed,3,8,0,11,11
+Emma Long Metro Park,161,Developed,253,110,35,363,398
+Decker Tallgrass Prairie Preserve,370,Undeveloped,0,2,0,2,2
+Hartford Planting Strip,361,Developed,0,0,0,0,0
+Deer Park at Maple Run Preserve,329,Undeveloped,0,0,0,0,0
+"Evergreen Cemetery
+",393,Developed,0,1,0,1,1
+Dick Nichols District Park,149,Developed,30,18,5,48,53
+Dittmar District Park,150,Developed,17,12,10,29,39
+Forest North Neighborhood Park,386,Developed,1,9,0,10,10
+Doss School Park,151,Developed,1,4,1,5,6
+Dottie Jordan Neighborhood Park,152,Developed,11,9,10,20,30
+Franklin Neighborhood Park,162,Developed,8,5,0,13,13
+Hartford Triangle,362,Undeveloped,0,0,0,0,0
+Gaines Creek Neighborhood Park,164,Developed,2,2,2,4,6
+Haskell House,177,Developed,0,1,0,1,1
+Garrison District Park,165,Developed,35,19,1,54,55
+Knollwood Neighborhood Park,397,Undeveloped,0,0,0,0,0
+George Washington Carver Museum,132,Developed,0,1,0,1,1
+Heath Eiland and Morgan Moss BMX Skate Park,381,Developed,0,5,0,5,5
+Georgian Acres Neighborhood Park,407,Undeveloped,0,0,0,0,0
+Gillis Neighborhood Park,166,Developed,12,7,0,19,19
+Heritage Oaks Neighborhood Park,388,Undeveloped,0,0,0,0,0
+Givens District Park,167,Developed,26,20,0,46,46
+Lakeline Neighborhood Park,188,Undeveloped,0,0,0,0,0
+Goat Cave Karst Nature Preserve,184,Undeveloped,0,0,0,0,0
+Hielscher Tract Greenbelt,351,Undeveloped,0,0,0,0,0
+Metz Neighborhood Park,207,Developed,13,13,0,26,26
+Hill School Park,178,Developed,2,5,0,7,7
+Lakeshore at Town Lake Metro Park,295,Developed,4,3,0,7,7
+Holly Shores at Town Lake Metro Park,294,Developed,2,6,0,8,8
+Houston School Park,179,Developed,0,2,0,2,2
+Lamar Beach at Town Lake Metro Park,296,Developed,10,44,0,54,54
+Hubert C. Schroeter Neighborhood Park,264,Developed,13,4,0,17,17
+Millennium Center,208,Developed,0,5,10,5,15
+Indiangrass Wildlife Sanctuary,368,Undeveloped,0,0,0,0,0
+International Shores at Town Lake Metro Park,363,Developed,4,3,0,7,7
+Govalle Neighborhood Park,168,Developed,20,13,1,33,34
+Gracywoods Neighborhood Park,169,Developed,34,5,9,39,48
+J.J. Seabrook Greenbelt,180,Undeveloped,3,0,0,3,3
+Grand Meadow Neighborhood Park,171,Undeveloped,0,0,0,0,0
+Great Hills Neighborhood Park,172,Developed,16,13,18,29,47
+Jimmy Clay Golf Course,181,Developed,4,110,0,114,114
+Legend Oaks Neighborhood Park,191,Undeveloped,0,0,0,0,0
+Grey Rock Golf Course,404,Developed,0,85,0,85,85
+Gullett School Park,173,Developed,0,12,1,12,13
+John Trevino Jr. Metro Park at Morrison Ranch,212,Developed,0,5,0,5,5
+"Gustavo ""Gus"" L. Garcia District Park",174,Developed,8,6,6,14,20
+Lewis Mountain Ranch Neighborhood Park,192,Undeveloped,2,0,0,2,2
+Hall/Goodnight Planting Strip,170,Undeveloped,0,0,0,0,0
+Joslin Neighborhood Park,183,Developed,3,6,0,9,9
+Hancock Golf Course,175,Developed,8,34,0,42,42
+Harris Branch Neighborhood Park,176,Developed,3,2,0,5,5
+Kealing School Park,185,Developed,8,19,20,27,47
+Harris Triangle,253,Developed,0,0,0,0,0
+Mary Moore Searight Metro Park,203,Developed,46,55,16,101,117
+Norman School Park,217,Developed,3,3,0,6,6
+Mayfield House,204,Developed,11,8,0,19,19
+Oertli Neighborhood Park,398,Undeveloped,0,0,0,0,0
+Mayfield Nature Preserve,205,Developed,4,5,11,9,20
+Meadows at Trinity Crossing Neighborhood Park,206,Developed,0,3,0,3,3
+Oakwood Cemetery,394,Developed,0,1,0,1,1
+Meadowview Triangle,380,Developed,5,3,8,8,16
+North Acres Neighborhood Park,195,Undeveloped,2,0,0,2,2
+Odom School Park,227,Developed,2,7,0,9,9
+Little Stacy Neighborhood Park,194,Developed,13,14,0,27,27
+Margaret Hoffman Oak Park,390,Developed,0,0,0,0,0
+Little Walnut Creek District Park,196,Undeveloped,0,0,0,0,0
+Old Bakery,228,Developed,0,2,0,2,2
+Little Zilker Neighborhood Park,323,Developed,9,6,2,15,17
+Mary Dawson Pocket Park,202,Undeveloped,0,0,0,0,0
+Longhorn Shores at Town Lake Metro Park,297,Developed,3,2,5,5,10
+Mary Frances Baylor Clarksville Pocket Park,138,Developed,3,5,0,8,8
+Old Moore's Crossing Neighborhood Park,230,Undeveloped,0,0,0,0,0
+Manuel and Robert Donley Pocket Park,328,Developed,2,1,0,3,3
+Longview Neighborhood Park,197,Developed,3,6,4,9,13
+Lott Pocket Park,198,Developed,3,6,0,9,9
+Marble Creek Greenbelt,201,Undeveloped,0,0,0,0,0
+Lower Bull Creek Greenbelt,127,Developed,5,14,13,19,32
+Old San Antonio Greenbelt,374,Undeveloped,0,0,0,0,0
+Lucy Read School Park,199,Developed,2,3,4,5,9
+Mabel Davis District Park,200,Developed,1,10,2,11,13
+Old San Antonio Park,391,Undeveloped,0,1,0,1,1
+South Park Meadows Greenbelt,375,Undeveloped,0,1,0,1,1
+Montopolis Neighborhood Park,209,Developed,13,13,0,26,26
+Oswaldo A.B. Cantu/Pan-American Recreation Center,237,Developed,10,12,7,22,29
+Montopolis Practice Fields,210,Developed,2,4,0,6,6
+Morris Williams Golf Course,211,Developed,1,123,0,124,124
+Palma Plaza Triangle Pocket Park,354,Undeveloped,0,0,0,0,0
+Mountain View Neighborhood Park,214,Developed,27,12,0,39,39
+Southland Oaks Neighborhood Park,275,Undeveloped,0,0,0,0,0
+Murchison Pool,215,Developed,0,4,0,4,4
+Parque Zaragoza Neighborhood Park,238,Developed,15,17,15,32,47
+Nicholas Dawson Neighborhood Park,216,Developed,4,1,0,5,5
+Patterson Neighborhood Park,239,Developed,18,11,12,29,41
+Sparky Pocket Park,352,Developed,0,3,0,3,3
+Payton Gin Pocket Park,382,Developed,0,0,1,0,1
+Peace Point at Town Lake Metro Park,364,Developed,2,10,0,12,12
+Springbrook Driving Range,276,Developed,0,2,0,2,2
+Pease District Park,240,Developed,21,23,1,44,45
+Pecan Springs School Park,241,Developed,4,3,0,7,7
+Perry Neighborhood Park,242,Developed,4,10,0,14,14
+Springdale Neighborhood Park,277,Developed,7,7,0,14,14
+Pickfair Pocket Park,244,Developed,0,6,0,6,6
+Springfield Neighborhood Park,278,Developed,0,0,4,0,4
+North Austin Recreation Center/YMCA,355,Developed,0,2,0,2,2
+North Cat Mountain Greenbelt,218,Undeveloped,0,0,0,0,0
+Onion Creek Greenbelt,231,Developed,4,3,0,7,7
+North Oaks Neighbohood Park,219,Developed,5,1,0,6,6
+Pillow School Park,245,Developed,1,5,0,6,6
+North Star Greenbelt,220,Developed,29,0,7,29,36
+Onion Creek Soccer Complex,234,Developed,1,12,12,13,25
+Northwest Balcones Neighborhood Park,222,Developed,15,14,16,29,45
+Onion Creek Metro Park,232,Undeveloped,0,0,0,0,0
+Northwest Recreation Center,223,Developed,5,8,0,13,13
+Norwood Tract at Town Lake Metro Park,298,Developed,12,1,0,13,13
+Onion Creek Wildlife Sanctuary,233,Undeveloped,0,0,0,0,0
+Nuckols Crossing of Slaughter Creek Greenbelt,357,Undeveloped,0,0,0,0,0
+Plummers Cemetery,396,Developed,0,0,0,0,0
+Oak Springs School Park,224,Developed,2,3,0,5,5
+Ortega School Park,235,Developed,3,4,3,7,10
+Oakhill Neighborhood Park,225,Undeveloped,0,0,0,0,0
+Piney Bend Neighborhood Park,346,Developed,0,0,0,0,0
+Oakview Neighborhood Park,226,Developed,10,5,0,15,15
+Oakwood Annex Cemetery,395,Developed,0,1,0,1,1
+Roy G. Guerrero Colorado River Metro Park,260,Developed,56,107,26,163,189
+Ponciana Neighborhood Park,248,Undeveloped,0,0,0,0,0
+Quail Creek Neighborhood Park,249,Developed,21,2,7,23,30
+Shipe Neighborhood Park,266,Developed,6,13,0,19,19
+Ramsey Neighborhood Park,250,Developed,7,11,0,18,18
+Red Bud Isle,251,Developed,10,8,0,18,18
+Shoal Beach at Town Lake Metro Park,299,Developed,9,25,24,34,58
+Reed Neighborhood Park,252,Developed,10,7,0,17,17
+Springwoods Neighborhood Park,387,Developed,53,14,21,67,88
+Shoal Creek Greenbelt,267,Developed,10,10,40,20,60
+St. Edwards Greenbelt,279,Developed,1,7,2,8,10
+Reilly School Park,254,Developed,1,4,0,5,5
+Republic Square,255,Developed,5,3,5,8,13
+Silk Oak Neighborhood Park,268,Developed,16,3,1,19,20
+Riata Neighborhood Park,256,Developed,7,3,4,10,14
+Ricky Guerrero Pocket Park,257,Developed,4,6,3,10,13
+Sir Swante Palm Neighborhood Park,236,Developed,1,3,2,4,6
+Ron Rigsby Pocket Park,258,Developed,3,0,0,3,3
+Swede Hill Pocket Park,285,Undeveloped,0,0,0,0,0
+Rosewood Neighborhood Park,259,Developed,20,23,9,43,52
+Roy Kizer Golf Course,261,Developed,1,126,10,127,137
+Ryan Planting Strip,383,Undeveloped,0,0,0,0,0
+Symphony Square,286,Developed,0,3,1,3,4
+Steck Valley Greenbelt,282,Undeveloped,0,0,0,0,0
+Sanchez School Park,262,Developed,7,4,2,11,13
+Schieffer Tract,263,Undeveloped,0,0,0,0,0
+St. Elmo School Park,280,Developed,4,6,3,10,13
+Scofield Farms Neighborhood Park,265,Developed,3,4,2,7,9
+Waterloo Neighborhood Park,309,Developed,8,7,0,15,15
+Seider Springs Greenbelt,366,Developed,7,2,0,9,9
+St. John's Pocket Park,281,Developed,0,2,0,2,2
+Sendera Mesa Neighborhood Park,325,Undeveloped,0,0,0,0,0
+Shinoak Valley Greenbelt,384,Undeveloped,0,0,0,0,0
+Slaughter Creek at Twin Oaks Greenbelt,356,Undeveloped,0,0,0,0,0
+Wells Creek Greenbelt,310,Undeveloped,0,0,0,0,0
+South Austin Island,271,Undeveloped,0,0,0,0,0
+South Austin Neighborhood Park,270,Developed,17,7,4,24,28
+Stillhouse Hollow Nature Preserve,284,Developed,2,2,1,4,5
+South Austin Senior Activity Center,272,Developed,3,6,5,9,14
+West Austin Neighborhood Park,311,Developed,11,10,1,21,22
+South Austin Tennis Center,273,Developed,3,13,6,16,22
+South Boggy Creek Greenbelt,274,Undeveloped,0,0,0,0,0
+Stoney Ridge Neighborhood Park,229,Developed,4,3,4,7,11
+Stephenson Nature Preserve & Outdoor Education Center,283,Developed,0,0,23,0,23
+T.A. Brown School Park,287,Developed,0,3,1,3,4
+Treaty Oak Square,301,Developed,2,0,0,2,2
+Tanglewood Neighborhood Park,288,Developed,13,14,0,27,27
+West Bouldin Creek Greenbelt,312,Developed,1,1,2,2,4
+Tannehill Creek Greenbelt,401,Undeveloped,0,0,0,0,0
+Triangle Commons Neighborhood Park,365,Developed,23,3,17,26,43
+Tarrytown Neighborhood Park,289,Developed,8,8,3,16,19
+The Circle ROW Greenbelt,360,Developed,0,0,0,0,0
+Tom Lasseter-South Lamar Neighborhood Park,373,Undeveloped,9,5,0,14,14
+Trailhead Neighborhood Park,378,Developed,19,8,0,27,27
+Williamson Creek Central Greenbelt,315,Undeveloped,0,0,0,0,0
+Williamson Creek East Greenbelt,316,Undeveloped,0,0,0,0,0
+Umlauf Sculpture Garden,302,Developed,0,4,9,4,13
+Westcreek Pocket Park,409,Undeveloped,0,0,0,0,0
+Upper Bull Creek Greenbelt,129,Developed,6,2,5,8,13
+Zilker Nature Preserve,371,Developed,13,34,1,47,48
+Veterans Pocket Park,372,Undeveloped,0,0,0,0,0
+Westenfield Neighborhood Park,313,Developed,9,12,4,21,25
+Vic Mathias Shores at Town Lake Metro Park,410,Developed,0,1,0,1,1
+Waller Beach at Town Lake Metro Park,300,Developed,6,34,17,40,57
+Williams School Park,314,Developed,0,2,1,2,3
+Stratford Overlook Greenbelt,412,Undeveloped,0,0,0,0,0
+Highland Neighborhood Park,413,Developed,0,0,0,0,0
+Waller Creek Greenbelt,304,Developed,1,4,9,5,14
+Zilker Metro Park,324,Developed,96,158,24,254,278
+Walnut Creek Greenbelt,305,Undeveloped,8,1,9,9,18
+Gilbert-Davis Tract,411,Undeveloped,0,0,0,0,0
+Walnut Creek Metro Park,306,Developed,20,23,48,43,91
+Walnut Creek Sports Park,350,Developed,19,30,0,49,49
+Walsh Boat Landing,307,Developed,3,9,0,12,12
+Walter E. Long Metro Park,308,Developed,56,37,0,93,93
+Williamson Creek West Greenbelt,317,Undeveloped,0,0,0,0,0
+Wooldridge School Park,318,Developed,1,5,1,6,7
+Wooldridge Square,319,Developed,2,8,1,10,11
+Wooten Neighborhood Park,320,Developed,10,4,3,14,17
+Wunneburger Park,402,Undeveloped,0,0,0,0,0
+Yates Pocket Park,321,Undeveloped,0,0,0,0,0
+Yett Creek Neighborhood Park,322,Developed,2,0,0,2,2
+Janet Long Fish Park,414,Undeveloped,0,0,0,0,0
