@@ -39,9 +39,9 @@ def count_park_feature(data, count, parks)
 end
 
 # loop through pard_***_points.json's for count of features for each park
-count_park_feature( amenities_data, "amenities_count", parks)
-count_park_feature( facilities_data, "facilities_count", parks)
-count_park_feature( trails_data, "trails_count", parks)
+count_park_feature(amenities_data, "amenities_count", parks)
+count_park_feature(facilities_data, "facilities_count", parks)
+count_park_feature(trails_data, "trails_count", parks)
 
 # sum number of amenities, facilities, and trails for each park
 parks.each do |park|
