@@ -31,9 +31,21 @@ _npm is Node's package manager. You can install Node at [their site](https://nod
 
 **2. [gulp](http://gulpjs.com/) is required**
 
-Before you can serve the app locally, you need to install some gulp libraries with npm:
+_gulp is used to build and run the app. Before you can serve the app locally, you need to install gulp cli:_
 
-	$ npm install gulp gulp-util gulp-compass gulp-connect gulp-gh-pages gulp-file-include gulp-rename gulp-notify --save-dev
+	$ npm install -g gulp
+
+**3. [compass](http://compass-style.org/) is required**
+
+_compass is a css authoring framework that is used to generate css used by the app. Follow the [install instructions](http://compass-style.org/install/) on the compass site._
+
+**4. install npm dependencies**
+
+Install the npm dependencies:
+
+	$ npm install
+
+**5. run the development server**
 
 To run the local server and see the app in your browser:
 
