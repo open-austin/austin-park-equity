@@ -20,4 +20,5 @@ data/osm-parks-filtered.geojson: tmp/osm-parks-all.geojson tmp/coa-individual-pa
 	cat $< | \
 		node scripts/uncollect-features.js | \
 		node scripts/filter-intersecting.js $(word 2, $^) | \
+		node scripts/elevate-tags.js | \
 		node scripts/collect-features.js > $@
