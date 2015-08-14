@@ -1,5 +1,5 @@
-// tiny script that takes a GeoJSON feature collection and returns individual
-// features
+// using a set of polygons as a filter, stream in polygons and only stream out
+// polygons that don't intersect any of the filter polygons
 
 var es = require('event-stream');
 var fs = require('fs');

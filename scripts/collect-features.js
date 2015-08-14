@@ -1,5 +1,4 @@
-// tiny script that takes a GeoJSON feature collection and returns individual
-// features
+// stream in individual features -> stream out a featurecollection
 
 var es = require('event-stream');
 var JSONStream = require('JSONStream');
