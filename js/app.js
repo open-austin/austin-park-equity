@@ -95,6 +95,30 @@
 	    }
 	}
 
+  // adds Open Street Map Parks
+  var osmParksLayer = L.geoJson(osmParks, {
+    style: function style(feature){
+      return {
+        fillColor: '#8ec127',
+        weight: 1,
+        opacity: 0.7,
+        color: '#44A048',
+        fillOpacity: 0.7
+      };
+    },
+    onEachFeature: onEachOSMPark
+  }).addTo(map);
+
+  function onEachOSMPark(feature, layer){
+    	var parkName 	   = feature.properties.name,
+          popupContent = "<p><span class='park-title'>"+parkName+"</span> \
+                          <br>Park Type: Non-PARD Facility</p>";
+
+      if (feature.properties) {
+          layer.bindPopup( popupContent );
+      }
+  }
+
 	var parksOn = true;
 	function toggleParksLayer(){
 		if (parksOn === true){

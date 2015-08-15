@@ -39,9 +39,9 @@ def count_park_feature(data, count, parks)
 end
 
 # loop through pard_***_points.json's for count of features for each park
-count_park_feature( amenities_data, "amenities_count", parks)
-count_park_feature( facilities_data, "facilities_count", parks)
-count_park_feature( trails_data, "trails_count", parks)
+count_park_feature(amenities_data, "amenities_count", parks)
+count_park_feature(facilities_data, "facilities_count", parks)
+count_park_feature(trails_data, "trails_count", parks)
 
 # sum number of amenities, facilities, and trails for each park
 parks.each do |park|
@@ -62,14 +62,20 @@ parks.each do |park|
   end
 end
 
-# export as csv
-CSV.open("park_attraction_counts.csv", "w") do |csv|
+# export as csv file
+CSV.open("data/park_attraction_counts.csv", "w") do |csv|
   csv << ["Park Name", "Park ID", "Development Status", "Amenities", "Facilities", "Trails", "Amenities + Facilities","Attractions Sum"]
 
   parks.each_with_index do |park, index|
     csv << [park["name"], park["park_id"], park["status"], park["amenities_count"], park["facilities_count"], park["trails_count"], park["am_plus_fac_sum"], park["attractions_sum"]]
   end
 end
+
+# export as json
+File.open("data/park_attraction_counts.json", "w") do |file|
+  file.puts parks.to_json
+end
+
 
 
 
