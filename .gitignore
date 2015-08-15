@@ -4,3 +4,4 @@ node_modules
 .publish
 
 sass/_dropdown.scss
+tmp/
