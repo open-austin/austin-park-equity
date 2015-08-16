@@ -22,6 +22,19 @@
 		// 'Esri.WorldGrayCanvas'
 		// 'CartoDB.DarkMatter'
 
+  var greenColors = [
+    'rgb(255,255,229)',
+    'rgb(247,252,185)',
+    'rgb(217,240,163)',
+    'rgb(173,221,142)',
+    'rgb(120,198,121)',
+    'rgb(65,171,93)',
+    'rgb(35,132,67)',
+    'rgb(0,104,55)',
+    'rgb(0,69,41)'];
+
+  var greyColors = ['rgb(255,255,255)','rgb(240,240,240)','rgb(217,217,217)','rgb(189,189,189)','rgb(150,150,150)','rgb(115,115,115)','rgb(82,82,82)','rgb(37,37,37)','rgb(0,0,0)'];
+
 	var map = L.map('main-map', {
 		center: [30.26618, -97.74467], //Austin!
 		zoom: 12,
@@ -30,18 +43,20 @@
 	});
 
 	var baseMaps = {
-	    // "Terrain": terrain, //removing other tiles now for simplicity
 	    "Grayscale": grayscale
+	    // "Terrain": terrain, //removing other tiles now for simplicity
 	};
 
-	L.geoJson( districts, {
+	var districtLines = L.geoJson( districts, {
 		weight: 1,
 		opacity: 1,
 		color: '#666',
 		fillOpacity: 0
 	}).addTo(map)
 
-	L.geoJson( parkAccessRing, {
+
+  // Heatmap layer and Ring Colors
+	var heatmap = L.geoJson( parkAccessRing, {
 		style: function style(feature){
 			return {
 				fillColor: getRingColor(feature.properties.distance_l),
@@ -59,58 +74,84 @@
 					 d === "1/4 mile" ? '#E5F57F' :
 					 d === "500'" 		? '#BBE47F' :
 					 d === "100'" 		? '#9BD37F' :
-					 													null;
+					 										'#FF8080';
 	}
 
-	// adding parks shapefiles to Map
-	var parkLayer = L.geoJson(parks, {
-		style: function style(feature){
-			return {
-				fillColor: getParkColor(feature.properties.DEVELOPMEN),
-				weight: 1,
-				opacity: 0.7,
-				color: '#44A048',
-				fillOpacity: 0.7
-			};
-		},
-		onEachFeature: onEachFeature
-	}).addTo(map);
-
 	function getParkColor(d) {
-		return d === "Developed" ? '#56DD54' : "#9f7048";
+    // LOGIC: return cemeteries as gray, OSM Parks as green5,
+    // undeveloped parks as brown, all others as green.
+    return d.properties.PARK_TYPE === "Cemetery" ? greyColors[5]  :
+           d.id                                  ? greenColors[5] :
+           d.properties.am_plus_fac_sum > 0      ? '#56DD54' : "#9f7048";
 	}
 
 	function onEachFeature(feature, layer) {
-		var parkName 	 = feature.properties.PARK_NAME,
-			parkAcres 	 = feature.properties.PARK_ACRES.toFixed(2),
-			parkType 		 = feature.properties.PARK_TYPE,
-			parkStatus	 = feature.properties.DEVELOPMEN,
-			popupContent = "<p><span class='park-title'>"+parkName+"</span> \
-											<br>" + parkAcres + " Acres \
-											<br>Park Type: " + parkType +
-											"<br>Status: " + parkStatus + "</p>";
+		var parkName 	   = feature.properties.PARK_NAME,
+  			parkAcres 	 = feature.properties.PARK_ACRES.toFixed(2),
+  			parkType 		 = feature.properties.PARK_TYPE,
+  			parkStatus	 = feature.properties.DEVELOPMEN,
+        parkAmen     = feature.properties.amenities_count,
+        parkFac      = feature.properties.facilities_count,
+        parkTrails   = feature.properties.trails_count,
+  			popupContent = "<p><span class='park-title'>" + parkName + "</span> \
+  											<br>" + parkAcres + " Acres \
+  											<br>Park Type: " + parkType +
+  											"<br>Status: " + parkStatus +
+  											"<br>" + parkAmen + " Amenities, " + parkFac + " Facilities, " + parkTrails + " Trails</p>";
 
 	    if (feature.properties) {
 	        layer.bindPopup( popupContent );
 	    }
 	}
 
-  // adds Open Street Map Parks
-  var osmParksLayer = L.geoJson(osmParks, {
-    style: function style(feature){
-      return {
-        fillColor: '#8ec127',
-        weight: 1,
-        opacity: 0.7,
-        color: '#44A048',
-        fillOpacity: 0.7
-      };
-    },
-    onEachFeature: onEachOSMPark
-  }).addTo(map);
+
+  // create Array of parks by "PARK_TYPE"
+  var parksByType = _.groupBy(parks.features, function(n){
+    return n.properties.PARK_TYPE
+  });
+
+  var cemeteries        = parksByType["Cemetery"],
+      districtParks     = parksByType["District"],
+      golfCourses       = parksByType["Golf Course"],
+      greenbelts        = parksByType["Greenbelt"],
+      metroParks        = parksByType["Metropolitan"],
+      naturePreserves   = parksByType["Nature Preserve"],
+      neighborhoodParks = parksByType["Neighborhood"],
+      plantingStrips    = parksByType["Planting Strips/Triangles"],
+      pocketParks       = parksByType["Pocket"],
+      schoolParks       = parksByType["School"],
+      specialParks      = parksByType["Special"];
+
+  var drawLayer = function(layer, popup){
+    return L.geoJson(layer, {
+      style: function style(feature){
+        return {
+          fillColor: getParkColor(feature),
+          weight: 1,
+          opacity: 0.7,
+          color: '#44A048',
+          fillOpacity: 0.7
+        };
+      },
+      onEachFeature: popup
+    }).addTo(map);
+  }
+
+  var cemeteryLayer     = drawLayer(cemeteries, onEachFeature),
+      districtParkLayer = drawLayer(districtParks, onEachFeature),
+      golfLayer         = drawLayer(golfCourses, onEachFeature),
+      greenbeltLayer    = drawLayer(greenbelts, onEachFeature),
+      metroParkLayer    = drawLayer(metroParks, onEachFeature),
+      naturePresLayer   = drawLayer(naturePreserves, onEachFeature),
+      neighborhoodLayer = drawLayer(neighborhoodParks, onEachFeature),
+      plantingLayer     = drawLayer(plantingStrips, onEachFeature),
+      pocketLayer       = drawLayer(pocketParks, onEachFeature),
+      schoolLayer       = drawLayer(schoolParks, onEachFeature),
+      specialLayer      = drawLayer(specialParks, onEachFeature),
+      osmParksLayer     = drawLayer(osmParks, onEachOSMPark);
 
   function onEachOSMPark(feature, layer){
-    	var parkName 	   = feature.properties.name,
+    	var parkName     = feature.properties.name == undefined ? "unnamed park" : feature.properties.name,
           popupContent = "<p><span class='park-title'>"+parkName+"</span> \
                           <br>Park Type: Non-PARD Facility</p>";
 
@@ -131,7 +172,12 @@
 
 
 	var overlayMaps = {
-		"Parks": parkLayer
+		// "Parks": parkLayer,
+    "Non-PARD Parks": osmParksLayer,
+    "Cemeteries": cemeteryLayer,
+    "Golf Course": golfLayer,
+    "School Parks": schoolLayer,
+    "Heatmap": heatmap
 	};
 
 	L.control.layers(baseMaps, overlayMaps, {collapsed: true, autoZIndex: true}).addTo(map);
@@ -159,8 +205,8 @@
 
 	// Loading Data with D3
 	var distDemoData,
-		parkAcreageData,
-		censusData;
+		  parkAcreageData,
+		  censusData;
 
 	queue()
 	  .defer(d3.json, "data/district-demographics.json")
@@ -171,9 +217,9 @@
 	function analyze(error, demographics, parks, census) {
 	  if(error) { console.log(error); }
 
-	  distDemoData 		= demographics;
+	  distDemoData 		  = demographics;
 	  parkAcreageData 	= parks;
-	  censusData 		= census;
+	  censusData 		    = census;
 
 	}
 
