@@ -1,7 +1,7 @@
 .PHONY: osm-parks clean
 
 
-osm-parks: data/osm-parks-filtered.geojson
+osm-parks: data/osm-parks-filtered.js
 
 clean:
 	rm -rf tmp/*
@@ -22,3 +22,7 @@ data/osm-parks-filtered.geojson: tmp/osm-parks-all.geojson tmp/coa-individual-pa
 		node scripts/filter-intersecting.js $(word 2, $^) | \
 		node scripts/elevate-tags.js | \
 		node scripts/collect-features.js > $@
+
+data/osm-parks-filtered.js: data/osm-parks-filtered.geojson
+	mkdir -p $(dir $@)
+	sed '1s/^/var osmParks = /' $< > $@
