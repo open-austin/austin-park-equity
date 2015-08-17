@@ -151,7 +151,7 @@
       osmParksLayer     = drawLayer(osmParks, onEachOSMPark);
 
   function onEachOSMPark(feature, layer){
-    	var parkName     = feature.properties.name == undefined ? "unnamed park" : feature.properties.name,
+    	var parkName     = feature.properties.name || 'Unnamed Park',
           popupContent = "<p><span class='park-title'>"+parkName+"</span> \
                           <br>Park Type: Non-PARD Facility</p>";
 
