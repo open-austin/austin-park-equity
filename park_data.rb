@@ -1,7 +1,7 @@
 require "json"
 require "csv"
 
-parks_file      = File.read("raw/city_of_austin_parks.json")
+parks_file      = File.read("data/city_of_austin_parks.geojson")
 amenities_file  = File.read("raw/pard_amenity_points.json")
 facilities_file = File.read("raw/pard_facility_points.json")
 trails_file     = File.read("raw/pard_trails_nrpa.json")
