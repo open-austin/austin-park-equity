@@ -212,7 +212,7 @@
 	queue()
 	  .defer(d3.json, "data/district-demographics.json")
 	  .defer(d3.json, "data/park-acreage-data.json")
-	  .defer(d3.json, "data/census-tract.json")
+	  // .defer(d3.json, "data/census-tract.json")
 	  .await(analyze);
 
 	function analyze(error, demographics, parks, census) {
@@ -220,7 +220,7 @@
 
 	  distDemoData 		  = demographics;
 	  parkAcreageData 	= parks;
-	  censusData 		    = census;
+	  // censusData 		    = census;
 
 	}
 
