@@ -200,6 +200,7 @@
 				};
 			}
 		}).addTo(map);
+    districtLayer.bringToBack();
 		map.fitBounds(districtLayer.getBounds());
 	}
 
