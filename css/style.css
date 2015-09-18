@@ -98,7 +98,7 @@ a:visited {
 }
 
 .main-content-wrapper {
-  height: 96%;
+  height: 100%;
 }
 
 .map {
@@ -119,6 +119,7 @@ a:visited {
 .aside {
   width: 33.333333%;
   height: 100%;
+  padding-top: 32px;
   float: left;
   background: #D5D5D5;
 }
@@ -562,4 +563,8 @@ div.dropdown ul li:before {
   /* The Fallback */
   background: rgba(255, 128, 128, 0.5);
   border: 1px solid #eee;
+}
+
+.leaflet-top {
+  top: 2rem;
 }

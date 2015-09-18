@@ -2,7 +2,7 @@
 // ============
 
 .main-content-wrapper {
-	height: 96%;
+	height: 100%;
 }
 
 .map {
@@ -23,6 +23,7 @@
 .aside {
 	width: 33.333333%;
 	height: 100%;
+	padding-top: 32px;
 	float: left;
 	background: $grey;
 }
