@@ -119,7 +119,6 @@ a:visited {
 .aside {
   width: 33.333333%;
   height: 100%;
-  padding-top: 32px;
   float: left;
   background: #D5D5D5;
 }
@@ -275,27 +274,28 @@ section#content {
   text-align: center;
 }
 
-div.dropdown {
+.dropdown {
+  margin-top: 32px;
   text-align: left;
   font-size: 0.9em;
   color: #111;
   text-shadow: 0px 1px 1px #808080;
 }
-div.dropdown.closed ul {
+.dropdown.closed ul {
   margin-top: 0px;
 }
-div.dropdown.closed ul li {
+.dropdown.closed ul li {
   margin-top: -40px;
   height: 0px;
 }
-div.dropdown.closed div.title:after {
+.dropdown.closed .title:after {
   margin-top: -14px;
   -moz-transform: rotate(0deg);
   -ms-transform: rotate(0deg);
   -webkit-transform: rotate(0deg);
   transform: rotate(0deg);
 }
-div.dropdown div.title {
+.dropdown .title {
   width: 100%;
   height: 40px;
   border: 1px solid rgba(25, 25, 25, 0.3);
@@ -317,7 +317,7 @@ div.dropdown div.title {
   -webkit-box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.3), 0px 2px 6px rgba(0, 0, 0, 0.3);
   box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.3), 0px 2px 6px rgba(0, 0, 0, 0.3);
 }
-div.dropdown div.title:after {
+.dropdown .title:after {
   display: block;
   content: "▾";
   position: absolute;
@@ -328,7 +328,7 @@ div.dropdown div.title:after {
   -webkit-transform: rotate(180deg);
   transform: rotate(180deg);
 }
-div.dropdown ul {
+.dropdown ul {
   overflow: hidden;
   -moz-transition: margin-top 1s;
   -o-transition: margin-top 1s;
@@ -344,7 +344,7 @@ div.dropdown ul {
   -webkit-border-radius: 0px;
   border-radius: 0px 0px 3px 3px;
 }
-div.dropdown ul li {
+.dropdown ul li {
   width: 100%;
   height: 40px;
   border: 1px solid rgba(25, 25, 25, 0.3);
@@ -365,20 +365,20 @@ div.dropdown ul li {
   background-image: -webkit-linear-gradient(top, rgba(230, 230, 230, 0.2), rgba(160, 160, 160, 0.2));
   background-image: linear-gradient(to bottom, rgba(230, 230, 230, 0.2), rgba(160, 160, 160, 0.2));
 }
-div.dropdown ul li:first-child {
+.dropdown ul li:first-child {
   border-bottom: none;
   border-top: none;
 }
-div.dropdown ul li:last-child {
+.dropdown ul li:last-child {
   border-top: none;
   -moz-border-radius: 0px 0px 3px 3px;
   -webkit-border-radius: 0px;
   border-radius: 0px 0px 3px 3px;
 }
-div.dropdown ul li:hover {
+.dropdown ul li:hover {
   text-shadow: 0px 1px 1px black, 0px 0px 4px white;
 }
-div.dropdown ul li:before {
+.dropdown ul li:before {
   content: " ";
   display: -webkit-inline-box;
   position: relative;
