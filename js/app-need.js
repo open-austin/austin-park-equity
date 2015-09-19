@@ -174,5 +174,39 @@
 	    }).addTo(map);
 	}
 
+	// Census SDK
+
+	console.log("City SDK");
+
+	var sdk = new CitySDK();
+	var censusModule = sdk.modules.census;
+
+	censusModule.enable("58211e2426331117ab16deabbfe10b226b95b61b");
+
+	var geojsonCensus = L.geoJson().addTo(map);
+
+	var request = {
+	  "lat": 30.26618,
+	  "lng": -97.74467,
+	  "level": "county",
+	  "sublevel": "true",
+	  "variables": ["income", "population", "poverty"]
+	};
+
+	// censusModule.APIRequest(request, function (response) {
+	//   console.log(response);
+	// });
+
+	censusModule.GEORequest(request, function (response) {
+	  console.log(response);
+
+	  response.features.forEach(function(f) {
+	    geojsonCensus.addData(f);
+	  })
+	});
+
+	// censusModule.getACSVariableDictionary("acs5", 2013)
+
+
 
 })();
