@@ -1,9 +1,12 @@
-(function(){
+var config = require("../config.json");
+var L = require("leaflet");
+require("leaflet-providers");
+var $ = require("jquery");
 
 	var grayscale = L.tileLayer.provider('CartoDB.Positron');
 
 	var map = L.map('map', {
-		center: [30.26618, -97.74467], //Austin!
+		center: config.map_center, //Austin!
 		zoom: 12,
 		scrollWheelZoom: false,
 		layers: [grayscale]
@@ -206,7 +209,3 @@
 	});
 
 	// censusModule.getACSVariableDictionary("acs5", 2013)
-
-
-
-})();

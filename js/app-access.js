@@ -1,4 +1,9 @@
-(function(){
+var config = require("../config.json");
+var L = require("leaflet");
+require("leaflet-providers");
+var $ = require("jquery");
+var queue = require("queue-async");
+var d3 = require("d3");
 
 	$('.parks').click( toggleParksLayer );
 
@@ -21,7 +26,7 @@
 		// 'CartoDB.DarkMatter'
 
 	var map = L.map('map', {
-		center: [30.26618, -97.74467], //Austin!
+		center: config.map_center, //Austin!
 		zoom: 12,
 		scrollWheelZoom: false,
 		layers: [grayscale] //include more options in array like terrain
@@ -257,6 +262,3 @@
 			$rankValue.parent().addClass("rgdiv0-5");
 		}
 	};
-
-
-})();

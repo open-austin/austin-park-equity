@@ -1,6 +1,10 @@
-(function(){
-
-  "use strict";
+var config = require("../config.json");
+var queue = require("queue-async");
+var L = require("leaflet");
+require("leaflet-providers");
+var $ = require("jquery");
+var _ = require("lodash");
+var d3 = require("d3");
 
 	$('.parks').click( toggleParksLayer );
 
@@ -36,7 +40,7 @@
   var greyColors = ['rgb(255,255,255)','rgb(240,240,240)','rgb(217,217,217)','rgb(189,189,189)','rgb(150,150,150)','rgb(115,115,115)','rgb(82,82,82)','rgb(37,37,37)','rgb(0,0,0)'];
 
 	var map = L.map('main-map', {
-		center: [30.26618, -97.74467], //Austin!
+		center: config.map_center, //Austin!
 		zoom: 12,
 		scrollWheelZoom: false,
 		layers: [grayscale] //include more options in array like terrain
@@ -327,6 +331,3 @@
 			$rankValue.parent().addClass("rgdiv0-5");
 		}
 	};
-
-
-})();
