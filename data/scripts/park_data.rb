@@ -72,6 +72,6 @@ CSV.open("csv/park_attraction_counts.csv", "w") do |csv|
 end
 
 # export as json
-File.open("geojson/park_attraction_counts.geojson", "w") do |file|
+File.open("json/park_attraction_counts.json", "w") do |file|
   file.puts parks.to_json
 end

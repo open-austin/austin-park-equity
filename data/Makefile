@@ -3,7 +3,7 @@
 all: \
 	geojson/city_of_austin_parks_amfac_counts.geojson \
 	geojson/city_of_austin_parks.geojson \
-	geojson/park_attraction_counts.geojson
+	json/park_attraction_counts.json
 
 
 osm-parks: osm-parks-filtered.js
@@ -109,7 +109,7 @@ geojson/city_of_austin_parks.geojson: raw/city_of_austin_parks.geojson
 	ogr2ogr -f "GeoJSON" -t_srs EPSG:4326 /vsistdout/ $< > $@
 
 # generate park_attraction_counts files
-geojson/park_attraction_counts.geojson: raw/city_of_austin_parks.geojson raw/pard_amenity_points.geojson raw/pard_facility_points.geojson raw/pard_trails_nrpa.geojson
+json/park_attraction_counts.json: raw/city_of_austin_parks.geojson raw/pard_amenity_points.geojson raw/pard_facility_points.geojson raw/pard_trails_nrpa.geojson
 	mkdir -p $(dir $@)
 	mkdir -p csv/
 	ruby scripts/park_data.rb
@@ -119,6 +119,6 @@ csv/park_attraction_counts.csv: raw/city_of_austin_parks.geojson raw/pard_amenit
 	mkdir -p geojson/
 	ruby scripts/park_data.rb
 
-geojson/city_of_austin_parks_amfac_counts.geojson: geojson/city_of_austin_parks.geojson geojson/park_attraction_counts.geojson
+geojson/city_of_austin_parks_amfac_counts.geojson: geojson/city_of_austin_parks.geojson json/park_attraction_counts.json
 	mkdir -p $(dir $@)
 	ruby scripts/add_counts_row.rb
