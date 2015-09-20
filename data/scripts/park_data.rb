@@ -63,7 +63,7 @@ parks.each do |park|
 end
 
 # export as csv file
-CSV.open("data/park_attraction_counts.csv", "w") do |csv|
+CSV.open("csv/park_attraction_counts.csv", "w") do |csv|
   csv << ["Park Name", "Park ID", "Development Status", "Amenities", "Facilities", "Trails", "Amenities + Facilities","Attractions Sum"]
 
   parks.each_with_index do |park, index|
@@ -72,6 +72,6 @@ CSV.open("data/park_attraction_counts.csv", "w") do |csv|
 end
 
 # export as json
-File.open("data/park_attraction_counts.geojson", "w") do |file|
+File.open("geojson/park_attraction_counts.geojson", "w") do |file|
   file.puts parks.to_json
 end

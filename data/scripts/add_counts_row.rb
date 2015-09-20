@@ -1,7 +1,7 @@
 require "json"
 
-parks_file        = File.read("data/city_of_austin_parks.geojson")
-attractions_file  = File.read("data/park_attraction_counts.geojson")
+parks_file        = File.read("geojson/city_of_austin_parks.geojson")
+attractions_file  = File.read("geojson/park_attraction_counts.geojson")
 parks_data        = JSON.parse(parks_file)
 attractions_data  = JSON.parse(attractions_file)
 
@@ -26,6 +26,6 @@ end
 # puts parks_data["features"].first["properties"]
 
 # export as json
-File.open("data/city_of_austin_parks_amfac_counts.geojson", "w") do |file|
+File.open("geojson/city_of_austin_parks_amfac_counts.geojson", "w") do |file|
   file.puts parks_data.to_json
 end
