@@ -11,7 +11,7 @@
 - [District 4 community meeting on parks - April 30, 2015](http://us8.campaign-archive1.com/?u=6fe419e1bea63f17bb6c8842d&id=13e7c71daa)
 - [North Austin green space becomes a priority for council - March 25, 2015](http://impactnews.com/austin-metro/northwest-austin/north-austin-green-space-becomes-a-priority-for-council)
 
-See our progress: [Live Demo](http://open-austin.github.io/Austin_Parks_Acreage/)
+See our progress: [Live Demo](http://open-austin.github.io/austin-park-equity/)
 
 ##Credits
 
