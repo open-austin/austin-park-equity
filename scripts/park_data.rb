@@ -1,10 +1,10 @@
 require "json"
 require "csv"
 
-parks_file      = File.read("raw/city_of_austin_parks.json")
-amenities_file  = File.read("raw/pard_amenity_points.json")
-facilities_file = File.read("raw/pard_facility_points.json")
-trails_file     = File.read("raw/pard_trails_nrpa.json")
+parks_file      = File.read("raw/city_of_austin_parks.geojson")
+amenities_file  = File.read("raw/pard_amenity_points.geojson")
+facilities_file = File.read("raw/pard_facility_points.geojson")
+trails_file     = File.read("raw/pard_trails_nrpa.geojson")
 parks_data      = JSON.parse(parks_file)
 amenities_data  = JSON.parse(amenities_file)
 facilities_data = JSON.parse(facilities_file)
@@ -72,11 +72,6 @@ CSV.open("data/park_attraction_counts.csv", "w") do |csv|
 end
 
 # export as json
-File.open("data/park_attraction_counts.json", "w") do |file|
+File.open("data/park_attraction_counts.geojson", "w") do |file|
   file.puts parks.to_json
 end
-
-
-
-
-

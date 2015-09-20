@@ -93,3 +93,21 @@ tmp/coa-parks.zip:
 tmp/coa-parks.shp: tmp/coa-parks.zip
 	unzip -d $(basename $@) $<
 
+# download layers as geojson from CoA ArcGIS Server
+raw/%.geojson:
+	mkdir -p $(dir $@)
+	curl "http://services.arcgis.com/0L95CJ0VTaxqcmED/ArcGIS/rest/services/$(notdir $(basename $@))/FeatureServer/0/query?where=1%3D1&objectIds=&time=&geometry=&geometryType=esriGeometryPolygon&inSR=&spatialRel=esriSpatialRelIntersects&distance=&units=esriSRUnit_Meter&outFields=*&returnGeometry=true&maxAllowableOffset=&geometryPrecision=&outSR=&returnIdsOnly=false&returnCountOnly=false&returnExtentOnly=false&orderByFields=&groupByFieldsForStatistics=&outStatistics=&resultOffset=&resultRecordCount=&returnZ=false&returnM=false&quantizationParameters=&f=pgeojson&token=" > $@
+
+# transform raw CoA geojson to EPSG:4326 
+tmp/transformed/%.geojson: raw/%.geojson
+	mkdir -p $(dir $@)
+	ogr2ogr -f "GeoJSON" -t_srs EPSG:4326 $@ $<
+
+# generate park_attraction_counts files
+data/park_attraction_counts.geojson: raw/city_of_austin_parks.geojson raw/pard_amenity_points.geojson raw/pard_facility_points.geojson raw/pard_trails_nrpa.geojson
+	mkdir -p $(dir $@)
+	ruby scripts/park_data.rb
+
+data/park_attraction_counts.csv: raw/city_of_austin_parks.geojson raw/pard_amenity_points.geojson raw/pard_facility_points.geojson raw/pard_trails_nrpa.geojson
+	mkdir -p $(dir $@)
+	ruby scripts/park_data.rb
