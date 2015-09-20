@@ -106,7 +106,7 @@ raw/%.geojson:
 # transform raw CoA geojson to EPSG:4326
 geojson/city_of_austin_parks.geojson: raw/city_of_austin_parks.geojson
 	mkdir -p $(dir $@)
-	ogr2ogr -f "GeoJSON" -t_srs EPSG:4326 $@ $<
+	ogr2ogr -f "GeoJSON" -t_srs EPSG:4326 /vsistdout/ $< > $@
 
 # generate park_attraction_counts files
 geojson/park_attraction_counts.geojson: raw/city_of_austin_parks.geojson raw/pard_amenity_points.geojson raw/pard_facility_points.geojson raw/pard_trails_nrpa.geojson
