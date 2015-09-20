@@ -1,7 +1,7 @@
 require "json"
 
 parks_file        = File.read("data/city_of_austin_parks.geojson")
-attractions_file  = File.read("data/park_attraction_counts.json")
+attractions_file  = File.read("data/park_attraction_counts.geojson")
 parks_data        = JSON.parse(parks_file)
 attractions_data  = JSON.parse(attractions_file)
 

@@ -111,3 +111,7 @@ data/park_attraction_counts.geojson: raw/city_of_austin_parks.geojson raw/pard_a
 data/park_attraction_counts.csv: raw/city_of_austin_parks.geojson raw/pard_amenity_points.geojson raw/pard_facility_points.geojson raw/pard_trails_nrpa.geojson
 	mkdir -p $(dir $@)
 	ruby scripts/park_data.rb
+
+data/city_of_austin_parks_amfac_counts.geojson: data/city_of_austin_parks.geojson data/park_attraction_counts.geojson
+	mkdir -p $(dir $@)
+	ruby scripts/add_counts_row.rb
