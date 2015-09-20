@@ -58,20 +58,27 @@ Gulp serves the app at `http://localhost:8080`.
 
 ## Data sources & use:
 - City of Austin, Parks and Rec Dept (PARD) Data
-	- Basic Park Layer:
-	- Amenities Layer:
-	- Facitilies Layer:
-	- Trails Layer:
-- Open Street Map Park Data:
+	- [Basic Park Feature Layer via ArcGIS Server](http://services.arcgis.com/0L95CJ0VTaxqcmED/ArcGIS/rest/services/city_of_austin_parks/FeatureServer/0/query?where=1%3D1&objectIds=&time=&geometry=&geometryType=esriGeometryPolygon&inSR=&spatialRel=esriSpatialRelIntersects&distance=&units=esriSRUnit_Meter&outFields=*&returnGeometry=true&maxAllowableOffset=&geometryPrecision=&outSR=&returnIdsOnly=false&returnCountOnly=false&returnExtentOnly=false&orderByFields=&groupByFieldsForStatistics=&outStatistics=&resultOffset=&resultRecordCount=&returnZ=false&returnM=false&quantizationParameters=&f=pgeojson&token=)
+		- _Also available on [data.austintexas.gov](https://data.austintexas.gov/dataset/City-Of-Austin-Parks/99qw-4ixs)_ 
+		- This data is used across the app to produce park shapes.
+	- [Park Amenity Points](https://services.arcgis.com/0L95CJ0VTaxqcmED/ArcGIS/rest/services/STRUCTURE_pard_amenity_points/FeatureServer/0/query?where=1%3D1&objectIds=&time=&geometry=&geometryType=esriGeometryEnvelope&inSR=&spatialRel=esriSpatialRelIntersects&distance=&units=esriSRUnit_Meter&outFields=*&returnGeometry=true&maxAllowableOffset=&geometryPrecision=&outSR=&returnIdsOnly=false&returnCountOnly=false&returnExtentOnly=false&orderByFields=&groupByFieldsForStatistics=&outStatistics=&resultOffset=&resultRecordCount=&returnZ=false&returnM=false&quantizationParameters=&f=pgeojson&token=)
+		- This data is used to calculate whether a park is "undeveloped" or "developed". 
+	- [Park Facility Points](https://services.arcgis.com/0L95CJ0VTaxqcmED/ArcGIS/rest/services/STRUCTURE_pard_facility_points/FeatureServer/0/query?where=1%3D1&objectIds=&time=&geometry=&geometryType=esriGeometryEnvelope&inSR=&spatialRel=esriSpatialRelIntersects&distance=&units=esriSRUnit_Meter&outFields=*&returnGeometry=true&maxAllowableOffset=&geometryPrecision=&outSR=&returnIdsOnly=false&returnCountOnly=false&returnExtentOnly=false&orderByFields=&groupByFieldsForStatistics=&outStatistics=&resultOffset=&resultRecordCount=&returnZ=false&returnM=false&quantizationParameters=&f=pgeojson&token=)
+		- This data is used to calculate whether a park is "undeveloped" or "developed".  
+	- [Park Trails](https://services.arcgis.com/0L95CJ0VTaxqcmED/ArcGIS/rest/services/pard_trails_nrpa/FeatureServer/0/query?where=1%3D1&objectIds=&time=&geometry=&geometryType=esriGeometryEnvelope&inSR=&spatialRel=esriSpatialRelIntersects&distance=&units=esriSRUnit_Meter&outFields=*&returnGeometry=true&maxAllowableOffset=&geometryPrecision=&outSR=&returnIdsOnly=false&returnCountOnly=false&returnExtentOnly=false&orderByFields=&groupByFieldsForStatistics=&outStatistics=&resultOffset=&resultRecordCount=&returnZ=false&returnM=false&quantizationParameters=&f=pgeojson&token=)
+- [Open Street Map](https://www.openstreetmap.org/) Park Data:
+	- We use the [Overpass API](http://wiki.openstreetmap.org/wiki/Overpass_API) via the ["query-overpass" plugin](https://github.com/perliedman/query-overpass) to extract data. Here's [the commit that added OSM data](https://github.com/open-austin/austin-park-equity/commit/a89bd02fce6170beac8dcf11c7a3f3479a71d047) if you're curious how. 
+	- We use this data to expose privately owned but publically accesible parks that PARD doesn't maintain.
 - Census.gov Data
-	-  District Demographic Data:
-	-  CitySDK API:
+	-  [District Demographic Data](https://www.austintexas.gov/page/district-demographics) via City of Austin Demographer.
+	-  [CitySDK API](http://uscensusbureau.github.io/citysdk/)
+		- We use this data to show park need and compare districts.  	
 	
 
 ## Architectural Decisions & Known Issues:
 - Our javascript files are messy. Based on the way this project grew from one map to many, we are currently making a seperate js file for each html page. This is bad and should eventually be fixed.
 - For the park access heatmap, we ran a GIS process in ArcGIS. This static heatmap layer isn't response to park layers being toggled on and off. We'll probably use CartoDB to host these heatmaps in the future and rely on their PostGIS servers to create simplified buffers vs the cost-distance analysis heatmap we are currently working with.
-
+- **Question about why or how we did something? [Create an issue!](https://github.com/open-austin/austin-park-equity/issues/new)**
 
 ## Unlicense:
 Released to the public domain under the [Unlicense](http://unlicense.org/) by [Open Austin](http://open-austin.org), 2015.
