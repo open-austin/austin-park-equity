@@ -3,11 +3,10 @@
 all: \
 	geojson/city_of_austin_parks_amfac_counts.geojson \
 	geojson/city_of_austin_parks.geojson \
+	geojson/osm-parks-filtered.geojson \
+	geojson/land-use-2012-all.geojson \
 	json/park_attraction_counts.json
 
-
-osm-parks: osm-parks-filtered.js
-land-use: land-use-2012-all.js
 
 clean:
 	rm -rf tmp/*
@@ -21,18 +20,13 @@ tmp/coa-individual-parks.geojson: city_of_austin_parks.geojson
 	mkdir -p $(dir $@)
 	cat $< | node scripts/uncollect-features.js > $@
 
-osm-parks-filtered.geojson: tmp/osm-parks-all.geojson tmp/coa-individual-parks.geojson
+geojson/osm-parks-filtered.geojson: tmp/osm-parks-all.geojson tmp/coa-individual-parks.geojson
 	mkdir -p $(dir $@)
 	cat $< | \
 		node scripts/uncollect-features.js | \
 		node scripts/filter-intersecting.js $(word 2, $^) | \
 		node scripts/elevate-tags.js | \
 		node scripts/collect-features.js > $@
-
-osm-parks-filtered.js: osm-parks-filtered.geojson
-	mkdir -p $(dir $@)
-	sed '1s/^/var osmParks = /' $< > $@
-
 
 tmp/Land_Use_2012.zip:
 	mkdir -p $(dir $@)
@@ -80,17 +74,14 @@ tmp/land_use_2012/preserves.geojson: tmp/land_use_2012.shp
 		node scripts/set-properties.js '{"source": "Land Use 2012", "source_href": "https://data.austintexas.gov/GeoLand-Use-2012/c2c6-6rve", "type": "Preserve"}' | \
 		node scripts/collect-features.js > $@
 
-land-use-2012-all.geojson: tmp/land_use_2012/parks-or-greenbelts.geojson tmp/land_use_2012/golf-courses.geojson tmp/land_use_2012/camp-grounds.geojson tmp/land_use_2012/common-areas.geojson tmp/land_use_2012/preserves.geojson
+
+geojson/land-use-2012-all.geojson: tmp/land_use_2012/parks-or-greenbelts.geojson tmp/land_use_2012/golf-courses.geojson tmp/land_use_2012/camp-grounds.geojson tmp/land_use_2012/common-areas.geojson tmp/land_use_2012/preserves.geojson
 	mkdir -p $(dir $@)
 	cat $^ | \
 		node scripts/uncollect-features.js | \
 		node scripts/collect-features.js > $@
 
-land-use-2012-all.js: land-use-2012-all.geojson
-	mkdir -p $(dir $@)
-	sed '1s/^/var landuseParks = /' $< > $@
-
-
+# possible alternative parks shp file (from data.austintexas.gov)
 tmp/coa-parks.zip:
 	mkdir -p $(dir $@)
 	curl 'https://data.austintexas.gov/api/geospatial/99qw-4ixs?method=export&format=Shapefile' -o $@
