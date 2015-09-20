@@ -9,10 +9,9 @@ var gulp 			= require( 'gulp' ),
 		notify			= require( 'gulp-notify' ),
 
 		// SOURCES
-		jsSources 	= ['js/app.js'],
-		sassSources = ['sass/style.scss'],
-		htmlSources = ['*.html'],
-		templates		= [ './templates/' ];
+		jsSources 		= ['js/app.js'],
+		sassSources 	= ['sass/style.scss'],
+		htmlTemplates	= [ './html_templates/' ];
 
 gulp.task('js', function(){
 	gulp.src(jsSources)
@@ -30,13 +29,8 @@ gulp.task( 'compass', function(){
 		.pipe( connect.reload())
 });
 
-gulp.task( 'html', function(){
-	gulp.src( htmlSources )
-		.pipe( connect.reload())
-});
-
 gulp.task( 'fileinclude', function(){
-	gulp.src( templates + '*.tpl.html' )
+	gulp.src( htmlTemplates + '*.tpl.html' )
 		.pipe( fileinclude())
 		.pipe( rename({ extname: "" }))
 		.pipe( rename({ extname: ".html"}))
@@ -48,8 +42,7 @@ gulp.task( 'fileinclude', function(){
 gulp.task('watch', function(){
 	gulp.watch( jsSources, ['js'] );
 	gulp.watch( 'sass/*.scss', ['compass'] );
-	gulp.watch( htmlSources, ['html'] );
-	gulp.watch( 'templates/*', ['fileinclude'] );
+	gulp.watch( 'html_templates/*', ['fileinclude'] );
 });
 
 gulp.task('connect', function(){
@@ -64,4 +57,4 @@ gulp.task('deploy', function () {
 });
 
 
-gulp.task('default', ['fileinclude','html', 'js', 'compass', 'connect', 'watch']);
+gulp.task('default', ['fileinclude', 'js', 'compass', 'connect', 'watch']);
