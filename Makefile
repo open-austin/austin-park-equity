@@ -84,3 +84,12 @@ data/land-use-2012-all.geojson: tmp/land_use_2012/parks-or-greenbelts.geojson tm
 data/land-use-2012-all.js: data/land-use-2012-all.geojson
 	mkdir -p $(dir $@)
 	sed '1s/^/var landuseParks = /' $< > $@
+
+
+tmp/coa-parks.zip:
+	mkdir -p $(dir $@)
+	curl 'https://data.austintexas.gov/api/geospatial/99qw-4ixs?method=export&format=Shapefile' -o $@
+
+tmp/coa-parks.shp: tmp/coa-parks.zip
+	unzip -d $(basename $@) $<
+
