@@ -53,8 +53,32 @@ To run the local server and see the app in your browser:
 
 Gulp serves the app at `http://localhost:8080`.
 
-## Makefile Instructions:
-[TODO]
+
+## To (re)build data files:
+
+The data processing workflow is (for the most part) automated with a `Makefile`
+in the `data/` directory. This workflow assumes a UNIX operating system (such as
+OS X or Linux). You'll also need:
+
+- node / npm
+- ruby
+- ogr/gdal
+
+
+To build data files, cd into the `data/` directory:
+
+    $ cd data
+
+
+And run `make`
+
+    $ make
+
+
+If you want to rebuild or update a file, just delete it and re-run make. At the
+moment, not everything has been ported over to the `Makefile`, so this won't
+work for all files.
+
 
 ## Data sources & use:
 - City of Austin, Parks and Rec Dept (PARD) Data
