@@ -44,30 +44,19 @@ var map = L.map('main-map', {
     center: config.map_center, // Austin!
     zoom: 12,
     scrollWheelZoom: false,
-    layers: [grayscale], // include more options in array like terrain
+    layers: [grayscale], // include more options in array like terrain,
 });
 
 var baseMaps = {
     'Grayscale': grayscale,
-    // 'Terrain': terrain, // removing other tiles now for simplicity
+    // 'Terrain': terrain, // removing other tiles now for simplicity,
 };
 
-var districtLines = L.geoJson(districts, {
+L.geoJson(districts, {
     weight: 1,
     opacity: 1,
     color: '#666',
-    fillOpacity: 0
-}).addTo(map);
-
-var heatmap = L.geoJson(parkAccessRing, {
-    style: function style(feature) {
-        return {
-            fillColor: getRingColor(feature.properties.distance_l),
-            weight: 0,
-            opacity: 0,
-            fillOpacity: 0.5
-        };
-    }
+    fillOpacity: 0,
 }).addTo(map);
 
 function getRingColor(d) {
@@ -79,13 +68,32 @@ function getRingColor(d) {
     if (d === '100') { return '#9BD37F'; }
     return '#FF8080';
 }
+var heatmap = L.geoJson(parkAccessRing, {
+    style: function style(feature) {
+        return {
+            fillColor: getRingColor(feature.properties.distance_l),
+            weight: 0,
+            opacity: 0,
+            fillOpacity: 0.5,
+        };
+    },
+}).addTo(map);
+
 
 function getParkColor(d) {
     // LOGIC: return cemeteries as gray, OSM Parks as green5,
     // undeveloped parks as brown, all others as green.
-    return d.properties.PARK_TYPE === 'Cemetery' ? greyColors[5] :
-        d.id ? greenColors[5] :
-            d.properties.am_plus_fac_sum > 0 ? '#56DD54' : '#9f7048';
+
+    if (d.properties.PARK_TYPE === 'Cemetery') {
+        return greyColors[5];
+    }
+    if (d.id) {
+        return greenColors[5];
+    }
+    if (d.properties.am_plus_fac_sum > 0) {
+        return '#56DD54';
+    }
+    return '#9f7048';
 }
 
 function onEachFeature(feature, layer) {
@@ -113,17 +121,17 @@ var parksByType = _.groupBy(parks.features, function(n) {
     return n.properties.PARK_TYPE;
 });
 
-var cemeteries = parksByType['Cemetery'];
-var districtParks = parksByType['District'];
+var cemeteries = parksByType.Cemetery;
+var districtParks = parksByType.District;
 var golfCourses = parksByType['Golf Course'];
-var greenbelts = parksByType['Greenbelt'];
-var metroParks = parksByType['Metropolitan'];
+var greenbelts = parksByType.Greenbelt;
+var metroParks = parksByType.Metropolitan;
 var naturePreserves = parksByType['Nature Preserve'];
-var neighborhoodParks = parksByType['Neighborhood'];
+var neighborhoodParks = parksByType.Neighborhood;
 var plantingStrips = parksByType['Planting Strips/Triangles'];
-var pocketParks = parksByType['Pocket'];
-var schoolParks = parksByType['School'];
-var specialParks = parksByType['Special'];
+var pocketParks = parksByType.Pocket;
+var schoolParks = parksByType.School;
+var specialParks = parksByType.Special;
 
 var drawLayer = function(layer, popup) {
     return L.geoJson(layer, {
@@ -133,25 +141,12 @@ var drawLayer = function(layer, popup) {
                 weight: 1,
                 opacity: 0.7,
                 color: '#44A048',
-                fillOpacity: 0.7
+                fillOpacity: 0.7,
             };
         },
-        onEachFeature: popup
+        onEachFeature: popup,
     }).addTo(map);
 };
-
-var cemeteryLayer = drawLayer(cemeteries, onEachFeature);
-var districtParkLayer = drawLayer(districtParks, onEachFeature);
-var golfLayer = drawLayer(golfCourses, onEachFeature);
-var greenbeltLayer = drawLayer(greenbelts, onEachFeature);
-var metroParkLayer = drawLayer(metroParks, onEachFeature);
-var naturePresLayer = drawLayer(naturePreserves, onEachFeature);
-var neighborhoodLayer = drawLayer(neighborhoodParks, onEachFeature);
-var plantingLayer = drawLayer(plantingStrips, onEachFeature);
-var pocketLayer = drawLayer(pocketParks, onEachFeature);
-var schoolLayer = drawLayer(schoolParks, onEachFeature);
-var specialLayer = drawLayer(specialParks, onEachFeature);
-var osmParksLayer = drawLayer(osmParks, onEachOSMPark);
 
 function onEachOSMPark(feature, layer) {
     var parkName = feature.properties.name || 'Unnamed Park';
@@ -162,6 +157,20 @@ function onEachOSMPark(feature, layer) {
         layer.bindPopup(popupContent);
     }
 }
+
+
+var cemeteryLayer = drawLayer(cemeteries, onEachFeature);
+drawLayer(districtParks, onEachFeature);
+drawLayer(golfCourses, onEachFeature);
+drawLayer(greenbelts, onEachFeature);
+drawLayer(metroParks, onEachFeature);
+drawLayer(naturePreserves, onEachFeature);
+drawLayer(neighborhoodParks, onEachFeature);
+drawLayer(plantingStrips, onEachFeature);
+drawLayer(pocketParks, onEachFeature);
+drawLayer(schoolParks, onEachFeature);
+drawLayer(specialParks, onEachFeature);
+drawLayer(osmParks, onEachOSMPark);
 
 var parksOn = true;
 function toggleParksLayer() {
@@ -181,23 +190,19 @@ var overlayMaps = {
     'Cemeteries': cemeteryLayer,
     'Golf Course': golfLayer,
     'School Parks': schoolLayer,
-    'Heatmap': heatmap
+    'Heatmap': heatmap,
 };
 
 L.control.layers(baseMaps, overlayMaps, {
     collapsed: true,
-    autoZIndex: true
+    autoZIndex: true,
 }).addTo(map);
-
-function isInArray(value, array) {
-    return array.indexOf(value) > -1;
-}
 
 // adding district shapefiles to Map
 var districtLayer;
 function addSingleDistrictLayer(districtNum) {
     districtLayer = L.geoJson(districts.features[districtNum], {
-        style: function style(feature) {
+        style: function style() {
             return {
                 fillColor: 'transparent',
                 weight: 3,
@@ -205,7 +210,7 @@ function addSingleDistrictLayer(districtNum) {
                 color: '#666',
                 dashArray: '',
             };
-        }
+        },
     }).addTo(map);
     districtLayer.bringToBack();
     map.fitBounds(districtLayer.getBounds());
@@ -214,31 +219,27 @@ function addSingleDistrictLayer(districtNum) {
 // Loading Data with D3
 var distDemoData;
 var parkAcreageData;
-var censusData;
 
 queue()
-    .defer(d3.json, 'data/district-demographics.json')
-    .defer(d3.json, 'data/park-acreage-data.json')
-    // .defer(d3.json, 'data/census-tract.json')
-    .await(analyze);
+    .defer(d3.json, 'data/json/district-demographics.json')
+    .defer(d3.json, 'data/json/park-acreage-data.json')
+    // .defer(d3.json, 'data/geojson/census-tract.geojson')
+    .await(function analyze(error, demographics, parks, census) {
+        if (error) {
+            console.log(error);
+        }
 
-function analyze(error, demographics, parks, census) {
-    if (error) {
-        console.log(error);
-    }
+        distDemoData = demographics;
+        parkAcreageData = parks;
+        censusData = census;
+    });
 
-    distDemoData = demographics;
-    parkAcreageData = parks;
-    // censusData 		    = census;
-
-}
-
-// d3.json('data/district-demographics.json', function(data) {
+// d3.json('data/json/district-demographics.json', function(data) {
 // 	distDemoData = data;
 // 	console.log(distDemoData[0]);
 // });
 
-// d3.json('data/district-park-acreage.json', function(data) {
+// d3.json('data/json/district-park-acreage.json', function(data) {
 // 	parkAcreageData = data;
 // 	console.log(parkAcreageData[0]);
 // });
@@ -249,35 +250,32 @@ $('.dropdown .title').click(function() {
     $('.facts-table').toggleClass('no-show');
 });
 
-$('.dropdown li').click(function() {
-    // capture district num/index selected
-    var $this = $(this);
-    var districtNum = parseInt($this.data('district'));
-    var districtIndex = districtNum - 1;
+function applyRankingColors($rankValue) {
+    var rankInt = parseInt($rankValue.text(), 10);
+    $rankValue.parent().removeClass();
 
-    $this.parent().parent().toggleClass('closed').find('.title').text($this.text());
-    $('.facts-table').toggleClass('no-show');
-
-    // add district polygon to map
-    if (districtLayer) {
-        map.removeLayer(districtLayer);
+    if (rankInt === 1 || rankInt === 2) {
+        $rankValue.parent().addClass('rgdiv4-5');
+    } else if (rankInt === 3 || rankInt === 4) {
+        $rankValue.parent().addClass('rgdiv3-5');
+    } else if (rankInt === 5 || rankInt === 6) {
+        $rankValue.parent().addClass('rgdiv2-5');
+    } else if (rankInt === 7 || rankInt === 8) {
+        $rankValue.parent().addClass('rgdiv1-5');
+    } else if (rankInt === 9 || rankInt === 10) {
+        $rankValue.parent().addClass('rgdiv0-5');
     }
-
-    addSingleDistrictLayer(districtIndex);
-    populateDistrictFacts(districtIndex);
-
-});
+}
 
 function populateDistrictFacts(districtIndex) {
-    var districtFeatures = districts.features[districtIndex].properties;
     var districtDemographics = distDemoData[districtIndex];
-    var districtParks = parkAcreageData[districtIndex];
-    var totParkAcres = (districtParks['Total Park Acres']).toFixed(2);
-    var parkAcresRank = districtParks['Park Acres Rank'];
-    var totParksNum = districtParks['Park Count'];
-    var parksNumRank = districtParks['Park Count Rank'];
-    var percParkCoverage = districtParks['Percent Park Coverage'];
-    var parkCoverageRank = districtParks['Coverage Rank'];
+    var _districtParks = parkAcreageData[districtIndex];
+    var totParkAcres = (_districtParks['Total Park Acres']).toFixed(2);
+    var parkAcresRank = _districtParks['Park Acres Rank'];
+    var totParksNum = _districtParks['Park Count'];
+    var parksNumRank = _districtParks['Park Count Rank'];
+    var percParkCoverage = _districtParks['Percent Park Coverage'];
+    var parkCoverageRank = _districtParks['Coverage Rank'];
     var familyIncome = districtDemographics.medianFamilyIncome2013;
     var rankIncome = districtDemographics.rankMedianFamilyIncome2013;
     var percRenter = districtDemographics.percentRenterOccupiedHousingUnitsOfTotalOccupied2010;
@@ -312,23 +310,22 @@ function populateDistrictFacts(districtIndex) {
     applyRankingColors($('#park-acres-rank'));
     applyRankingColors($('#parks-num-rank'));
     applyRankingColors($('#park-coverage-rank'));
-
 }
 
+$('.dropdown li').click(function() {
+    // capture district num/index selected
+    var $this = $(this);
+    var districtNum = parseInt($this.data('district'), 10);
+    var districtIndex = districtNum - 1;
 
-function applyRankingColors($rankValue) {
-    var rankInt = parseInt($rankValue.text());
-    $rankValue.parent().removeClass();
+    $this.parent().parent().toggleClass('closed').find('.title').text($this.text());
+    $('.facts-table').toggleClass('no-show');
 
-    if (rankInt === 1 || rankInt === 2) {
-        $rankValue.parent().addClass('rgdiv4-5');
-    } else if (rankInt === 3 || rankInt === 4) {
-        $rankValue.parent().addClass('rgdiv3-5');
-    } else if (rankInt === 5 || rankInt === 6) {
-        $rankValue.parent().addClass('rgdiv2-5');
-    } else if (rankInt === 7 || rankInt === 8) {
-        $rankValue.parent().addClass('rgdiv1-5');
-    } else if (rankInt === 9 || rankInt === 10) {
-        $rankValue.parent().addClass('rgdiv0-5');
+    // add district polygon to map
+    if (districtLayer) {
+        map.removeLayer(districtLayer);
     }
-}
+
+    addSingleDistrictLayer(districtIndex);
+    populateDistrictFacts(districtIndex);
+});

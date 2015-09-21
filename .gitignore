@@ -1,5 +1,11 @@
 node_modules
 **/.sass-cache
 .publish
+<<<<<<< HEAD
 tmp/
 dist/
+=======
+
+sass/_dropdown.scss
+data/tmp/
+>>>>>>> master
