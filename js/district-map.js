@@ -134,9 +134,9 @@
     censusData;
 
   queue()
-    .defer(d3.json, "data/district-demographics.json")
-    .defer(d3.json, "data/park-acreage-data.json")
-    .defer(d3.json, "data/census-tract.json")
+    .defer(d3.json, "data/json/district-demographics.json")
+    .defer(d3.json, "data/json/park-acreage-data.json")
+    .defer(d3.json, "data/geojson/census-tract.geojson")
     .await(analyze);
 
   function analyze(error, demographics, parks, census) {
@@ -148,12 +148,12 @@
 
   }
 
-  // d3.json("data/district-demographics.json", function(data) {
+  // d3.json("data/json/district-demographics.json", function(data) {
   //  distDemoData = data;
   //  console.log(distDemoData[0]);
   // });
 
-  // d3.json("data/district-park-acreage.json", function(data) {
+  // d3.json("data/json/district-park-acreage.json", function(data) {
   //  parkAcreageData = data;
   //  console.log(parkAcreageData[0]);
   // });

@@ -1,7 +1,7 @@
 // This was putting park data on the map
 // var PARK_COLOR = '#2DCB70';
 // var parkData;
-// d3.json("json/parks.json", function(error, json) {
+// d3.json("data/deprecated/parks.json", function(error, json) {
 //   if (error) return console.warn(error);
 //   parkData = json;
 //   _.each(parkData,function(park){
@@ -84,4 +84,4 @@ $.when($.get('https://data.austintexas.gov/resource/wa68-dsqa.json')).then(funct
 
 // censusModule.GEORequest(request, callback);
 
-d3.json("json/tracts.json", tractCallback);
+d3.json("data/geojson/tracts.json", tractCallback);
