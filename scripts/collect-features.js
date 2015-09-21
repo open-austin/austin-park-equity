@@ -6,11 +6,10 @@ var turf = require('turf');
 
 
 process.stdin
-  .pipe(JSONStream.parse())
-  .pipe(es.writeArray(function(err, features) {
-    var fc = turf.featurecollection(features);
-    es.readArray([fc])
-      .pipe(JSONStream.stringify(false))
-      .pipe(process.stdout);
-  }));
-
+    .pipe(JSONStream.parse())
+    .pipe(es.writeArray(function(err, features) {
+        var fc = turf.featurecollection(features);
+        es.readArray([fc])
+            .pipe(JSONStream.stringify(false))
+            .pipe(process.stdout);
+    }));
