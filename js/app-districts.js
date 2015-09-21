@@ -1,16 +1,17 @@
-var config = require('../config.json');
 var $ = require('jquery');
 var queue = require('queue-async');
 var d3 = require('d3');
 var L = require('leaflet');
 require('leaflet-providers');
 
+var config = require('../config.json');
+
 // $('.districts-toggles li').on( 'click', function(){
-// 	$this = $(this);
-// 	var districtNum = parseInt($this.data('district'));
-// 	var districtIndex = districtNum - 1;
-// 	if (districtLayer){ map.removeLayer(districtLayer); };
-// 	addSingleDistrictLayer(districtIndex);
+//  $this = $(this);
+//  var districtNum = parseInt($this.data('district'));
+//  var districtIndex = districtNum - 1;
+//  if (districtLayer){ map.removeLayer(districtLayer); };
+//  addSingleDistrictLayer(districtIndex);
 // });
 
 var grayscale = L.tileLayer.provider('CartoDB.Positron');
@@ -23,11 +24,11 @@ var grayscale = L.tileLayer.provider('CartoDB.Positron');
 // 'Esri.WorldGrayCanvas'
 // 'CartoDB.DarkMatter'
 
-var map = L.map('map', {
+var map = L.map('district-map', {
     center: config.map_center, // Austin!
     zoom: 12,
     scrollWheelZoom: false,
-    layers: [grayscale], // include more options in array like terrain
+    layers: [grayscale], // include more options in array like terrain,
 });
 
 var baseMaps = {
@@ -35,34 +36,23 @@ var baseMaps = {
     'Grayscale': grayscale,
 };
 
-function getRingColor(d) {
-    if (d === '> 1 mile') { return '#FF8080'; }
-    if (d === '1 mile') { return '#FFB380'; }
-    if (d === '1/2 mile') { return '#FFE680'; }
-    if (d === '1/4 mile') { return '#E5F57F'; }
-    if (d === "500'") { return '#BBE47F'; }
-    if (d ===  "100'") { return '#9BD37F'; }
-
-    return 'red';
-}
-
-L.geoJson(parkAccessRing, {
-    style: function style(feature) {
-        return {
-            fillColor: getRingColor(feature.properties.distance_l),
-            weight: 0,
-            opacity: 0,
-            fillOpacity: 0.6,
-        };
-    },
+L.geoJson(districts, {
+    weight: 1,
+    opacity: 1,
+    color: '#666',
+    fillOpacity: 0,
 }).addTo(map);
 
 
+function getParkColor(d) {
+    return d === 'Developed' ? '#56DD54' : '#9f7048';
+}
+
 // adding parks shapefiles to Map
 var parkLayer = L.geoJson(parks, {
-    style: function style() {
+    style: function style(feature) {
         return {
-            fillColor: '#56DD54',
+            fillColor: getParkColor(feature.properties.DEVELOPMEN),
             weight: 1,
             opacity: 0.7,
             color: '#44A048',
@@ -73,16 +63,17 @@ var parkLayer = L.geoJson(parks, {
         var parkName = feature.properties.PARK_NAME;
         var parkAcres = feature.properties.PARK_ACRES.toFixed(2);
         var parkType = feature.properties.PARK_TYPE;
+        var parkStatus = feature.properties.DEVELOPMEN;
         var popupContent = "<p><span class='park-title'>" + parkName + '</span> \
-    						<br>' + parkAcres + ' Acres \
-    						<br>Park Type: ' + parkType + '</p>';
+                <br>' + parkAcres + ' Acres \
+                <br>Park Type: ' + parkType +
+                '<br>Status: ' + parkStatus + '</p>';
 
         if (feature.properties) {
             layer.bindPopup(popupContent);
         }
     },
 }).addTo(map);
-
 
 var parksOn = true;
 function toggleParksLayer() {
@@ -156,13 +147,13 @@ queue()
     });
 
 // d3.json("data/json/district-demographics.json", function(data) {
-// 	distDemoData = data;
-// 	console.log(distDemoData[0]);
+//  distDemoData = data;
+//  console.log(distDemoData[0]);
 // });
 
 // d3.json("data/json/district-park-acreage.json", function(data) {
-// 	parkAcreageData = data;
-// 	console.log(parkAcreageData[0]);
+//  parkAcreageData = data;
+//  console.log(parkAcreageData[0]);
 // });
 
 // DROPDOWN
@@ -191,19 +182,12 @@ function applyRankingColors($rankValue) {
 function populateDistrictFacts(districtIndex) {
     var districtDemographics = distDemoData[districtIndex];
     var districtParks = parkAcreageData[districtIndex];
-
-    // Parks Data
     var totParkAcres = (districtParks['Total Park Acres']).toFixed(2);
     var parkAcresRank = districtParks['Park Acres Rank'];
     var totParksNum = districtParks['Park Count'];
     var parksNumRank = districtParks['Park Count Rank'];
     var percParkCoverage = districtParks['Percent Park Coverage'];
-    // var pocketParks 					= districtFeatures.POCKET_PARKS;
-    // var neighborhoodParks 		= districtFeatures.NEIGHBORHOOD_PARKS;
-    // var districtParks 				= districtFeatures.DISTRICT_PARKS;
-    // var metroParks 						= districtFeatures.METRO_PARKS;
-
-    // Demographic Data
+    var parkCoverageRank = districtParks['Coverage Rank'];
     var familyIncome = districtDemographics.medianFamilyIncome2013;
     var rankIncome = districtDemographics.rankMedianFamilyIncome2013;
     var percRenter = districtDemographics.percentRenterOccupiedHousingUnitsOfTotalOccupied2010;

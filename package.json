@@ -18,6 +18,10 @@
   "homepage": "https://github.com/open-austin/Austin_Parks_Equity",
   "devDependencies": {
     "JSONStream": "^1.0.4",
+    "babel-eslint": "^4.1.3",
+    "eslint": "^1.5.0",
+    "eslint-config-airbnb": "0.0.8",
+    "eslint-config-standard": "^4.4.0",
     "event-stream": "^3.3.1",
     "gulp": "^3.9.0",
     "gulp-compass": "^2.1.0",
@@ -27,10 +31,21 @@
     "gulp-notify": "^2.2.0",
     "gulp-rename": "^1.2.2",
     "gulp-util": "^3.0.6",
+    "json-loader": "^0.5.3",
     "lodash.merge": "^3.3.2",
     "minimist": "^1.1.3",
     "query-overpass": "^1.0.0",
+    "standard": "^5.3.1",
     "turf": "^2.0.2",
-    "turf-cli": "^1.1.0"
+    "turf-cli": "^1.1.0",
+    "webpack": "^1.12.2"
+  },
+  "dependencies": {
+    "d3": "^3.5.6",
+    "jquery": "^2.1.4",
+    "leaflet": "^0.7.5",
+    "leaflet-providers": "^1.1.2",
+    "lodash": "^3.10.1",
+    "queue-async": "^1.0.7"
   }
 }
