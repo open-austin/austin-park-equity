@@ -1,0 +1,104 @@
+//  Dropdown module
+//  ---
+
+/* OPTIONS */
+
+$list_opacity: 0.2;
+$border_radius: 3px;
+$width: 300px;
+
+/* STYLES */
+section#content {
+  width: $width;
+  position: fixed;
+  left: 50%;
+  top: 50px;
+  margin-left: -150px;
+  text-align: center;
+}
+div.dropdown {
+  text-align: left;
+  font-size: 0.9em;
+  color: $black;
+  text-shadow: 0px 1px 1px $dark-grey;
+
+  &.closed {
+    ul {
+      margin-top: 0px;
+      li {
+        margin-top: -40px;
+        height: 0px;
+      }
+    }
+    div.title:after {
+      margin-top: -14px;
+      @include transform(rotate(0deg));
+    }
+  }
+
+  div.title {
+    width: 100%;
+    height: 40px;
+    border: 1px solid rgba(25,25,25,0.3);
+    padding: 12px;
+    cursor: pointer;
+    @include box-sizing("border-box");
+    @include background-image(linear-gradient(top, rgba(230, 230, 230, $list_opacity), rgba(160, 160, 160, $list_opacity)));
+    @include border-radius($border_radius);
+    @include box-shadow(0px 1px 0px 0px rgba(0,0,0,0.3), 0px 2px 6px rgba(0,0,0,0.3));
+
+    &:after {
+      display: block;
+      content: "▾";
+      position: absolute;
+      right: 20px;
+      margin-top: -12px;
+      @include transform(rotate(180deg));
+    }
+  }
+
+  ul {
+    overflow: hidden;
+    @include transition(margin-top 1s);
+    @include box-sizing("border-box");
+    @include box-shadow(0px 1px 0px 0px rgba(0,0,0,0.3), 0px 2px 6px rgba(0,0,0,0.3));
+    @include border-radius(0px 0px $border_radius $border_radius);
+
+    li {
+      width: 100%;
+      height: 40px;
+      border: 1px solid rgba(25,25,25,0.3);
+      padding: 12px;
+      vertical-align: top;
+      overflow: hidden;
+      cursor: pointer;
+      @include transition(margin-top 0.5s, height 0.5s);
+      @include box-sizing("border-box");
+      @include background-image(linear-gradient(top, rgba(230, 230, 230, $list_opacity), rgba(160, 160, 160, $list_opacity)));
+
+      &:first-child {
+        border-bottom: none;
+        border-top: none;
+      }
+      &:last-child {
+        border-top: none;
+        @include border-radius(0px 0px $border_radius $border_radius);
+      }
+      &:hover {
+        text-shadow: 0px 1px 1px black, 0px 0px 4px white;
+      }
+      &:before {
+        content: " ";
+        display: -webkit-inline-box;
+        position: relative;
+        background: transparent url("http://www.carlcalderon.com/pen/img/line-stop.png");
+        margin-top: -12px;
+        margin-right: 10px;
+        width: 20px;
+        height: 40px;
+        @include opacity(0.7);
+        @include transition(all 0.5s);
+      }
+    }
+  }
+}
