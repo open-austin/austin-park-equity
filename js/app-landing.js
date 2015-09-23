@@ -160,17 +160,17 @@ function onEachOSMPark(feature, layer) {
 
 
 var cemeteryLayer = drawLayer(cemeteries, onEachFeature);
+var golfLayer = drawLayer(golfCourses, onEachFeature);
+var osmParksLayer = drawLayer(osmParks, onEachOSMPark);
+var schoolLayer = drawLayer(schoolParks, onEachFeature);
 drawLayer(districtParks, onEachFeature);
-drawLayer(golfCourses, onEachFeature);
 drawLayer(greenbelts, onEachFeature);
 drawLayer(metroParks, onEachFeature);
 drawLayer(naturePreserves, onEachFeature);
 drawLayer(neighborhoodParks, onEachFeature);
 drawLayer(plantingStrips, onEachFeature);
 drawLayer(pocketParks, onEachFeature);
-drawLayer(schoolParks, onEachFeature);
 drawLayer(specialParks, onEachFeature);
-drawLayer(osmParks, onEachOSMPark);
 
 var parksOn = true;
 function toggleParksLayer() {
@@ -269,13 +269,13 @@ function applyRankingColors($rankValue) {
 
 function populateDistrictFacts(districtIndex) {
     var districtDemographics = distDemoData[districtIndex];
-    var _districtParks = parkAcreageData[districtIndex];
-    var totParkAcres = (_districtParks['Total Park Acres']).toFixed(2);
-    var parkAcresRank = _districtParks['Park Acres Rank'];
-    var totParksNum = _districtParks['Park Count'];
-    var parksNumRank = _districtParks['Park Count Rank'];
-    var percParkCoverage = _districtParks['Percent Park Coverage'];
-    var parkCoverageRank = _districtParks['Coverage Rank'];
+    var districtParks = parkAcreageData[districtIndex];
+    var totParkAcres = (districtParks['Total Park Acres']).toFixed(2);
+    var parkAcresRank = districtParks['Park Acres Rank'];
+    var totParksNum = districtParks['Park Count'];
+    var parksNumRank = districtParks['Park Count Rank'];
+    var percParkCoverage = districtParks['Percent Park Coverage'];
+    var parkCoverageRank = districtParks['Coverage Rank'];
     var familyIncome = districtDemographics.medianFamilyIncome2013;
     var rankIncome = districtDemographics.rankMedianFamilyIncome2013;
     var percRenter = districtDemographics.percentRenterOccupiedHousingUnitsOfTotalOccupied2010;

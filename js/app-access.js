@@ -198,6 +198,7 @@ function populateDistrictFacts(districtIndex) {
     var totParksNum = districtParks['Park Count'];
     var parksNumRank = districtParks['Park Count Rank'];
     var percParkCoverage = districtParks['Percent Park Coverage'];
+    var parkCoverageRank = districtParks['Coverage Rank'];
     // var pocketParks 					= districtFeatures.POCKET_PARKS;
     // var neighborhoodParks 		= districtFeatures.NEIGHBORHOOD_PARKS;
     // var districtParks 				= districtFeatures.DISTRICT_PARKS;
