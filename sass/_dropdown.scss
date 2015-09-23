@@ -102,3 +102,13 @@ div.dropdown {
     }
   }
 }
+
+.districts-toggles p {
+    float: left;
+    margin: 0px;
+    line-height: 1.25em;
+}
+
+.districts-toggles li::before {
+    float: left;
+}
