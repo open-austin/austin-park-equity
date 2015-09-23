@@ -60,14 +60,15 @@ L.geoJson(districts, {
 }).addTo(map);
 
 function getRingColor(d) {
-    if (d === '> 1 mile') { return '#FF8080'; }
-    if (d === '1 mile') { return '#FFB380'; }
-    if (d === '1/2 mile') { return '#FFE680'; }
-    if (d === '1/4 mile') { return '#E5F57F'; }
-    if (d === '500') { return '#BBE47F'; }
-    if (d === '100') { return '#9BD37F'; }
-    return '#FF8080';
+  return d === "> 1 mile" ? '#FF8080' :
+         d === "1 mile" 	? '#FFB380' :
+         d === "1/2 mile" ? '#FFE680' :
+         d === "1/4 mile" ? '#E5F57F' :
+         d === "500'" 		? '#BBE47F' :
+         d === "100'" 		? '#9BD37F' :
+                            '#FF8080';
 }
+
 var heatmap = L.geoJson(parkAccessRing, {
     style: function style(feature) {
         return {
