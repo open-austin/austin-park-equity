@@ -16,11 +16,13 @@ section#content {
   margin-left: -150px;
   text-align: center;
 }
-div.dropdown {
+
+.dropdown {
   text-align: left;
   font-size: 0.9em;
   color: $black;
   text-shadow: 0px 1px 1px $dark-grey;
+  margin-top: 32px;
 
   &.closed {
     ul {
