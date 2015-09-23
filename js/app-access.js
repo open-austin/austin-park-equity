@@ -42,8 +42,7 @@ function getRingColor(d) {
     if (d === '1/4 mile') { return '#E5F57F'; }
     if (d === "500'") { return '#BBE47F'; }
     if (d ===  "100'") { return '#9BD37F'; }
-
-    return 'red';
+    return "#FF8080";
 }
 
 L.geoJson(parkAccessRing, {
@@ -115,7 +114,7 @@ function getColor(d) {
     if (d > 3) { return '#b3de69'; }
     if (d > 2) { return '#fccde5'; }
     if (d > 1) { return '#98e986'; }
-    return '#bc80bd';
+    else { return '#bc80bd'; }
 }
 
 // adding district shapefiles to Map
