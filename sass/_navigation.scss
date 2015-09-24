@@ -11,7 +11,7 @@ nav {
   text-shadow: #444 2px 2px;
   list-style: none;
   margin: 0;
-  background: $green4;
+  background: $purple4;
 
   display: -webkit-box;
   display: -moz-box;
@@ -64,7 +64,7 @@ nav {
 .submenu:hover .submenu-items {
   display: block;
   z-index: 1;
-  background-color: $green4;
+  background-color: $purple4;
 }
 
 .submenu-items {
@@ -73,6 +73,12 @@ nav {
 }
 
 .submenu-items li {
-  margin: 0
+  margin: 0;
 }
 
+.submenu-item--featured {
+  margin-left: auto;
+  a {
+    color: $yellow;
+  }
+}
