@@ -1,16 +1,14 @@
 @@include( '_head.html' )
 @@include( '_nav.html' )
 
-@@include( '_welcome.html' )
-
 	<div class="main-content-wrapper">
-		<div id="main-map" class="map"></div>
+		<div id="map" class="map"></div>
 		@@include( '_district-aside.html' )
 	</div>
 
 	@@include( '_data-files.html' )
 
 	<!-- App files -->
-	<script type="text/javascript" src="dist/main.bundle.js" charset="utf-8"></script>
+	<script src="dist/access.bundle.js"></script>
 
 @@include('_end.html')
