@@ -1,3 +1,9 @@
+nav {
+  width: 100%;
+  position: fixed;
+  z-index: 2;
+}
+
 .nav {
   font-family: $head-font;
   font-weight: bold;
@@ -6,6 +12,7 @@
   list-style: none;
   margin: 0;
   background: $dark-green;
+  background: $green4;
 
   display: -webkit-box;
   display: -moz-box;
@@ -20,7 +27,7 @@
   padding: .5em;
   color: white;
   &:hover {
-    background: $middle-green;
+    background: $green3;
   }
 }
 
@@ -58,7 +65,7 @@
 .submenu:hover .submenu-items {
   display: block;
   z-index: 1;
-  background-color: $dark-green;
+  background-color: $green4;
 }
 
 .submenu-items {
@@ -69,4 +76,3 @@
 .submenu-items li {
   margin: 0
 }
-

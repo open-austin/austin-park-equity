@@ -10,8 +10,11 @@
 @import "variables";
 @import "mixins";
 @import "base";
+
+// Compoment partials
 @import "modules";
 @import "welcome";
 @import "navigation";
 @import "table";
-
+@import "dropdown";
+@import "leafet";

@@ -1,28 +1,39 @@
 // _variables.scss
 // =================
 
+//////////
+// FONTS
+//////////
 @import "http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800)";
 @import "http://fonts.googleapis.com/css?family=Raleway:800,100,400";
 
+$head-font : 'Raleway', sans-serif;
+$body-font : 'Open Sans', sans-serif;
+
+
+//////////
+// COLORS
+//////////
+
 // NEUTRAL COLORS
-$black		   	: #111;
-$white			: #fff;
-$grey			: #D5D5D5;
-$dark-grey		: #808080;
-$off-grey		: #ECDFED;
+$black        : #111;
+$white      : #fff;
+$grey     : #D5D5D5;
+$dark-grey    : #808080;
+$off-grey   : #ECDFED;
 
 // MORE COLORS
-$bright-green		: rgba(100, 192, 98, 1);
+$bright-green   : rgba(100, 192, 98, 1);
 $middle-green   : #60B25E;
 $dark-green     : #388636;
-$light-green	  : #83A33E;
-$footer-green-1	: #879C5B;
-$footer-green-2	: #657E30;
-$grey-green		  : #B8C59C;
+$light-green    : #83A33E;
+$footer-green-1 : #879C5B;
+$footer-green-2 : #657E30;
+$grey-green     : #B8C59C;
 
-$lilac-purlpe	: #C9A6CE;
-$purple			  : #9F5EA7;
-$dark-purple	: #6D4073;
+$lilac-purlpe : #C9A6CE;
+$purple       : #9F5EA7;
+$dark-purple  : #6D4073;
 
 $red    : #C00C0F;
 $yellow : #DD9E28;
@@ -44,11 +55,21 @@ $purpdiv5-8 : #8c6bb1;
 $purpdiv6-8 : #88419d;
 $purpdiv7-8 : #6e016b;
 
-
 // COLOR THEMES
-$main-color		: $black;
+$main-color   : $black;
 
-// FONTS
-$head-font : 'Raleway', sans-serif;
-$body-font : 'Open Sans', sans-serif;
-
+//////// Color Brewer
+// PURPLE to GREEN DIVERGENT
+$purple5 : #40004b;
+$purple4 : #762a83;
+$purple3 : #9970ab;
+$purple2 : #c2a5cf;
+$purple1 : #e7d4e8;
+$neutral : #f7f7f7;
+$green1  : #d9f0d3;
+$green2  : #a6dba0;
+$green3  : #5aae61;
+$green4  : #1b7837;
+$green5  : #00441b;
+// javascript array
+// ['rgb(64,0,75)','rgb(118,42,131)','rgb(153,112,171)','rgb(194,165,207)','rgb(231,212,232)','rgb(247,247,247)','rgb(217,240,211)','rgb(166,219,160)','rgb(90,174,97)','rgb(27,120,55)','rgb(0,68,27)']
