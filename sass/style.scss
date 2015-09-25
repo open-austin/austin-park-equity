@@ -1,15 +1,11 @@
 // style.scss
 // ==============
 
-//Compass imports
-@import "compass";
-@import "compass/reset";
-@import "compass/css3/box-shadow";
-
 //Core partials
 @import "variables";
 @import "mixins";
 @import "base";
+@import "bourbon";
 
 // Compoment partials
 @import "modules";
@@ -18,4 +14,3 @@
 @import "dropdown";
 @import "table";
 @import "leafet";
-
