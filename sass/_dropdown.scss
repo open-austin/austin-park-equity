@@ -33,7 +33,7 @@ section#content {
       }
     }
     div.title:after {
-      margin-top: -14px;
+      margin-top: -20px;
       @include transform(rotate(0deg));
     }
   }
@@ -54,7 +54,7 @@ section#content {
       content: "▾";
       position: absolute;
       right: 20px;
-      margin-top: -12px;
+      margin-top: -20px;
       @include transform(rotate(180deg));
     }
   }

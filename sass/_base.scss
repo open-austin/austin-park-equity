@@ -3,6 +3,7 @@
 
 html, body {
   height: 100%;
+  margin: 0px;
 }
 
 // body {}
@@ -42,4 +43,17 @@ a {
 	&:visited {
 		color: $dark-purple;
 	}
+}
+
+table {
+  border-spacing: 0px;
+  border: 0px;
+}
+
+ul {
+  -webkit-margin-before: 0em;
+  -webkit-margin-after: 0em;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+  -webkit-padding-start: 0px;
 }
