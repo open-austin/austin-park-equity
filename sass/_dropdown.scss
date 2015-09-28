@@ -44,10 +44,10 @@ section#content {
     border: 1px solid rgba(25,25,25,0.3);
     padding: 12px;
     cursor: pointer;
-    @include box-sizing("border-box");
+    box-sizing: border-box;
     @include background-image(linear-gradient(top, rgba(230, 230, 230, $list_opacity), rgba(160, 160, 160, $list_opacity)));
-    @include border-radius($border_radius);
-    @include box-shadow(0px 1px 0px 0px rgba(0,0,0,0.3), 0px 2px 6px rgba(0,0,0,0.3));
+    border-radius: $border_radius;
+    box-shadow: 0px 1px 0px 0px rgba(0,0,0,0.3), 0px 2px 6px rgba(0,0,0,0.3);
 
     &:after {
       display: block;
@@ -62,9 +62,9 @@ section#content {
   ul {
     overflow: hidden;
     @include transition(margin-top 1s);
-    @include box-sizing("border-box");
-    @include box-shadow(0px 1px 0px 0px rgba(0,0,0,0.3), 0px 2px 6px rgba(0,0,0,0.3));
-    @include border-radius(0px 0px $border_radius $border_radius);
+    box-sizing: border-box;
+    box-shadow: 0px 1px 0px 0px rgba(0,0,0,0.3), 0px 2px 6px rgba(0,0,0,0.3);
+    border-radius: 0px 0px $border_radius $border_radius;
 
     li {
       width: 100%;
@@ -75,7 +75,7 @@ section#content {
       overflow: hidden;
       cursor: pointer;
       @include transition(margin-top 0.5s, height 0.5s);
-      @include box-sizing("border-box");
+      box-sizing: border-box;
       @include background-image(linear-gradient(top, rgba(230, 230, 230, $list_opacity), rgba(160, 160, 160, $list_opacity)));
 
       &:first-child {
@@ -84,7 +84,7 @@ section#content {
       }
       &:last-child {
         border-top: none;
-        @include border-radius(0px 0px $border_radius $border_radius);
+        border-radius: 0px 0px $border_radius $border_radius;
       }
       &:hover {
         text-shadow: 0px 1px 1px black, 0px 0px 4px white;
@@ -98,7 +98,7 @@ section#content {
         margin-right: 10px;
         width: 20px;
         height: 40px;
-        @include opacity(0.7);
+        opacity: 0.7;
         @include transition(all 0.5s);
       }
     }

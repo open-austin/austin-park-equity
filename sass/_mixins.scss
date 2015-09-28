@@ -20,3 +20,25 @@
     background: $color; /* The Fallback */
     background: rgba($color, $opacity);
 }
+//
+// @mixin filter( $var ) {
+// 	-webkit-filter: $var;
+// 	-moz-filter: $var;
+// 	-ms-filter: $var;
+// 	-o-filter: $var;
+// 	filter: $var;
+// }
+//
+// @mixin transform($transforms) {
+//     -moz-transform: $transforms;
+//     -o-transform: $transforms;
+//     -ms-transform: $transforms;
+//     -webkit-transform: $transforms;
+//     transform: $transforms;
+// }
+//
+// @mixin box-sizing($box-model) {
+//     -webkit-box-sizing: $box-model;
+//     -moz-box-sizing: $box-model;
+//     box-sizing: $box-model;
+// }

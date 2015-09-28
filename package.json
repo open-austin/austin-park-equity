@@ -1,24 +1,38 @@
 {
-  "name": "austin_parks_equity",
-  "version": "1.0.0",
+  "name": "austin-park-equity",
+  "version": "0.0.1",
   "description": "This is a civic app that aims to help visualize how Austin's park resources are distributed throughout the City of Austin.",
-  "main": "gulpfile.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build:css": "node-sass --include-path node_modules/bourbon/app/assets/stylesheets sass --output dist/css",
+    "watch:css": "./node_modules/.bin/watch 'npm run build:css' sass",
+    "build:js": "webpack -p -d --bail --progress",
+    "watch:js": "webpack --watch -d --devtool cheap-eval-source-map --progress",
+    "build:html": "node scripts/build_html",
+    "watch:html": "./node_modules/.bin/watch 'npm run build:html' templates",
+    "link:data": "ln -sf $(pwd)/data $(pwd)/dist/data",
+    "link:img": "ln -sf $(pwd)/img $(pwd)/dist/img",
+    "build": "npm run build:html && npm run build:css && npm run link:data && npm run link:img && npm run build:js",
+    "watch": "parallelshell 'npm run watch:html' 'npm run watch:css' 'npm run watch:js' 'npm run link:data' 'npm run link:img'",
+    "serve": "serve --port 8080 dist",
+    "copy:data": "rm -rf dist/data && cp -r data dist",
+    "copy:img": "rm -rf dist/img && cp -r img dist",
+    "deploy": "npm run build && npm run copy:img && npm run copy:data && node scripts/deploy",
+    "start": "mkdir -p dist && parallelshell 'npm run watch' 'npm run serve'"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/open-austin/Austin_Parks_Equity.git"
+    "url": "https://github.com/open-austin/austin-park-equity.git"
   },
-  "author": "",
+  "author": "Open Austin",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/open-austin/Austin_Parks_Equity/issues"
+    "url": "https://github.com/open-austin/austin-park-equity/issues"
   },
-  "homepage": "https://github.com/open-austin/Austin_Parks_Equity",
+  "homepage": "https://github.com/open-austin/austin-park-equity",
   "devDependencies": {
     "JSONStream": "^1.0.4",
     "babel-eslint": "^4.1.3",
+    "bourbon": "^4.2.5",
     "eslint": "^1.5.0",
     "eslint-config-airbnb": "0.0.8",
     "eslint-config-standard": "^4.4.0",
@@ -29,11 +43,13 @@
     "gulp-file-include": "^0.13.7",
     "gulp-gh-pages": "^0.5.2",
     "gulp-notify": "^2.2.0",
+    "gulp-print": "^2.0.1",
     "gulp-rename": "^1.2.2",
     "gulp-util": "^3.0.6",
     "json-loader": "^0.5.3",
     "lodash.merge": "^3.3.2",
     "minimist": "^1.1.3",
+    "node-sass": "^3.3.3",
     "query-overpass": "^1.0.0",
     "standard": "^5.3.1",
     "turf": "^2.0.2",
