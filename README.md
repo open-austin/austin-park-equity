@@ -13,16 +13,6 @@
 
 See our progress: [Live Demo](http://open-austin.github.io/austin-park-equity/)
 
-##Credits
-
-- **Maintainer**: [@mateoclarke](https://github.com/mateoclarke) - dev
-- [@kyoder](https://github.com/kyoder) - GIS Data Analysis
-- [@wilsaj](https://github.com/wilsaj) - GIS & dev
-- [@fremn](https://github.com/fremn) - dev
-- [@luqmaan](https://github.com/luqmaan) - dev
-- [@mattybow](https://github.com/mattybow) - dev
-- [@johntryee](https://github.com/johntyree) - dev
-
 ## Running Code Locally:
 
 **1. [npm](https://www.npmjs.com/) is required**
@@ -42,25 +32,21 @@ _webpack is used to bundle assets_
 
 To bundle assets:
 
- 	$ webpack --watch
+ 	$ webpack
 
-**4. [compass](http://compass-style.org/) is required**
-
-_compass is a css authoring framework that is used to generate css used by the app. Follow the [install instructions](http://compass-style.org/install/) on the compass site._
-
-**5. install npm dependencies**
+**4. install npm dependencies**
 
 Install the npm dependencies:
 
 	$ npm install
 
-**6. run the development server**
+**5. run the development server**
 
 To run the local server and see the app in your browser:
 
-	$ gulp
+	$ npm start
 
-Gulp serves the app at `http://localhost:8080`.
+Serves the app at `http://localhost:8080`.
 
 
 ## To (re)build data files:
@@ -101,7 +87,7 @@ work for all files.
 	- [Park Trails](https://services.arcgis.com/0L95CJ0VTaxqcmED/ArcGIS/rest/services/pard_trails_nrpa/FeatureServer/0/query?where=1%3D1&objectIds=&time=&geometry=&geometryType=esriGeometryEnvelope&inSR=&spatialRel=esriSpatialRelIntersects&distance=&units=esriSRUnit_Meter&outFields=*&returnGeometry=true&maxAllowableOffset=&geometryPrecision=&outSR=&returnIdsOnly=false&returnCountOnly=false&returnExtentOnly=false&orderByFields=&groupByFieldsForStatistics=&outStatistics=&resultOffset=&resultRecordCount=&returnZ=false&returnM=false&quantizationParameters=&f=pgeojson&token=)
 - [Open Street Map](https://www.openstreetmap.org/) Park Data:
 	- We use the [Overpass API](http://wiki.openstreetmap.org/wiki/Overpass_API) via the ["query-overpass" plugin](https://github.com/perliedman/query-overpass) to extract data. Here's [the commit that added OSM data](https://github.com/open-austin/austin-park-equity/commit/a89bd02fce6170beac8dcf11c7a3f3479a71d047) if you're curious how.
-	- We use this data to expose privately owned but publically accesible parks that PARD doesn't maintain.
+	- We use this data to expose privately owned but publicly accessible parks that PARD doesn't maintain.
 - Census.gov Data
 	-  [District Demographic Data](https://www.austintexas.gov/page/district-demographics) via City of Austin Demographer.
 	-  [CitySDK API](http://uscensusbureau.github.io/citysdk/)
@@ -109,9 +95,18 @@ work for all files.
 
 
 ## Architectural Decisions & Known Issues:
-- Our javascript files are messy. Based on the way this project grew from one map to many, we are currently making a seperate js file for each html page. This is bad and should eventually be fixed.
+- Our javascript files are messy. Based on the way this project grew from one map to many, we are currently making a separate js file for each html page. This is bad and should eventually be fixed.
 - For the park access heatmap, we ran a GIS process in ArcGIS. This static heatmap layer isn't response to park layers being toggled on and off. We'll probably use CartoDB to host these heatmaps in the future and rely on their PostGIS servers to create simplified buffers vs the cost-distance analysis heatmap we are currently working with.
 - **Question about why or how we did something? [Create an issue!](https://github.com/open-austin/austin-park-equity/issues/new)**
+
+##Credits
+- **Maintainer**: [@mateoclarke](https://github.com/mateoclarke) - dev
+- [@kyoder](https://github.com/kyoder) - GIS Data Analysis
+- [@wilsaj](https://github.com/wilsaj) - GIS & dev
+- [@fremn](https://github.com/fremn) - dev
+- [@luqmaan](https://github.com/luqmaan) - dev
+- [@mattybow](https://github.com/mattybow) - dev
+- [@johntryee](https://github.com/johntyree) - dev
 
 ## Unlicense:
 Released to the public domain under the [Unlicense](http://unlicense.org/) by [Open Austin](http://open-austin.org), 2015.
