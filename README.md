@@ -6,6 +6,7 @@
 
 ###Related News:
 
+- [Does Austin spend enough on parks? - Nov 19, 2015 ](http://www.austinmonitor.com/stories/2015/11/austin-spend-enough-parks/)
 - [District 4 residents want more parks, connectivity - June 3, 2015](http://communityimpact.com/district-4-residents-want-more-parks-connectivity/)
 - [Council Member Houston sees disparity in treatment of parks - May 20, 2015](http://www.austinmonitor.com/stories/2015/05/houston-sees-disparity-treatment-parks/)
 - [District 4 community meeting on parks - April 30, 2015](http://us8.campaign-archive1.com/?u=6fe419e1bea63f17bb6c8842d&id=13e7c71daa)
