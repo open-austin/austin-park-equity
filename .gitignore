@@ -1,5 +1,4 @@
 node_modules
 **/.sass-cache
 .publish
-dist/
 data/tmp/
