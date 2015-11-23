@@ -10,7 +10,6 @@ var tablesArray = [
   "B27001", // Health Insurance Coverage Status by Sex by Age -- ACS 2013 5yr
   "B17001", // Poverty Status in the Past 12 Months by Sex by Age -- ACS 2013 5yr
   "B01001", // Sex by Age -- ACS 2013 5yr
-  "B01003"  // Total Population -- ACS 2013 5yr
 ];
 
 // ------------
@@ -38,6 +37,10 @@ pullCensusReporterData(tablesArray);
 
 // ------------
 // Step 3: Bring down geojson for geo_ids
+// use the total population data as the base
+
+// "B01003"  // Total Population -- ACS 2013 5yr
+
 
 // ------------
 // Step 4: Merge data from each table into geojson
