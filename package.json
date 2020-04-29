@@ -61,7 +61,7 @@
   },
   "dependencies": {
     "d3": "^3.5.6",
-    "jquery": "^2.1.4",
+    "jquery": "^3.5.0",
     "leaflet": "^0.7.5",
     "leaflet-providers": "^1.1.2",
     "lodash": "^3.10.1",
