@@ -64,7 +64,7 @@
     "jquery": "^2.1.4",
     "leaflet": "^0.7.5",
     "leaflet-providers": "^1.1.2",
-    "lodash": "^3.10.1",
+    "lodash": "^4.17.19",
     "queue-async": "^1.0.7"
   }
 }
